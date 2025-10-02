@@ -8,7 +8,7 @@
 // SECURITY: This file includes plaintext credentials for demo/sandbox only. Do NOT
 // store real credentials or secrets in frontend code in production.
 
-import React, { useState, useRef } from "react";
+import { useState, useRef } from "react";
 import type { JSX } from "react/jsx-runtime";
 
 // ------------------
@@ -19,7 +19,6 @@ const REDIRECT_URI = import.meta.env.VITE_REDIRECT_URI; // must be registered
 
 // Akoya sandbox endpoints - confirm & replace with the exact URLs for your Akoya account
 const AUTH_ENDPOINT = "https://sandbox-idp.ddp.akoya.com/auth";
-const TOKEN_ENDPOINT = "https://sandbox-idp.ddp.akoya.com/token";
 
 // Credentials used for the Basic Authorization header on the token endpoint.
 // Provided here only for local sandbox testing. For production, exchange on a
@@ -28,7 +27,6 @@ const TOKEN_ENDPOINT = "https://sandbox-idp.ddp.akoya.com/token";
 const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
 // Optional: demo user credentials used as login_hint (won't auto-fill IdP fields reliably)
 const DEMO_USERNAME = "test-user";
-const DEMO_PASSWORD = "test-password";
 
 function makeAuthUrl(state: string) {
   const params = new URLSearchParams({
