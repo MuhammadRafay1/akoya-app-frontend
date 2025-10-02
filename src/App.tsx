@@ -175,6 +175,12 @@ ${idToken}`);
   });
 
   if (!resp.ok) {
+  const text = await resp.text();
+  console.error("Exchange failed", resp.status, text);  // 👈 add this
+  throw new Error(`Backend exchange failed: ${resp.status} ${text}`);
+  }
+
+  if (!resp.ok) {
     const text = await resp.text();
     throw new Error(`Backend exchange failed: ${resp.status} ${text}`);
   }
