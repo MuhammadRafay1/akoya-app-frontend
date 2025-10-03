@@ -193,11 +193,11 @@ ${idToken}`);
 
 
   return (
-  <div className="min-h-screen bg-gray-50 text-gray-800" style={{ display: "flex", flexDirection: "column", height: "100vh" }}>
+  <div className="app-root">
     <Header onGetAuthClick={startAuthFlow} logoSrc="/static/images/logo-dark.png" title="Akoya API" />
 
     {/* Body holds the apimatic portal scripts and container */}
-    <div style={{ flex: 1, overflow: "hidden" }}>
+    <div style={{ flex: 1, overflow: "aut" }}>
       <Body />
     </div>
   </div>

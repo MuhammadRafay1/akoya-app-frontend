@@ -70,27 +70,39 @@ button:focus-visible {
 /* src/index.css (or your global CSS) */
 html, body, #root {
   height: 100%;
+  width: 100%;
   margin: 0;
+  overflow-x: hidden;
+  min-width: 0;
 }
 body {
-  background: #222; /* optional, match your portal bg */
+  background: #222;
 }
 
 /* make the app container fill full viewport */
+/* NEW — scope layout to app-root so portal is not affected */
 .app-root {
-  height: 100vh;
   display: flex;
   flex-direction: column;
+  min-width: 320px;
+  min-height: 100vh;
+  width: 100%;
+  height: 100vh;
 }
+
 
 /* ensure portal wrapper and widget stretch */
 .apimatic-portal-wrapper,
 .hosted-api-docs,
 #apimatic-widget {
-  height: calc(100vh - 64px); /* 64px = header height; change if you used different height */
-  min-height: 400px;
-  overflow: auto;
+  width: 100% !important;
+  max-width: 100% !important; /* 👈 clamp width to viewport */
+  height: calc(100vh - 64px) !important;
 }
+
+/* Ensure flex items can shrink instead of forcing overflow */
+
+
 
 /* small logo styling */
 .header-logo {

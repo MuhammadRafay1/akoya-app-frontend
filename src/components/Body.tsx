@@ -2,87 +2,129 @@
 import { useEffect, useRef } from "react";
 
 export default function Body() {
-  const extScriptRef = useRef<HTMLScriptElement | null>(null);
-  const localScriptRef = useRef<HTMLScriptElement | null>(null);
-  const cssLinkRef = useRef<HTMLLinkElement | null>(null);
+  const widgetId = "apimatic-widget";
+  const extRef = useRef<HTMLScriptElement | null>(null);
+  const localRef = useRef<HTMLScriptElement | null>(null);
+  const observerRef = useRef<MutationObserver | null>(null);
 
   useEffect(() => {
     const externalJs = "https://dxjs.apimatic.io/v7/static/js/portal.v7.js";
     const localJs = "/static/js/portal.js";
     const localCss = "/static/css/portal.css";
 
-    // inject CSS if missing
+    // append portal CSS once
     if (!document.querySelector(`link[href="${localCss}"]`)) {
       const link = document.createElement("link");
       link.rel = "stylesheet";
       link.href = localCss;
       document.head.appendChild(link);
-      cssLinkRef.current = link;
-      console.log("[Body] appended CSS:", localCss);
     }
 
-    // ordered script loading
-    const makeScript = (src: string) => {
-      const s = document.createElement("script");
-      s.src = src;
-      s.defer = true;
-      s.async = false;
-      return s;
-    };
+    const loadScript = (src: string) =>
+      new Promise<void>((resolve, reject) => {
+        const s = document.createElement("script");
+        s.src = src;
+        s.defer = true;
+        s.async = false;
+        s.onload = () => resolve();
+        s.onerror = (e) => reject(e);
+        document.body.appendChild(s);
+      });
 
-    const ext = makeScript(externalJs);
-    ext.onload = () => {
-      console.log("[Body] external portal script loaded:", externalJs);
-      const local = makeScript(localJs);
-      local.onload = () => {
-        console.log("[Body] local portal script loaded:", localJs);
-        // debug: check widget children after a small delay
+    // function that applies safe fixes to ONE element that overflows
+    function fixOverflowElement(el: HTMLElement) {
+      try {
+        // Don't touch form controls or simple icons; target larger blocks (div, pre, table, img)
+        const tag = (el.tagName || "").toLowerCase();
+        if (["div", "pre", "code", "table", "img", "svg", "section"].includes(tag)) {
+          el.style.maxWidth = "100%";
+          el.style.boxSizing = "border-box";
+          el.style.overflowWrap = "anywhere";
+          el.style.wordBreak = "break-word";
+          // small safe min-width so flex children don't collapse to 0
+          if (!el.style.minWidth) el.style.minWidth = "0";
+        }
+      } catch {
+        // ignore
+      }
+    }
+
+    // scan the container for any offenders and patch them
+    function scanAndPatch() {
+      const container = document.getElementById(widgetId);
+      if (!container) return;
+      const rw = container.clientWidth;
+      const nodes = Array.from(container.querySelectorAll<HTMLElement>("*"));
+      nodes.forEach((el) => {
+        if (el.clientWidth === 0) return; // skip tiny elements
+        if (el.scrollWidth > rw + 1 || el.clientWidth > rw + 1) {
+          fixOverflowElement(el);
+        }
+      });
+    }
+
+    // install mutation observer to detect appended content from portal and patch
+    function startObserver() {
+      const container = document.getElementById(widgetId);
+      if (!container) return;
+      const obs = new MutationObserver(() => {
         setTimeout(() => {
-          const w = document.getElementById("apimatic-widget");
-          console.log("DEBUG: apimatic-widget children:", w?.children.length, w);
-        }, 500);
-      };
-      local.onerror = (e) => console.error("[Body] local script error", e);
-      localScriptRef.current = local;
-      document.body.appendChild(local);
-    };
-    ext.onerror = (e) => console.error("[Body] external script error", e);
+          scanAndPatch();
+        }, 50);
+      });
+      obs.observe(container, {
+        childList: true,
+        subtree: true,
+        attributes: true,
+        attributeFilter: ["style", "class"],
+      });
+      observerRef.current = obs;
+    }
 
-    extScriptRef.current = ext;
-    document.body.appendChild(ext);
+    (async () => {
+      try {
+        await loadScript(externalJs);
+        await loadScript(localJs);
+
+        try {
+          const ap = (window as any).APIMaticDevPortal;
+          if (ap && typeof ap.show === "function") {
+            ap.show({ container: widgetId });
+          }
+        } catch {
+          /* ignore */
+        }
+
+        setTimeout(() => {
+          scanAndPatch();
+          startObserver();
+          window.dispatchEvent(new Event("resize"));
+          setTimeout(() => {
+            scanAndPatch();
+            window.dispatchEvent(new Event("resize"));
+          }, 800);
+        }, 200);
+      } catch (err) {
+        console.error("Failed to load portal scripts:", err);
+      }
+    })();
 
     return () => {
+      observerRef.current?.disconnect();
       try {
-        extScriptRef.current?.parentNode?.removeChild(extScriptRef.current);
-        localScriptRef.current?.parentNode?.removeChild(localScriptRef.current);
-        cssLinkRef.current?.parentNode?.removeChild(cssLinkRef.current);
+        extRef.current?.remove();
+        localRef.current?.remove();
       } catch {}
     };
   }, []);
 
   return (
-    <div className="apimatic-portal-wrapper" style={{ flex: 1, overflow: "hidden" }}>
-      <div>
-        <div className="portal-header">
-          <div className="branding-container apimatic-background-color">
-            <div className="logo">
-              <a href="https://akoya.com" target="_blank" rel="noreferrer" className="apimatic-light-image">
-                <img src="/static/images/logo.png" alt="logo" />
-              </a>
-              <a href="https://akoya.com" target="_blank" rel="noreferrer" className="apimatic-dark-image">
-                <img src="/static/images/logo-dark.png" alt="logo dark" />
-              </a>
-              <div className="divider apimatic-border-color" />
-              <p className="apimatic-text-color">Akoya's Data Access APIs</p>
-            </div>
-          </div>
-        </div>
-
-        <div className="hosted-api-docs" style={{ height: "calc(100vh - 64px)" }}>
-          <div id="apimatic-widget" style={{ height: "100%", width: "100%" }} />
-        </div>
-        <div className="portal-footer" />
-      </div>
-    </div>
+    <div
+      id="apimatic-widget"
+      style={{
+        width: "100%",
+        height: "calc(100vh - 64px)",
+      }}
+    />
   );
 }
