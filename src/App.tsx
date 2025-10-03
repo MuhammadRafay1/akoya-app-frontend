@@ -47,7 +47,7 @@ function makeAuthUrl(state: string) {
 }
 
 export default function App(): JSX.Element {
-  const [status, setStatus] = useState<string>("idle");
+  const [, setStatus] = useState<string>("idle");
   const popupRef = useRef<Window | null>(null);
 
   async function startAuthFlow(): Promise<void> {

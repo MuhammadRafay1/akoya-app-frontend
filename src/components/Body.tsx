@@ -1,5 +1,5 @@
 // src/components/Body.tsx
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 
 export default function Body() {
   const extScriptRef = useRef<HTMLScriptElement | null>(null);
