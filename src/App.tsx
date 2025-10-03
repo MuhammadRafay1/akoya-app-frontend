@@ -127,12 +127,12 @@ export default function App(): JSX.Element {
                 // Clipboard API may be unavailable; ignore copy failure
               }
               injectTokenToPortal(idToken).then((ok) => {
-    if (ok) {
-      console.log("[App] Token successfully injected to portal");
-    } else {
-      console.warn("[App] Token injection to portal failed");
-    }
-  });
+              if (ok) {
+                console.log("[App] Token successfully injected to portal");
+              } else {
+                console.warn("[App] Token injection to portal failed");
+              }
+            });
 
               const resultWin = window.open("", "akoya_token_result", "width=600,height=400");
               if (resultWin) {
@@ -142,9 +142,7 @@ export default function App(): JSX.Element {
 
 ${idToken}`;
               } else {
-                alert(`id_token:
-
-${idToken}`);
+                alert("Access Token successfully copied to portal");
               }
             } else {
               // No id_token found: show full response
