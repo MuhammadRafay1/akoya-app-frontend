@@ -1,10 +1,7 @@
 // src/components/Body.tsx
 import { useEffect, useRef } from "react";
 
-export default function Body() {
-  const widgetId = "apimatic-widget";
-  const extRef = useRef<HTMLScriptElement | null>(null);
-  const localRef = useRef<HTMLScriptElement | null>(null);
+export default function Body({ accessToken }: { accessToken?: string }) {
   const observerRef = useRef<MutationObserver | null>(null);
 
   useEffect(() => {
@@ -31,79 +28,37 @@ export default function Body() {
         document.body.appendChild(s);
       });
 
-    // function that applies safe fixes to ONE element that overflows
-    function fixOverflowElement(el: HTMLElement) {
-      try {
-        // Don't touch form controls or simple icons; target larger blocks (div, pre, table, img)
-        const tag = (el.tagName || "").toLowerCase();
-        if (["div", "pre", "code", "table", "img", "svg", "section"].includes(tag)) {
-          el.style.maxWidth = "100%";
-          el.style.boxSizing = "border-box";
-          el.style.overflowWrap = "anywhere";
-          el.style.wordBreak = "break-word";
-          // small safe min-width so flex children don't collapse to 0
-          if (!el.style.minWidth) el.style.minWidth = "0";
-        }
-      } catch {
-        // ignore
-      }
-    }
-
-    // scan the container for any offenders and patch them
-    function scanAndPatch() {
-      const container = document.getElementById(widgetId);
-      if (!container) return;
-      const rw = container.clientWidth;
-      const nodes = Array.from(container.querySelectorAll<HTMLElement>("*"));
-      nodes.forEach((el) => {
-        if (el.clientWidth === 0) return; // skip tiny elements
-        if (el.scrollWidth > rw + 1 || el.clientWidth > rw + 1) {
-          fixOverflowElement(el);
-        }
-      });
-    }
-
-    // install mutation observer to detect appended content from portal and patch
-    function startObserver() {
-      const container = document.getElementById(widgetId);
-      if (!container) return;
-      const obs = new MutationObserver(() => {
-        setTimeout(() => {
-          scanAndPatch();
-        }, 50);
-      });
-      obs.observe(container, {
-        childList: true,
-        subtree: true,
-        attributes: true,
-        attributeFilter: ["style", "class"],
-      });
-      observerRef.current = obs;
-    }
-
     (async () => {
       try {
         await loadScript(externalJs);
         await loadScript(localJs);
 
-        try {
-          const ap = (window as any).APIMaticDevPortal;
-          if (ap && typeof ap.show === "function") {
-            ap.show({ container: widgetId });
-          }
-        } catch {
-          /* ignore */
-        }
+        (window as any).APIMaticDevPortal?.ready(async (portal: any) => {
+        console.log("[Portal] Ready event fired. Methods available:", Object.keys(portal));
 
-        setTimeout(() => {
-          scanAndPatch();
-          startObserver();
-          window.dispatchEvent(new Event("resize"));
-          setTimeout(() => {
-            scanAndPatch();
-            window.dispatchEvent(new Event("resize"));
-          }, 800);
-        }, 200);
+        const token = "MY_FAKE_ACCESS_TOKEN"; // replace with your state/session token
+
+        try {
+            await portal.setConfig((defaultConfig: any) => {
+            console.log("[Portal] defaultConfig received in setConfig:", defaultConfig);
+
+            return {
+                ...defaultConfig,
+                auth: {
+                ...defaultConfig.auth,
+                bearerAuth: {
+                    ...defaultConfig.auth?.bearerAuth,
+                    AccessToken: accessToken,
+                },
+                },
+            };
+            });
+
+            console.log("[Portal] Token injected successfully:", token);
+        } catch (err) {
+            console.error("[Portal] Failed to set config:", err);
+        }
+        });
       } catch (err) {
         console.error("Failed to load portal scripts:", err);
       }
@@ -111,12 +66,8 @@ export default function Body() {
 
     return () => {
       observerRef.current?.disconnect();
-      try {
-        extRef.current?.remove();
-        localRef.current?.remove();
-      } catch {}
     };
-  }, []);
+  }, [accessToken]);
 
   return (
     <div
