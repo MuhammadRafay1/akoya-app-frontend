@@ -12,6 +12,7 @@ import { useState, useRef } from "react";
 import type { JSX } from "react/jsx-runtime";
 import Header from "./components/Header";
 import Body from "./components/Body";
+import { injectTokenToPortal } from "./utils/injectTokenToPortal"; // or inline the function
 
 
 // ------------------
@@ -125,6 +126,13 @@ export default function App(): JSX.Element {
               } catch (e) {
                 // Clipboard API may be unavailable; ignore copy failure
               }
+              injectTokenToPortal(idToken).then((ok) => {
+    if (ok) {
+      console.log("[App] Token successfully injected to portal");
+    } else {
+      console.warn("[App] Token injection to portal failed");
+    }
+  });
 
               const resultWin = window.open("", "akoya_token_result", "width=600,height=400");
               if (resultWin) {
