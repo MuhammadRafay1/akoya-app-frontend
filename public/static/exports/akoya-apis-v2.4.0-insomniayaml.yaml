@@ -4,7 +4,7 @@ __export_source: apimatic.transformer
 resources:
 - name: Akoya APIs v2.4.0
   _type: workspace
-  _id: wrk_53660ff0fdfe44a29990c68da47bb737
+  _id: wrk_ea4f8e66c9e24460a277a152f84c7045
   description: >-
     Akoya product APIs for data access. Default servers are set for the Akoya sandbox environment.
 
@@ -37,54 +37,54 @@ resources:
     default: https://sandbox-products.ddp.akoya.com
     authserver: https://sandbox-idp.ddp.akoya.com
   _type: environment
-  _id: env_08c9e1d9c3174b159d8f329d3af5602a
-  parentId: wrk_53660ff0fdfe44a29990c68da47bb737
+  _id: env_8cf8733beff8459a9a45215206cf1bc5
+  parentId: wrk_ea4f8e66c9e24460a277a152f84c7045
 - name: environment2
   data:
     default: https://products.ddp.akoya.com
     authserver: https://sandbox-idp.ddp.akoya.com
   _type: environment
-  _id: env_e0da6c08fe0a4a449f1636fca8ce68cb
-  parentId: wrk_53660ff0fdfe44a29990c68da47bb737
+  _id: env_62c200713a5c444faeb50f673bcc8000
+  parentId: wrk_ea4f8e66c9e24460a277a152f84c7045
 - name: Account information
   _type: request_group
-  _id: fld_82c41e976a21465e90fd976ee4fc9b7e
-  parentId: wrk_53660ff0fdfe44a29990c68da47bb737
+  _id: fld_ec171e61ca924ffa88d67d1512037e3f
+  parentId: wrk_ea4f8e66c9e24460a277a152f84c7045
   description: Account information
 - name: Balances
   _type: request_group
-  _id: fld_066cd4fcd79f46ba887b2d376234db75
-  parentId: wrk_53660ff0fdfe44a29990c68da47bb737
+  _id: fld_915738e050d04042b0b1055f58b7aef4
+  parentId: wrk_ea4f8e66c9e24460a277a152f84c7045
   description: Balances
 - name: Customers
   _type: request_group
-  _id: fld_3ed3067388f6407ab3a0b88b3f04cca6
-  parentId: wrk_53660ff0fdfe44a29990c68da47bb737
+  _id: fld_7535e0e68225496088e2c3c6d7ebd6e5
+  parentId: wrk_ea4f8e66c9e24460a277a152f84c7045
   description: Customers
 - name: Investments
   _type: request_group
-  _id: fld_f4d2facf310e4f7781bf7d242b3759d2
-  parentId: wrk_53660ff0fdfe44a29990c68da47bb737
+  _id: fld_747ec57d2d9f41a4a4ed1c22dc55b4d6
+  parentId: wrk_ea4f8e66c9e24460a277a152f84c7045
   description: Investments
 - name: Payments
   _type: request_group
-  _id: fld_04de83c06a3044a1aee45c3745a2fe5e
-  parentId: wrk_53660ff0fdfe44a29990c68da47bb737
+  _id: fld_4ee2970b321247a8a503e4624986e765
+  parentId: wrk_ea4f8e66c9e24460a277a152f84c7045
   description: Payments
 - name: Statements
   _type: request_group
-  _id: fld_cd1decfd2e694f4888cfa9c2d48bd805
-  parentId: wrk_53660ff0fdfe44a29990c68da47bb737
+  _id: fld_7143936f559e4dcc9f6f014ef26b2c9b
+  parentId: wrk_ea4f8e66c9e24460a277a152f84c7045
   description: Statements
 - name: Tax (beta)
   _type: request_group
-  _id: fld_78bdb49e96a54893b4e9a69e856fe713
-  parentId: wrk_53660ff0fdfe44a29990c68da47bb737
+  _id: fld_61d590c44ce648babbb87e5b105c2d0d
+  parentId: wrk_ea4f8e66c9e24460a277a152f84c7045
   description: Tax (beta)
 - name: Transactions
   _type: request_group
-  _id: fld_351db7c9f6814d269b87c27a1a0dcc80
-  parentId: wrk_53660ff0fdfe44a29990c68da47bb737
+  _id: fld_4a6e72807b5446eab3d3f771c8255b39
+  parentId: wrk_ea4f8e66c9e24460a277a152f84c7045
   description: Transactions
 - name: get-accounts-info
   method: GET
@@ -99,8 +99,8 @@ resources:
     disabled: false
   authentication: {}
   _type: request
-  _id: req_98faf85d020346089ba7d01c4003bbe3
-  parentId: fld_82c41e976a21465e90fd976ee4fc9b7e
+  _id: req_79960d3d070049069397c91d2b04860b
+  parentId: fld_ec171e61ca924ffa88d67d1512037e3f
   description: "Get basic account information including accountId, masked account number, type, description, etc.\n\nTo view the response schema, select the `200` response below. Then pick an option for annuity, deposit, insurance, investment, loan, and line of credit account types. \n\nFor an example payload response, see the `200` example response below the `Try it` feature. The example is from a deposit account but all account types are supported by this endpoint.\n\n> \U0001F6D1\n> \n> The *id_token* should be used as the bearer token with this call.\n\nUse the `mode` query param to receive FDX-aligned, standardized data values (Beta). For example:\n\n`https://sandbox-products.ddp.akoya.com/accounts-info/v2/mikomo?mode=standard`\n\n`mode` is available in both sandbox and production.\n\n`mode` is supported by a subset of providers. Log into the [Data Recipient Hub](https://recipient.ddp.akoya.com/login) and click [here](https://recipient.ddp.akoya.com/support/article/kA0Uw00000015GzKAI) to view a list of all providers supporting the `mode` parameter.\n\n"
 - name: get-balances
   method: GET
@@ -115,8 +115,8 @@ resources:
     disabled: false
   authentication: {}
   _type: request
-  _id: req_b7f42476d2e04c57b009e12f73c13944
-  parentId: fld_066cd4fcd79f46ba887b2d376234db75
+  _id: req_3179df991f2643bc8a5740e0e84d05ad
+  parentId: fld_915738e050d04042b0b1055f58b7aef4
   description: "Account information that includes balances and rates of bank accounts, credit cards, loans, investments, and more.\n\nTo view the response schema, select the `200` response below. Then pick an option for annuity, deposit, insurance, investment, loan, and line of credit account types. \n\nFor an example payload response, see the `200` example response below the `Try it` feature. The example is from a deposit account but all account types are supported by this endpoint.\n\n> \U0001F6D1\n> \n> The *id_token* should be used as the bearer token with this call.\n\nUse the `mode` query param to receive FDX-aligned, standardized data values (Beta). For example:\n\n`https://sandbox-products.ddp.akoya.com/balances/v2/mikomo?mode=standard`\n\n`mode` is available in both sandbox and production.\n\n`mode` is supported by a subset of providers. Log into the [Data Recipient Hub](https://recipient.ddp.akoya.com/login) and click [here](https://recipient.ddp.akoya.com/support/article/kA0Uw00000015GzKAI) to view a list of all providers supporting the `mode` parameter."
 - name: customer-info
   method: GET
@@ -127,8 +127,8 @@ resources:
     disabled: false
   authentication: {}
   _type: request
-  _id: req_efa0ce75c321443c913a62080881ec20
-  parentId: fld_3ed3067388f6407ab3a0b88b3f04cca6
+  _id: req_9451c35d09fc4831af6854e4b7a0ffcd
+  parentId: fld_7535e0e68225496088e2c3c6d7ebd6e5
   description: "This product supports use cases such as payment enablement, account opening, and identity verification. Responses return information about the authorized end-user, the customer associated with the `id_token` used in the call. This information may include, but is not limited to, the customer identifier, name, email, address, and phone number.\n\n<br>\n\nTo see the response schema, select the `200` response below. For an example payload response, see the `200` example response below the *Try it* feature. \n\nThis product requires consumer consent to share all account holder information.\n\n> \U0001F6D1 The `id_token` should be used as the bearer token with this call.\n> "
 - name: get-account-holder
   method: GET
@@ -139,8 +139,8 @@ resources:
     disabled: false
   authentication: {}
   _type: request
-  _id: req_40d5dc4a6d0147a0bc57df1fb9438f47
-  parentId: fld_3ed3067388f6407ab3a0b88b3f04cca6
+  _id: req_c1f6b12a32fb494198c02ce33d8fc1a5
+  parentId: fld_7535e0e68225496088e2c3c6d7ebd6e5
   description: "This product supports use cases such as payment enablement, account opening, identity verification,or lending & credit enhancement. Responses return information about the authorized consumer, the customer associated with the `id_token` used in the call, and the relationship specific to the provided `accountId`.\n\n> \U0001F4CC Please note!\n>\n> This endpoint provides additional information which may not be required for your use case, making it inefficient compared to the [/customer info](https://docs.akoya.com/reference/customer-info) endpoint. Please refer to to the [Customers guide](https://docs.akoya.com/reference/customers) for more information about this endpoint.\n\nGet account holder information. Based on FDX 5.2.1.\n\nThis product requires consumer consent to share all account holder information.\n\n> \U0001F6D1 The `id_token` should be used as the bearer token with this call.\n> \n"
 - name: get-accounts
   method: GET
@@ -155,18 +155,18 @@ resources:
     disabled: false
   authentication: {}
   _type: request
-  _id: req_750e4c4e7d154e37b67093ff459fdcbc
-  parentId: fld_f4d2facf310e4f7781bf7d242b3759d2
+  _id: req_e26dc9bffe78498ab0de59f3f2547bd8
+  parentId: fld_747ec57d2d9f41a4a4ed1c22dc55b4d6
   description: "Get detailed account information that includes Akoya products Account Info and Balances for all account types (annunity, deposit, insurance, investments, line of credit, and loan) and adds the Investments product to investment accounts including contributions, holdings, vesting information, and more.\n\nTo view the response schema, select the `200` response below. Then pick an option for annuity, deposit, insurance, investment, loan, and line of credit account types. \n\nFor an example payload response, see the `200` example response below the `Try it` feature. The example is from an investment account but all account types are supported and returned by this endpoint.\n\n> \U0001F6D1\n> \n> The *id_token* should be used as the bearer token with this call.\n\nUse the `mode` query param to receive FDX-aligned, standardized data values (Beta). For example:\n\n`https://sandbox-products.ddp.akoya.com/accounts/v2/mikomo?mode=standard`\n\n`mode` is available in both sandbox and production.\n\n`mode` is supported by a subset of providers. Log into the [Data Recipient Hub](https://recipient.ddp.akoya.com/login) and click [here](https://recipient.ddp.akoya.com/support/article/kA0Uw00000015GzKAI) to view a list of all providers supporting the `mode` parameter."
 - name: get-taxlots
   method: GET
   url: '{{default}}/taxlots/{version}/{providerId}/{accountId}/{holdingId}'
   parameters:
   - name: offset
-    value: offset48
+    value: offset92
     disabled: false
   - name: limit
-    value: limit58
+    value: limit49
     disabled: false
   headers:
   - name: x-akoya-interaction-type
@@ -174,8 +174,8 @@ resources:
     disabled: false
   authentication: {}
   _type: request
-  _id: req_d0d54bdb32a446a0b22f0ab5bd22cd73
-  parentId: fld_f4d2facf310e4f7781bf7d242b3759d2
+  _id: req_2f5f61ac62c8457dbb4a23d1588c1296
+  parentId: fld_747ec57d2d9f41a4a4ed1c22dc55b4d6
   description: "The taxlots API allows you to retrieve tax lots of consumer-permissioned accounts.\n\n> \U0001F6D1\n> \n> The *id_token* should be used as the bearer token with this call."
 - name: payment-networks
   method: GET
@@ -186,8 +186,8 @@ resources:
     disabled: false
   authentication: {}
   _type: request
-  _id: req_6cb9058000df42678e698f0e998927d0
-  parentId: fld_04de83c06a3044a1aee45c3745a2fe5e
+  _id: req_b5a1f5af15e44077b0091899deaa81de
+  parentId: fld_4ee2970b321247a8a503e4624986e765
   description: "This product supports use cases such as payment enablement or account opening. The response includes identifiers necessary to make ACH and RTP payments. Identifiers include account number, routing number, identifier type (actual or tokenized account number), and payment network type such as ACH or RTP.\n\n<br>\n\nTo see the response schema, select the `200` response below. For an example payload response, see the `200` example response below the *Try it* feature. \n\n> \U0001F6D1\n> \n> The *id_token* should be used as the bearer token with this call."
 - name: get-statement-list
   method: GET
@@ -211,8 +211,8 @@ resources:
     disabled: false
   authentication: {}
   _type: request
-  _id: req_dccbacdc0b744566b7bffa90c8ecc2c2
-  parentId: fld_cd1decfd2e694f4888cfa9c2d48bd805
+  _id: req_d9ffc6d0a66c44f29b81a5f069d2c641
+  parentId: fld_7143936f559e4dcc9f6f014ef26b2c9b
   description: >-
     Retrieve a list of available statements for the end-user's consented accounts. You may request a date range of up to two years of historical statements (maximum date ranges vary by provider).
 
@@ -227,8 +227,8 @@ resources:
     disabled: false
   authentication: {}
   _type: request
-  _id: req_10f40ff372a94257910ab4e9d3f9ad16
-  parentId: fld_cd1decfd2e694f4888cfa9c2d48bd805
+  _id: req_e8a8b78c06a743fbb7383ce1bf6ce1ec
+  parentId: fld_7143936f559e4dcc9f6f014ef26b2c9b
   description: "Retrieve a specific account statement file. Use [HTTP Accept request-header](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html) to specify desired content types. \n\nFor the initial launch, only PDF statements are supported. PDFs are returned in the response.\n\n### cURL request\n\nWe recommend using the auto-generated cURL request with the {idToken}, accountId, providerId, statementId, and version with an added cURL parameter to return the output to a file. For example:\n\n```curl\ncurl --request GET --url https://sandbox-products.ddp.akoya.com/statements/v2/mikomo/513815781465/P9CvLPKDaFRMbNDkhu1 --header \"accept: application/pdf\" --header \"authorization: Bearer {idtoken}\" --output example.pdf\n```"
 - name: taxFormsSearch
   method: GET
@@ -241,7 +241,7 @@ resources:
     value: '["Tax1099Div","Tax1099Int"]'
     disabled: false
   - name: accountId
-    value: accountId40
+    value: accountId98
     disabled: false
   headers:
   - name: x-akoya-interaction-id
@@ -255,8 +255,8 @@ resources:
     disabled: false
   authentication: {}
   _type: request
-  _id: req_ddb4f0852c9f4e529b2de911b74653f8
-  parentId: fld_78bdb49e96a54893b4e9a69e856fe713
+  _id: req_bfbc29d313554caca6c27836afa0fa56
+  parentId: fld_61d590c44ce648babbb87e5b105c2d0d
   description: Get the full lists of tax document data and tax form images available for a specific year for the current authorized customer.
 - name: getTaxForm
   method: GET
@@ -277,8 +277,8 @@ resources:
     disabled: false
   authentication: {}
   _type: request
-  _id: req_75b20023e40b403e96d9722a5da9804e
-  parentId: fld_78bdb49e96a54893b4e9a69e856fe713
+  _id: req_fc5da039375542e496399704dcff1399
+  parentId: fld_61d590c44ce648babbb87e5b105c2d0d
   description: >-
     Get the Tax Statement as JSON or PDF for a single tax document for the customer. Use [HTTP Accept request-header](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html) to specify desired content types. See `AcceptHeader` definition for typical values.
 
@@ -310,6 +310,6 @@ resources:
     disabled: false
   authentication: {}
   _type: request
-  _id: req_b0c3226e5493458499d92daf1b595625
-  parentId: fld_351db7c9f6814d269b87c27a1a0dcc80
+  _id: req_cbf8e584d0a94965a01af9e810230e4a
+  parentId: fld_4a6e72807b5446eab3d3f771c8255b39
   description: "The transactions API allows you to retrieve transaction history of consumer-permissioned accounts.\n\n> \U0001F6D1\n> \n> The *id_token* should be used as the bearer token with this call.\n\nFor more information on how to paginate transaction results, please see: [Pagination](https://docs.akoya.com/v2/docs/pagination)\n\nUse the `mode` query param to receive FDX-aligned, standardized data values (Beta). For example:\n\n`https://sandbox-products.ddp.akoya.com/transactions/v2/mikomo?mode=standard`\n\n`mode` is available in both sandbox and production.\n\n`mode` is supported by a subset of providers. Log into the [Data Recipient Hub](https://recipient.ddp.akoya.com/login) and click [here](https://recipient.ddp.akoya.com/support/article/kA0Uw00000015GzKAI) to view a list of all providers supporting the `mode` parameter."

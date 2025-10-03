@@ -1,0 +1,416 @@
+# Akoya APIs v2.4.0
+
+> Akoya product APIs for data access. Default servers are set for the Akoya sandbox environment.
+
+Akoya APIs include the following updates:
+
+- v2.4.0
+  - Added Tax product
+- v2.3.0
+  - Removed erroneous `accountId` query param from Taxlots endpoint
+  - Added TaxLots endpoint
+- v2.2.2
+  - Added mode query parameter to Account Information, Balances, Investments, and Transactions to support standard mode.
+  - Edited callouts for Account Holder endpoint
+- v2.2.1
+  - Fixed typo in `accountIds` query parameter for `/accounts-info`, `/balances`, `/accounts`
+  - Added security method for `Account holder information` to bear token. Missing method defaulted to basic auth.
+  - Added examples and descriptions to some schemas
+  - Added HTTP status `429` FDX error `1207`.
+- v2.2 Additions
+  - Added optional `x-akoya-interaction-type` header to all endpoints to specify if a request is part of a batch process
+  - Update of tags to organize endpoints by Akoya product
+  - `206` response added to `/accounts-info`, `/balances`, `/accounts`
+- v2.1 New Statements product and Customers product updated with additional endpoint, `Account holder information`.
+- v2.0 Launch of Akoya products: Account Info, Balances, Investments, Transactions, Payments, Customers.
+
+Authentication
+- Basic Authentication
+- OAuth 2 Bearer token
+- OAuth 2 Authorization Code Grant
+## Docs
+
+- [Introduction](https://akoya-app.netlify.app/#/http/x-redirect/page%3Agetting-started%2Fintroduction) : Akoya product APIs provide secure data access.
+- [Envrionments](https://akoya-app.netlify.app/#/http/x-redirect/page%3Agetting-started%2Fenvironments) : The Akoya API supports multiple environments.
+- [Authentication](https://akoya-app.netlify.app/#/http/x-redirect/page%3Agetting-started%2Fauthentication) : This API supports the following authentication schemes:
+- [API Change Log](https://akoya-app.netlify.app/#/http/x-redirect/page%3Agetting-started%2Fchange-log) : - Added `taxlots` endpoint to the **Investments** product.
+- [Account Details Flow](https://akoya-app.netlify.app/#/http/x-redirect/page%3Arecipes%2FAccountDetailsFlow) : This is the starter content
+- [Account Verification Flow](https://akoya-app.netlify.app/#/http/x-redirect/page%3Arecipes%2FAccountVerificationFlow) : This is the starter content
+- [PFM Account Aggregation Flow](https://akoya-app.netlify.app/#/http/x-redirect/page%3Arecipes%2FPfmAccountAggregationFlow) : This is the starter content
+- [Quickstart](https://akoya-app.netlify.app/#/http/x-redirect/%24h%2F__getting_started) : Akoya product APIs for data access.
+- [Data Access Network](https://akoya-app.netlify.app/#/http/x-redirect/page%3Aguides%2Fdata-access-network) : Akoya enables consumers to provide third-party access to their financial data in a safe, secure, and transparent way.
+- [Introduction to Mikomo and Sandbox](https://akoya-app.netlify.app/#/http/x-redirect/page%3Aguides%2Fintro-to-mikomo-sandbox) : We want you to be able to learn our platform and test our APIs in a safe environment with test data, so we created **Mikomo Bank** and a set of test API servers for your use.
+- [Requirements](https://akoya-app.netlify.app/#/http/x-redirect/page%3Aguides%2Frequirements) : Tips for integrating your application with the Akoya Data Access Network.
+- [Creating a Test App](https://akoya-app.netlify.app/#/http/x-redirect/page%3Aguides%2Ftest-app) : An overview of technical implementation steps to integrate with the Akoya Data Access Network.
+- [Preparing to Integrate](https://akoya-app.netlify.app/#/http/x-redirect/page%3Aguides%2Fpreparing-to-integrate) : How to work with Akoya
+- [Pagination](https://akoya-app.netlify.app/#/http/x-redirect/page%3Aguides%2Fpagination) : When dealing with large sets of data, receiving results in segments can help apps process information in a more structured way.
+- [Timestamp Formatting](https://akoya-app.netlify.app/#/http/x-redirect/page%3Aguides%2Ftimestamp) : Below is an explanation of the timestamp formatting Akoya expects in requests, and how timestamps are returned.
+- [Tokenized Account Numbers (TAN)](https://akoya-app.netlify.app/#/http/x-redirect/page%3Aguides%2Ftokenized-account-numbers) : The number of financial payments that depend on the **ACH** and **RTP** networks is growing rapidly.
+- [Use Cases Overview](https://akoya-app.netlify.app/#/http/x-redirect/page%3Aguides%2Fuse-cases%2Foverview) : Akoya products can be combined to help facilitate several use cases across financial services.
+- [Account Verification Usecase](https://akoya-app.netlify.app/#/http/x-redirect/page%3Aguides%2Fuse-cases%2Faccount-verification) : ---
+- [Account Ownership Validation Usecase](https://akoya-app.netlify.app/#/http/x-redirect/page%3Aguides%2Fuse-cases%2Faccount-ownership-validation) : Existing methods of account ownership validation rely on basic username and password authentication.
+- [Account Linking and Consent](https://akoya-app.netlify.app/#/http/x-redirect/page%3Aguides%2Fuse-cases%2Faccount-linking-and-consent) : Traditional account linking and consent flow depends on credential-based screen scraping.
+- [PFM Account Aggregation Usecase](https://akoya-app.netlify.app/#/http/x-redirect/page%3Aguides%2Fuse-cases%2Fpfm-account-aggregation) : Users often have multiple accounts across different financial institutions.
+
+
+## API Docs (Http) 
+
+### API Endpoints
+
+- Account information [get-accounts-info](https://akoya-app.netlify.app/#/http/x-redirect/%24e%2FAccount%2520information%2Fget-accounts-info) : Get basic account information including accountId, masked account number, type, description, etc.
+- Balances [get-balances](https://akoya-app.netlify.app/#/http/x-redirect/%24e%2FBalances%2Fget-balances) : Account information that includes balances and rates of bank accounts, credit cards, loans, investments, and more.
+- Customers [customer-info](https://akoya-app.netlify.app/#/http/x-redirect/%24e%2FCustomers%2Fcustomer-info) : This product supports use cases such as payment enablement, account opening, and identity verification.
+- Customers [get-account-holder](https://akoya-app.netlify.app/#/http/x-redirect/%24e%2FCustomers%2Fget-account-holder) : This product supports use cases such as payment enablement, account opening, identity verification,or lending & credit enhancement.
+- Investments [get-accounts](https://akoya-app.netlify.app/#/http/x-redirect/%24e%2FInvestments%2Fget-accounts) : Get detailed account information that includes Akoya products Account Info and Balances for all account types (annunity, deposit, insurance, investments, line of credit, and loan) and adds the Investments product to investment accounts including contributions, holdings, vesting information, and more.
+- Investments [get-taxlots](https://akoya-app.netlify.app/#/http/x-redirect/%24e%2FInvestments%2Fget-taxlots) : The taxlots API allows you to retrieve tax lots of consumer-permissioned accounts.
+- Payments [payment-networks](https://akoya-app.netlify.app/#/http/x-redirect/%24e%2FPayments%2Fpayment-networks) : This product supports use cases such as payment enablement or account opening.
+- Statements [get-statement-list](https://akoya-app.netlify.app/#/http/x-redirect/%24e%2FStatements%2Fget-statement-list) : Retrieve a list of available statements for the end-user's consented accounts.
+- Statements [get-statements](https://akoya-app.netlify.app/#/http/x-redirect/%24e%2FStatements%2Fget-statements) : Retrieve a specific account statement file.
+- Tax (beta) [taxFormsSearch](https://akoya-app.netlify.app/#/http/x-redirect/%24e%2FTax%2520%2528beta%2529%2FtaxFormsSearch) : Get the full lists of tax document data and tax form images available for a specific year for the current authorized customer.
+- Tax (beta) [getTaxForm](https://akoya-app.netlify.app/#/http/x-redirect/%24e%2FTax%2520%2528beta%2529%2FgetTaxForm) : Get the Tax Statement as JSON or PDF for a single tax document for the customer.
+- Transactions [get-transactions](https://akoya-app.netlify.app/#/http/x-redirect/%24e%2FTransactions%2Fget-transactions) : The transactions API allows you to retrieve transaction history of consumer-permissioned accounts.
+
+### Models
+
+- [Account information](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FAccount%2520information) 
+- [Payment Network Supported by Account](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FPayment%2520Network%2520Supported%2520by%2520Account) : This provides details required to execute a transaction against the account within the payment network
+- [Address](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FAddress) : U.
+- [Investment Balance List](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FInvestment%2520Balance%2520List) 
+- [Business name](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FBusiness%2520name) : Name 1, Name 2
+- [Business Income Statement](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FBusiness%2520Income%2520Statement) : Business Income Statement for IRS Form 1040 Schedule C
+- [AnnuityAccount](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FAnnuityAccount) : Annuity Account
+- [Annuity balances](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FAnnuity%2520balances) : Data elements included with balances specific to annuity accounts
+- [Code and Amount](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FCode%2520and%2520Amount) : Code and amount pair used on IRS W-2, K-1, etc.
+- [Contribution Entity](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FContribution%2520Entity) : Describes how new contributions are distributed among the available securities.
+- [Coverage Month](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FCoverage%2520Month) : Month enumeration used on forms 1095-A and 1095-C
+- [Gain or loss from cryptocurrency transaction](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FGain%2520or%2520loss%2520from%2520cryptocurrency%2520transaction) : Tax information for a single cryptocurrency transaction.
+- [Cryptocurrency Tax Statement list](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FCryptocurrency%2520Tax%2520Statement%2520list) : Array of cryptocurrency gains and losses
+- [Currency Entity](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FCurrency%2520Entity) : Indicates the currency code used by the account.
+- [customer](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2Fcustomer) : Represents a customer (end-user)
+- [DebtSecurity Entity](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FDebtSecurity%2520Entity) : Information about the debt security specific to the type of security
+- [DepositAccount](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FDepositAccount) : Deposit Account
+- [Deposit balances](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FDeposit%2520balances) : Data elements included with balances specific to deposit accounts
+- [depositTransaction](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FdepositTransaction) : Deposit transaction
+- [Date and Amount](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FDate%2520and%2520Amount) : Date, description, and amount.
+- [Description and Amount](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FDescription%2520and%2520Amount) : Description and amount pair used on IRS W-2, etc.
+- [equityGrant](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FequityGrant) 
+- [Error](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FError) : An error entity which can be used at the API level for error responses or at the account level to indicate a problem specific to a particular account.
+- [Expired Option Type](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FExpired%2520Option%2520Type) : Type of expired stock option.
+- [Farm Income Statement](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FFarm%2520Income%2520Statement) : Farm Income Statement for IRS Form 1040 Schedule F
+- [Farm Rental Income Statement](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FFarm%2520Rental%2520Income%2520Statement) : Farm Rental Income Statement for IRS Form 4835
+- [FiAttribute Entity](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FFiAttribute%2520Entity) : Data provider-specific attribute
+- [Form 1042-S Agent](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FForm%25201042-S%2520Agent) : One of various persons or businesses involved in Form 1042-S reporting.
+- [Form 1042-S Recipient](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FForm%25201042-S%2520Recipient) : Recipient for Form 1042-S, Boxes 13a-j, 13l
+- [HATEOAS Link](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FHATEOAS%2520Link) : REST application constraint (Hypermedia As The Engine Of Application State)
+- [Health Insurance Coverage](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FHealth%2520Insurance%2520Coverage) : Used on Form 1095-A Part III
+- [Health Insurance Covered Individual](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FHealth%2520Insurance%2520Covered%2520Individual) : Used on Form 1095-B Part IV and Form 1095-C Part III
+- [Health Insurance Marketplace Covered Individual](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FHealth%2520Insurance%2520Marketplace%2520Covered%2520Individual) : Used on Form 1095-A Part II
+- [An investment holding](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FAn%2520investment%2520holding) 
+- [Individual name](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FIndividual%2520name) : First name, middle initial, last name, suffix fields
+- [InsuranceAccount](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FInsuranceAccount) : Insurance Account
+- [Insurance balances](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FInsurance%2520balances) : Data elements included with balances specific to insurance accounts
+- [insuranceTransaction](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FinsuranceTransaction) : Insurance transactions
+- [interactionType](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FinteractionType) 
+- [InvestmentAccount](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FInvestmentAccount) : Investment Account
+- [Investment balances](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FInvestment%2520balances) : Data elements included with balances specific to investment accounts
+- [InvestmentLoan Entity](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FInvestmentLoan%2520Entity) : Information about an investment loan.
+- [Investment account with all details](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FInvestment%2520account%2520with%2520all%2520details) : Data elements included with the investment product
+- [investmentTransaction](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FinvestmentTransaction) : Investment Transactions
+- [Investment Sale Type](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FInvestment%2520Sale%2520Type) : Type of investment sale
+- [ISO 3166 Country Code](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FISO%25203166%2520Country%2520Code) : ISO 3166-1 alpha-2 codes as of April 5, 2023, from officially assigned Country Codes on [ISO Online Browsing Platform](https://www.
+- [LineItem](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FLineItem) 
+- [LoanAccount](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FLoanAccount) : Loan Account
+- [Loan balances](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FLoan%2520balances) : Data elements included with balances specific to loan accounts
+- [Loan Transaction](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FLoan%2520Transaction) : Loan Transaction
+- [Local Tax Withholding](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FLocal%2520Tax%2520Withholding) : Income in a locality and its tax withholding
+- [Line of credit balances](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FLine%2520of%2520credit%2520balances) : Data elements included with balances specific to line of credit accounts
+- [LocTransaction](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FLocTransaction) : A line of credit transaction of type
+- [Mode](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FMode) : Indicates format of returned data.
+- [Month Abbreviation](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FMonth%2520Abbreviation) : Used by MonthAmount
+- [Month and Amount](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FMonth%2520and%2520Amount) : Month and amount pair used on IRS Form 1099-K, etc.
+- [MutualFundSecurity Entity](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FMutualFundSecurity%2520Entity) : Information about the mutual fund security specific to the type of security
+- [Name and Address](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FName%2520and%2520Address) : Individual or business name with address
+- [Name, Address and Phone](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FName%252C%2520Address%2520and%2520Phone) : Contact phone number with name and address
+- [Offer of Health Insurance Coverage](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FOffer%2520of%2520Health%2520Insurance%2520Coverage) : Health insurance coverage offer for part II of IRS Form 1095-C
+- [OpenOrder Entity](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FOpenOrder%2520Entity) : Information on an open order.
+- [OptionSecurity Entity](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FOptionSecurity%2520Entity) : Information about the option security specific to the type of security
+- [OtherSecurity Entity](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FOtherSecurity%2520Entity) : Information about the security specific to the type of security
+- [paginatedArray](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FpaginatedArray) 
+- [PaymentDetails](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FPaymentDetails) : Payment details for some transactions
+- [PensionSource Entity](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FPensionSource%2520Entity) : Information about a pension source.
+- [Rental Income Statement](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FRental%2520Income%2520Statement) : Rental Income Statement for IRS Form 1040 Schedule E
+- [Result Type](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FResult%2520Type) : Flag to indicate if you want a lightweight array of metadata (AccountDescriptor or Tax or Operations) or full item details (Account or a Tax subclass or Availability details).
+- [Royalty Income Statement](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FRoyalty%2520Income%2520Statement) : Royalty Income Statement for IRS Form 1040 Schedule E
+- [Sale Proceeds Type](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FSale%2520Proceeds%2520Type) : Gross or net proceeds.
+- [Sale Term Type](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FSale%2520Term%2520Type) : Long or short term.
+- [Security Detail, IRS Form 1099-B](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FSecurity%2520Detail%252C%2520IRS%2520Form%25201099-B) : Tax information for a single security transaction
+- [State and Local Tax Withholding](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FState%2520and%2520Local%2520Tax%2520Withholding) : Income in a state and/or locality and its or their tax withholding
+- [State Code](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FState%2520Code) : The codes for U.
+- [State Tax Withholding](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FState%2520Tax%2520Withholding) : Income in a state and its tax withholding
+- [StockSecurity Entity](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FStockSecurity%2520Entity) : Information about the stock security specific to the type of security
+- [SweepSecurity Entity](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FSweepSecurity%2520Entity) : Information about the sweep security specific to the type of security
+- [taxlotsResponse](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FtaxlotsResponse) 
+- [Tax Data](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FTax%2520Data) : Tax data container for API requests and responses
+- [Type Data Type](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FType%2520Data%2520Type) : Specify which data type is requested using TaxDataTypeQuery parameter, to receive 'JSON' formatted tax data in `forms` property or PDF-formatted tax data encoded as Base64 in `pdf` property ('BASE64_PDF').
+- [Type Form Type](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FType%2520Form%2520Type) : Tax form entity name e.
+- [transaction](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2Ftransaction) : Transaction elements
+- [Transactions Entity](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FTransactions%2520Entity) : Optionally paginated array of transactions
+- [Tax](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FTax) : Base entity for all IRS Tax forms
+- [Form 1041 K-1](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FForm%25201041%2520K-1) : Beneficiary's Share of Income, Deductions, Credits, etc.
+- [Form 1042-S](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FForm%25201042-S) : Foreign Person's U.
+- [Form 1065 K-1](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FForm%25201065%2520K-1) : Partner's Share of Income, Deductions, Credits, etc.
+- [Form 1095-A](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FForm%25201095-A) : Health Insurance Marketplace Statement, to Recipient (boxes 4-5, 12-15)
+- [Form 1095-B](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FForm%25201095-B) : Health Coverage, from Issuer (boxes 16-22) to Responsible Individual (boxes 1-2, 4-7 as recipient)
+- [Form 1095-C](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FForm%25201095-C) : Employer-Provided Health Insurance Offer and Coverage, from Employer (boxes 7-13 as issuer) to Employee (boxes 1-6 as recipient)
+- [Form 1097-BTC](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FForm%25201097-BTC) : Bond Tax Credit, from FORM 1097-BTC ISSUER (1st-2nd boxes) to RECIPIENT (3rd-6th boxes)
+- [Form 1098](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FForm%25201098) : Mortgage Interest Statement, from RECIPIENT/LENDER (1st-2nd boxes as issuer) to PAYER/BORROWER (3rd-6th boxes as recipient)
+- [Form 1098-C](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FForm%25201098-C) : Contributions of Motor Vehicles, Boats, and Airplanes, from DONEE (1st-2nd boxes as issuer) to DONOR (3rd-6th boxes as recipient)
+- [Form 1098-E](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FForm%25201098-E) : Student Loan Interest Statement, from RECIPIENT/LENDER (1st-2nd boxes as issuer) to PAYER/BORROWER (3rd-4th boxes as recipient)
+- [Form 1098-MA](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FForm%25201098-MA) : Mortgage Assistance Payments, from FILER (1st-2nd boxes as issuer) to HOMEOWNER (3rd-6th boxes as recipient)
+- [Form 1098-Q](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FForm%25201098-Q) : Qualifying Longevity Annuity Contract Information, from ISSUER (1st box) to PARTICIPANT (3rd-5th boxes as recipient)
+- [Form 1098-T](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FForm%25201098-T) : Tuition Statement, from FILER (1st-2nd boxes as issuer) to STUDENT (3rd-6th boxes as recipient)
+- [Form 1099-A](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FForm%25201099-A) : Acquisition or Abandonment of Secured Property, from LENDER (1st-2nd boxes as issuer) to BORROWER (3rd-4th boxes as recipient)
+- [Form 1099-B](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FForm%25201099-B) : Proceeds From Broker and Barter Exchange Transactions, from PAYER (1st-2nd boxes as issuer) to RECIPIENT (3rd-6th boxes)
+- [Form 1099-C](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FForm%25201099-C) : Cancellation of Debt, from CREDITOR (1st-2nd boxes as issuer) to DEBTOR (3rd-4th boxes as recipient)
+- [Form 1099-CAP](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FForm%25201099-CAP) : Changes in Corporate Control and Capital Structure, from CORPORATION (1st-2nd boxes as issuer) to SHAREHOLDER (3rd-4th boxes as recipient)
+- [Form 1099 Consolidated Statement](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FForm%25201099%2520Consolidated%2520Statement) : Various tax-related items reported on consolidated brokerage or mutual fund statements not on the base 1099 forms.
+- [Form 1099-DIV](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FForm%25201099-DIV) : Dividends and Distributions, from PAYER (1st-2nd boxes as issuer) to RECIPIENT (3rd-6th boxes)
+- [Form 1099-G](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FForm%25201099-G) : Certain Government Payments, from PAYER (1st-2nd boxes as issuer) to RECIPIENT (3rd-4th boxes)
+- [Form 1099-H](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FForm%25201099-H) : Health Coverage Tax Credit (HCTC) Advance Payments, from ISSUER/PROVIDER (1st-2nd boxes as issuer) to RECIPIENT (3rd-4th boxes)
+- [Form 1099-INT](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FForm%25201099-INT) : Interest Income, from PAYER (1st-2nd boxes as issuer) to RECIPIENT (3rd-4th boxes)
+- [Form 1099-K](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FForm%25201099-K) : Merchant Card and Third-Party Network Payments, from FILER (1st, 7th boxes as issuer) to PAYEE (4th, 8th boxes as recipient)
+- [Form 1099-LS](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FForm%25201099-LS) : Reportable Life Insurance Sale, from ACQUIRER (1st-2nd boxes as issuer) to PAYMENT RECIPIENT (3rd-4th boxes)
+- [Form 1099-LTC](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FForm%25201099-LTC) : Long-Term Care and Accelerated Death Benefits, from PAYER (1st-2nd boxes as issuer) to POLICY HOLDER (3rd-4th boxes as recipient)
+- [Form 1099-MISC](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FForm%25201099-MISC) : Miscellaneous Income, from PAYER (1st-2nd boxes as issuer) to RECIPIENT (3rd-4th boxes)
+- [Form 1099-NEC](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FForm%25201099-NEC) : Non-Employee Compensation, from PAYER (1st-2nd boxes as issuer) to RECIPIENT (3rd-4th boxes)
+- [Form 1099-OID](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FForm%25201099-OID) : Original Issue Discount, from PAYER (1st-2nd boxes as issuer) to RECIPIENT (3rd-4th boxes)
+- [Form 1099-PATR](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FForm%25201099-PATR) : Taxable Distributions Received From Cooperatives, from PAYER (1st-2nd boxes as issuer) to RECIPIENT (3rd-4th boxes)
+- [Form 1099-Q](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FForm%25201099-Q) : Payments From Qualified Education Programs, from PAYER/TRUSTEE (1st-2nd boxes as issuer) to RECIPIENT (3rd-4th boxes)
+- [Form 1099-QA](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FForm%25201099-QA) : Distributions From ABLE Accounts, from PAYER (1st-2nd boxes as issuer) to RECIPIENT (3rd-4th boxes)
+- [Form 1099-R](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FForm%25201099-R) : Distributions from Pensions, Annuities, Retirement or Profit-Sharing Plans, IRAs, Insurance Contracts, etc.
+- [Form 1099-S](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FForm%25201099-S) : Proceeds From Real Estate Transactions, from FILER (1st-2nd boxes as issuer) to TRANSFEROR (3rd-4th boxes as recipient)
+- [Form 1099-SA](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FForm%25201099-SA) : Distributions From an HSA, Archer MSA, or Medicare Advantage MSA, from PAYER (1st-2nd boxes as issuer) to RECIPIENT (3rd-4th boxes)
+- [Form 1099-SB](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FForm%25201099-SB) : Seller's Investment in Life Insurance Contract, from ISSUER (1st-2nd boxes) to SELLER (3rd-4th boxes as recipient)
+- [Form 1120-S K-1](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FForm%25201120-S%2520K-1) : Shareholder's Share of Income, Deductions, Credits, etc.
+- [Form 2439](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FForm%25202439) : Notice to Shareholder of Undistributed Long-Term Capital Gains, from RIC or REIT (1st-2nd boxes as issuer) to Shareholder (3rd-4th boxes as recipient)
+- [Form 3921](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FForm%25203921) : Exercise of an Incentive Stock Option Under Section 422(b), from TRANSFEROR (1st-2nd boxes as issuer) to EMPLOYEE (3rd-4th boxes as recipient)
+- [Form 3922](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FForm%25203922) : Transfer of Stock Acquired Through an Employee Stock Purchase Plan under Section 423(c), from CORPORATION (1st-2nd boxes as issuer) to EMPLOYEE (3rd-4th boxes as recipient)
+- [Form 5498](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FForm%25205498) : IRA Contribution Information, from TRUSTEE/ISSUER (1st-2nd boxes as issuer) to PARTICIPANT (3rd-4th boxes as recipient)
+- [Form 5498-ESA](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FForm%25205498-ESA) : Coverdell ESA Contribution Information, from TRUSTEE/ISSUER (1st-2nd boxes as issuer) to BENEFICIARY (3rd-4th boxes as recipient)
+- [Form 5498-QA](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FForm%25205498-QA) : ABLE Account Contribution Information, from ISSUER (1st-2nd boxes) to BENEFICIARY (3rd-4th boxes as recipient)
+- [Form 5498-SA](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FForm%25205498-SA) : HSA, Archer MSA, or Medicare Advantage (MA) MSA Information, from TRUSTEE (1st-2nd boxes as issuer) to PARTICIPANT (3rd-4th boxes as recipient)
+- [Tax Form Attribute](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FTax%2520Form%2520Attribute) : An additional tax form attribute for use when a defined field is not available
+- [Tax Party](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FTax%2520Party) : Legal entity for issuer or recipient, used across all tax forms
+- [Tax Party Type](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FTax%2520Party%2520Type) : Whether the tax legal entity is a business or an individual
+- [Tax Refund Direct Deposit](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FTax%2520Refund%2520Direct%2520Deposit) : IRS Form 8888 Direct Deposit Information
+- [Tax Statement](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FTax%2520Statement) : Tax statement containing one or more tax forms
+- [Tax Statement List](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FTax%2520Statement%2520List) : Tax statement list containing one or more tax statements
+- [Form W-2](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FForm%2520W-2) : Wage and Tax Statement, from Employer (boxes b-c as issuer) to Employee (boxes a, e-f as recipient)
+- [Form W-2c](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FForm%2520W-2c) : IRS form W-2c, Corrected Wage and Tax Statement, from Employer (boxes a-b as issuer) to Employee (boxes d, h-i as recipient)
+- [Form W-2G](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FForm%2520W-2G) : Certain Gambling Winnings, from PAYER (1st-3rd boxes as issuer) to WINNER (boxes 4th-6th and 9 as recipient)
+- [Telephone Number](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FTelephone%2520Number) : Standard for international phone numbers
+- [Telephone Number Plus Extension](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FTelephone%2520Number%2520Plus%2520Extension) : A telephone number that can contain optional text for an arbitrary length telephone extension number
+- [Telephone Number Type](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FTelephone%2520Number%2520Type) : Purpose or type of telephone number
+- [Vesting Entity](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FVesting%2520Entity) : Provides the past, present, and future vesting schedule and percentages.
+- [Account Contact entity](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FAccount%2520Contact%2520entity) : Contact information for the account
+- [Account Holder entity](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FAccount%2520Holder%2520entity) : Extends `Customer` and adds a `relationship` field to define the customer's relationship with an account
+- [Account Holder Relationship](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FAccount%2520Holder%2520Relationship) : Types of relationships between accounts and holders.
+- [Business Customer entity](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FBusiness%2520Customer%2520entity) : Customers that are commercial in nature are affiliated with a business entity
+- [customerName](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FcustomerName) 
+- [acceptMediaType](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FacceptMediaType) 
+- [Account](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FAccount) 
+- [Account Holder Relationship2](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FAccount%2520Holder%2520Relationship2) : Customer's relationship to the account
+- [Account1](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FAccount1) 
+- [Account2](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FAccount2) 
+- [Account3](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FAccount3) 
+- [Account4](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FAccount4) 
+- [Account5](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FAccount5) 
+- [Account6](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FAccount6) 
+- [account7](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2Faccount7) 
+- [Account8](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FAccount8) 
+- [Account61](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FAccount61) 
+- [Account62](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FAccount62) 
+- [Account63](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FAccount63) 
+- [Account64](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FAccount64) 
+- [Account65](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FAccount65) 
+- [accountCategory](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FaccountCategory) : The account category of the insurance account.
+- [Action](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FAction) : HTTP Method to use for the request
+- [Address1](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FAddress1) : Issuer or recipient address
+- [address2](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2Faddress2) 
+- [Address3](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FAddress3) : Box 1a, Physical address of property (street, city, state, ZIP code)
+- [Address5](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FAddress5) : Box 8, Address of property securing mortgage
+- [Akoya Account Info product](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FAkoya%2520Account%2520Info%2520product) 
+- [annualIncreaseType](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FannualIncreaseType) 
+- [annunityProductType](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FannunityProductType) 
+- [annunityValueBasis](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FannunityValueBasis) 
+- [Array of account payment networks](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FArray%2520of%2520account%2520payment%2520networks) 
+- [AssetClass](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FAssetClass) 
+- [AssetClass1](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FAssetClass1) 
+- [balances](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2Fbalances) 
+- [balanceType](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FbalanceType) : ASSET (positive transaction amount increases balance), LIABILITY (positive transaction amount decreases balance)
+- [BalanceType1](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FBalanceType1) : The type of an investment balance.
+- [Business name1](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FBusiness%2520name1) : Business issuer or recipient name
+- [CallType](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FCallType) : Type of next call
+- [CompoundingPeriod](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FCompoundingPeriod) 
+- [CouponMatureFrequency](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FCouponMatureFrequency) : When coupons mature
+- [Coverage Month1](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FCoverage%2520Month1) : Month of coverage
+- [Coverage Month2](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FCoverage%2520Month2) : Month
+- [Cryptocurrency Tax Statement list1](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FCryptocurrency%2520Tax%2520Statement%2520list1) : Cryptocurrency Tax Statement list
+- [debitCreditMemo](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FdebitCreditMemo) : Akoya will ensure that this is correctly populated with one of DEBIT or CREDIT and matches the sign of the status field.
+- [DebtClass](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FDebtClass) : Classification of debt
+- [DebtType](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FDebtType) : Debt type
+- [deliveryAddress](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FdeliveryAddress) 
+- [domicile](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2Fdomicile) : The country and region of the business customer's location
+- [Error2](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FError2) : Present if an error was encountered while retrieving this form
+- [Expired Option Type1](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FExpired%2520Option%2520Type1) : To indicate gain or loss resulted from option expiration.
+- [FiAssetClass](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FFiAssetClass) 
+- [Form 1042-S Agent1](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FForm%25201042-S%2520Agent1) : Boxes 12a-i, Withholding agent
+- [Form 1042-S Recipient1](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FForm%25201042-S%2520Recipient1) : Boxes 13a-j, 13l, Recipient for Form 1042-S
+- [Form 1042-S Agent2](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FForm%25201042-S%2520Agent2) : Boxes 14a-b, Primary Withholding Agent
+- [Form 1042-S2](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FForm%25201042-S2) : Foreign Person's U.
+- [Form 1095-A2](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FForm%25201095-A2) : Health Insurance Marketplace Statement
+- [Form 1095-B2](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FForm%25201095-B2) : Health Coverage
+- [Form 1095-C2](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FForm%25201095-C2) : Employer-Provided Health Insurance Offer and Coverage
+- [Form 1097-BTC2](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FForm%25201097-BTC2) : Bond Tax Credit
+- [Form 1098-C2](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FForm%25201098-C2) : Contributions of Motor Vehicles, Boats, and Airplanes
+- [Form 1098-E2](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FForm%25201098-E2) : Student Loan Interest Statement
+- [Form 1098-MA2](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FForm%25201098-MA2) : Mortgage Assistance Payments
+- [Form 1098-Q2](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FForm%25201098-Q2) : Qualifying Longevity Annuity Contract Information
+- [Form 1098-T2](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FForm%25201098-T2) : Tuition Statement
+- [Form 1099-A2](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FForm%25201099-A2) : Acquisition or Abandonment of Secured Property
+- [Form 1099-B2](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FForm%25201099-B2) : Proceeds From Broker and Barter Exchange Transactions
+- [Form 1099-C2](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FForm%25201099-C2) : Cancellation of Debt
+- [Form 1099-CAP2](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FForm%25201099-CAP2) : Changes in Corporate Control and Capital Structure
+- [Form 1099 Consolidated Statement2](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FForm%25201099%2520Consolidated%2520Statement2) : Consolidated Statement for combined IRS Form 1099s
+- [Form 1099-DIV2](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FForm%25201099-DIV2) : Dividends and Distributions
+- [Form 1099-G2](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FForm%25201099-G2) : Certain Government Payments
+- [Form 1099-H2](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FForm%25201099-H2) : Health Coverage Tax Credit (HCTC) Advance Payments
+- [Form 1099-INT2](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FForm%25201099-INT2) : Interest Income
+- [Form 1099-K2](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FForm%25201099-K2) : Merchant Card and Third-Party Network Payments
+- [Form 1099-LS2](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FForm%25201099-LS2) : Reportable Life Insurance Sale
+- [Form 1099-LTC2](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FForm%25201099-LTC2) : Long-Term Care and Accelerated Death Benefits
+- [Form 1099-MISC2](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FForm%25201099-MISC2) : Miscellaneous Income
+- [Form 1099-NEC2](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FForm%25201099-NEC2) : Nonemployee Compensation
+- [Form 1099-OID2](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FForm%25201099-OID2) : Original Issue Discount
+- [Form 1099-PATR2](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FForm%25201099-PATR2) : Taxable Distributions Received From Cooperatives
+- [Form 1099-Q2](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FForm%25201099-Q2) : Payments From Qualified Education Programs
+- [Form 1099-QA2](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FForm%25201099-QA2) : Distributions From ABLE Accounts
+- [Form 1099-R2](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FForm%25201099-R2) : Distributions from Pensions, Annuities, Retirement or Profit-Sharing Plans, IRAs, Insurance Contracts, etc.
+- [Form 1099-S2](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FForm%25201099-S2) : Proceeds From Real Estate Transactions
+- [Form 1099-SA2](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FForm%25201099-SA2) : Distributions From an HSA, Archer MSA, or Medicare Advantage MSA
+- [Form 1099-SB2](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FForm%25201099-SB2) : Seller's Investment in Life Insurance Contract
+- [Form 5498-ESA2](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FForm%25205498-ESA2) : Coverdell ESA Contribution Information
+- [Form 5498-QA2](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FForm%25205498-QA2) : ABLE Account Contribution Information
+- [Form 5498-SA2](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FForm%25205498-SA2) : HSA, Archer MSA, or Medicare Advantage MSA Information
+- [Form 1042-S Agent3](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FForm%25201042-S%2520Agent3) : Boxes 15a-i, Intermediary or flow thru entity
+- [Form 1042-S Agent4](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FForm%25201042-S%2520Agent4) : Boxes 16a-e, Payer
+- [Form 1041 K-12](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FForm%25201041%2520K-12) : Beneficiary's Share of Income, Deductions, Credits, etc.
+- [Form 1065 K-12](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FForm%25201065%2520K-12) : Partner's Share of Income, Deductions, Credits, etc.
+- [Form 1120-S K-12](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FForm%25201120-S%2520K-12) : Shareholder's Share of Income, Deductions, Credits, etc.
+- [Form 10982](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FForm%252010982) : Mortgage Interest Statement
+- [Form 24392](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FForm%252024392) : Notice to Shareholder of Undistributed Long-Term Capital Gains
+- [Form 39212](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FForm%252039212) : Exercise of an Incentive Stock Option Under Section 422(b)
+- [Form 39222](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FForm%252039222) : Transfer of Stock Acquired Through an Employee Stock Purchase Plan under Section 423(c)
+- [Form 54982](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FForm%252054982) : IRA Contribution Information
+- [Form W-2c2](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FForm%2520W-2c2) : IRS form W-2c, Corrected Wage and Tax Statement
+- [Form W-2G2](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FForm%2520W-2G2) : Certain Gambling Winnings
+- [Form W-21](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FForm%2520W-21) : Boxes 1-20 of Previously reported Wage and Tax Statement
+- [Form W-22](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FForm%2520W-22) : Boxes 1-20 of Correct information Wage and Tax Statement
+- [Form W-24](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FForm%2520W-24) : Wage and Tax Statement
+- [frequency](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2Ffrequency) 
+- [HeldInAccount](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FHeldInAccount) : Sub-account
+- [holding](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2Fholding) 
+- [HoldingSubType](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FHoldingSubType) 
+- [holdingType](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FholdingType) 
+- [incomeType](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FincomeType) : Type of investment income.
+- [Individual name1](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FIndividual%2520name1) : Name of responsible individual
+- [Individual name3](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FIndividual%2520name3) : Box g, Employee's previously reported name
+- [Individual name4](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FIndividual%2520name4) : Individual issuer or recipient name
+- [industryCode](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FindustryCode) : Industry code and type
+- [interestRateType](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FinterestRateType) : The type of interest rate.
+- [inv401kSource](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2Finv401kSource) : For 401(k) accounts, source of money for this order.
+- [inv401kSurce](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2Finv401kSurce) : Source for money for this security.
+- [inv401kSource1](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2Finv401kSource1) : Source of money.
+- [investments](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2Finvestments) 
+- [ISO 3166 Country Code2](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FISO%25203166%2520Country%2520Code2) : Country code
+- [items](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2Fitems) 
+- [links](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2Flinks) 
+- [loanPaymentFrequency](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FloanPaymentFrequency) 
+- [Local Tax Withholding1](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FLocal%2520Tax%2520Withholding1) : Amount of local income tax withheld, if any
+- [location type](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2Flocation%2520type) : The location type of an address
+- [Month Abbreviation1](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FMonth%2520Abbreviation1) : Month
+- [MutualFundType](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FMutualFundType) : Mutual fund type
+- [name](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2Fname) : The end-user's name
+- [Name and Address1](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FName%2520and%2520Address1) : Insured name and address
+- [Name, Address and Phone1](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FName%252C%2520Address%2520and%2520Phone1) : Acquirer's information contact name, street address, city or town, state or province, country, ZIP or foreign postal code, and telephone no.
+- [Name, Address and Phone2](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FName%252C%2520Address%2520and%2520Phone2) : Issuer's information contact name, street address, city or town, state or province, country, ZIP or foreign postal code, and telephone no.
+- [Next](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FNext) 
+- [optionType](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FoptionType) 
+- [OrderDuration](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FOrderDuration) : This order is good for DAY, GOODTILLCANCEL, IMMEDIATE
+- [OrderType](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FOrderType) : Type of order.
+- [PaymentFrequency](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FPaymentFrequency) 
+- [paymentFrequency1](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FpaymentFrequency1) 
+- [periodCertainGuarantee](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FperiodCertainGuarantee) 
+- [Phone type](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FPhone%2520type) 
+- [policyPremiumTerm](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FpolicyPremiumTerm) : he payment term for the premium.
+- [positionType](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FpositionType) 
+- [positionType2](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FpositionType2) : LONG, SHORT.
+- [PostionType](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FPostionType) : LONG, SHORT.
+- [Prev](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FPrev) 
+- [Sale Proceeds Type1](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FSale%2520Proceeds%2520Type1) : Box 6, Reported to IRS: GROSS or NET
+- [Sale Term Type2](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FSale%2520Term%2520Type2) : Box 2, LONG or SHORT
+- [Sale Term Type3](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FSale%2520Term%2520Type3) : LONG or SHORT (1099-B box 2)
+- [secured](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2Fsecured) : How the option is secured
+- [securityIdType](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FsecurityIdType) : Security identifier type
+- [securityIdType3](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FsecurityIdType3) : Security identifier type.
+- [securityType](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FsecurityType) 
+- [State and Local Tax Withholding1](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FState%2520and%2520Local%2520Tax%2520Withholding1) : Box 17, State and Local tax withholding
+- [State and Local Tax Withholding2](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FState%2520and%2520Local%2520Tax%2520Withholding2) : State and Local tax withholding, from IRS's IRIS schema
+- [State Code2](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FState%2520Code2) : State two-digit code
+- [State Tax Withholding2](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FState%2520Tax%2520Withholding2) : Amount of state income tax withheld
+- [status](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2Fstatus) : The status of an account.
+- [status1](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2Fstatus1) : AUTHORIZATION, MEMO, PENDING, or POSTED
+- [stockType](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FstockType) 
+- [subAccount](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FsubAccount) 
+- [subAccountFund](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FsubAccountFund) : From which account money came in.
+- [SubAccountSec](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FSubAccountSec) : Sub-account security type.
+- [Tax Party Type2](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FTax%2520Party%2520Type2) : Type of issuer or recipient legal entity, as "BUSINESS" or "INDIVIDUAL".
+- [Tax Party1](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FTax%2520Party1) : Recipient's name, address, phone, and TIN.
+- [Tax Party2](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FTax%2520Party2) : Box C, Fiduciary's name and address
+- [Tax Party3](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FTax%2520Party3) : Boxes 10-15, Employer EIN, name and address
+- [Tax Party4](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FTax%2520Party4) : Box 6, If other than TRANSFEROR, name, address and tin of corporation whose stock is being transferred
+- [Tax Party6](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FTax%2520Party6) : Issuer's name, address, phone, and TIN.
+- [Tax Party7](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FTax%2520Party7) : Recipient's name, address, phone, and TIN.
+- [Tax Party8](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FTax%2520Party8) : Issuer's name, address, phone, and TIN.
+- [Tax Refund Direct Deposit2](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FTax%2520Refund%2520Direct%2520Deposit2) : Tax refund direct deposit information
+- [Tax Statement1](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FTax%2520Statement1) : The TaxStatement json for a single tax document containing one or more tax reporting forms for the customer
+- [Tax Statement2](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FTax%2520Statement2) : The TaxStatement json for a single tax document containing one or more tax reporting forms for the customer, one or more of which contain an Error
+- [TaxLot](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FTaxLot) 
+- [telephone](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2Ftelephone) 
+- [Telephone Number Plus Extension1](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FTelephone%2520Number%2520Plus%2520Extension1) : Phone number
+- [Telephone Number Plus Extension2](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FTelephone%2520Number%2520Plus%2520Extension2) : PSE's phone number
+- [Telephone Number Plus Extension4](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FTelephone%2520Number%2520Plus%2520Extension4) : Issuer or recipient telephone number
+- [Telephone Number Type2](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FTelephone%2520Number%2520Type2) : Type of phone number: HOME, BUSINESS, CELL, FAX
+- [Transaction1](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FTransaction1) 
+- [Transaction11](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FTransaction11) 
+- [Transaction12](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FTransaction12) 
+- [Transaction13](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FTransaction13) 
+- [Transaction14](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FTransaction14) 
+- [TransactionReason](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FTransactionReason) : Reason for this transaction; CALL (the debt was called), SELL (the debt was sold), MATURITY (the debt reached maturity)
+- [TransactionType](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FTransactionType) : DepositTransaction Type
+- [transactionType1](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FtransactionType1) : InsuranceTransaction Type
+- [TransactionType2](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FTransactionType2) : InvestmentTransaction Type
+- [TransactionType3](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FTransactionType3) : LoanTransaction Type
+- [TransactionType4](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FTransactionType4) : LocTransaction Type
+- [TransferAction](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FTransferAction) : Transfer direction.
+- [Type](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FType) 
+- [Type Data Type1](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FType%2520Data%2520Type1) : Whether this `application/json` tax form response contains data in `forms` property (as 'JSON' format) or `pdf` property (as 'BASE64_PDF' format)
+- [Type Form Type2](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FType%2520Form%2520Type2) : Enumerated name of the tax form entity e.
+- [UnitType](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FUnitType) : Type of unit.
+- [UnitType1](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FUnitType1) 
+- [version](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2Fversion) 
+- [vesting](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2Fvesting) 
+- [TransactionsEntityTransactions](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FTransactionsEntityTransactions) : This is a container for AnyOf cases.
+- [AkoyaAccountInfoProductAccounts](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FAkoyaAccountInfoProductAccounts) : This is a container for AnyOf cases.
+- [BalancesAccounts](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FBalancesAccounts) : This is a container for AnyOf cases.
+- [InvestmentsAccounts](https://akoya-app.netlify.app/#/http/x-redirect/%24m%2FInvestmentsAccounts) : This is a container for AnyOf cases.

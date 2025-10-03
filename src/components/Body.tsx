@@ -7,6 +7,7 @@ export default function Body({ accessToken }: { accessToken?: string }) {
   useEffect(() => {
     const externalJs = "https://dxjs.apimatic.io/v7/static/js/portal.v7.js";
     const localJs = "/static/js/portal.js";
+    const recipeScript = "/static/scripts/recipes/recipes.js";
     const localCss = "/static/css/portal.css";
 
     if (!document.querySelector(`link[href="${localCss}"]`)) {
@@ -18,19 +19,27 @@ export default function Body({ accessToken }: { accessToken?: string }) {
 
     const loadScript = (src: string) =>
       new Promise<void>((resolve, reject) => {
-        const s = document.createElement("script");
-        s.src = src;
-        s.defer = true;
-        s.async = false;
-        s.onload = () => resolve();
-        s.onerror = (e) => reject(e);
-        document.body.appendChild(s);
-      });
+      const s = document.createElement("script");
+      s.src = src;
+      s.defer = true;
+      s.async = false;
+      s.onload = () => {
+        console.log(`[Body] Script loaded: ${src}`);
+        resolve();
+      };
+      s.onerror = (e) => {
+        console.error(`[Body] Failed to load script: ${src}`, e);
+        reject(e);
+      };
+      document.body.appendChild(s);
+      console.log(`[Body] Appended script: ${src}`);
+    });
 
     (async () => {
       try {
         await loadScript(externalJs);
         await loadScript(localJs);
+        await loadScript(recipeScript);
 
         (window as any).APIMaticDevPortal?.ready(async (portal: any) => {
           console.log("[Portal] Ready event fired");

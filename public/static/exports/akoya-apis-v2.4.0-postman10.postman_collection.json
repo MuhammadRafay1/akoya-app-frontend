@@ -1,90 +1,90 @@
 {
-  "id": "b4ccd376-fad6-4577-bbbe-4ecb67c2b020",
+  "id": "c2f2d449-0d4c-4829-bf68-f567d0f276f4",
   "name": "Akoya APIs v2.4.0",
   "description": "Akoya product APIs for data access. Default servers are set for the Akoya sandbox environment.\n\nAkoya APIs include the following updates:\n\n- v2.4.0\n  - Added Tax product\n- v2.3.0\n  - Removed erroneous `accountId` query param from Taxlots endpoint\n  - Added TaxLots endpoint\n- v2.2.2\n  - Added mode query parameter to Account Information, Balances, Investments, and Transactions to support standard mode.\n  - Edited callouts for Account Holder endpoint\n- v2.2.1\n  - Fixed typo in `accountIds` query parameter for `/accounts-info`, `/balances`, `/accounts`\n  - Added security method for `Account holder information` to bear token. Missing method defaulted to basic auth.\n  - Added examples and descriptions to some schemas\n  - Added HTTP status `429` FDX error `1207`.\n- v2.2 Additions\n  - Added optional `x-akoya-interaction-type` header to all endpoints to specify if a request is part of a batch process\n  - Update of tags to organize endpoints by Akoya product\n  - `206` response added to `/accounts-info`, `/balances`, `/accounts`\n- v2.1 New Statements product and Customers product updated with additional endpoint, `Account holder information`.\n- v2.0 Launch of Akoya products: Account Info, Balances, Investments, Transactions, Payments, Customers.",
   "order": [],
   "folders": [
     {
-      "id": "a4d5edb2-e888-4804-9c45-10858ec8e816",
+      "id": "4843ce80-cb33-4b19-b830-bfa1b401e970",
       "name": "Account information",
       "description": "Account information",
       "order": [
-        "7310b2cc-7b0d-4e77-a425-3ee4e85e45e2"
+        "30530479-573b-46e4-95d2-ccdac3842e16"
       ],
-      "collection_id": "b4ccd376-fad6-4577-bbbe-4ecb67c2b020"
+      "collection_id": "c2f2d449-0d4c-4829-bf68-f567d0f276f4"
     },
     {
-      "id": "229070f8-64de-4447-910b-7f3d5b599c5c",
+      "id": "8592c1da-4c30-4b22-9468-19afeb4b118f",
       "name": "Balances",
       "description": "Balances",
       "order": [
-        "2c5f4a27-293b-4feb-8a2a-04904e4331f1"
+        "73f97183-3b78-4cc2-9975-3625bcbf2a7d"
       ],
-      "collection_id": "b4ccd376-fad6-4577-bbbe-4ecb67c2b020"
+      "collection_id": "c2f2d449-0d4c-4829-bf68-f567d0f276f4"
     },
     {
-      "id": "1174a506-ef2a-458d-a51e-6587140079b2",
+      "id": "9fa36390-8413-4608-97b6-e3231d8327d8",
       "name": "Customers",
       "description": "Customers",
       "order": [
-        "30180fba-e08e-4ed7-b47b-7094e0c45c49",
-        "23b6b799-78d7-4ba4-8a59-8de0220b7978"
+        "3ce00aa8-48b1-4166-8368-012e8ddc06ce",
+        "8529c8df-1a74-4609-8c30-73da63cddd30"
       ],
-      "collection_id": "b4ccd376-fad6-4577-bbbe-4ecb67c2b020"
+      "collection_id": "c2f2d449-0d4c-4829-bf68-f567d0f276f4"
     },
     {
-      "id": "802ebe4c-4b65-44db-b89d-e10a173f7a41",
+      "id": "e16174fd-3a29-4a89-aa42-c73b0e5f5f53",
       "name": "Investments",
       "description": "Investments",
       "order": [
-        "5701c2ab-bee4-4396-bd8d-b9b58d5f695e",
-        "dcfe5508-d726-40a8-9ed3-57ab5c944355"
+        "0208b0c8-92b3-40a1-b970-6215102271cc",
+        "6c67998d-faef-4af0-ae52-d79f6d8e563c"
       ],
-      "collection_id": "b4ccd376-fad6-4577-bbbe-4ecb67c2b020"
+      "collection_id": "c2f2d449-0d4c-4829-bf68-f567d0f276f4"
     },
     {
-      "id": "dedb7635-e617-4931-aec7-b5564adb4cba",
+      "id": "1cb456db-f88b-473f-8204-f36271681457",
       "name": "Payments",
       "description": "Payments",
       "order": [
-        "efca041c-4c30-49b7-b0c8-9c4d22a8cf41"
+        "d0a77df0-9d58-4363-82a1-7ba07b4a2f4a"
       ],
-      "collection_id": "b4ccd376-fad6-4577-bbbe-4ecb67c2b020"
+      "collection_id": "c2f2d449-0d4c-4829-bf68-f567d0f276f4"
     },
     {
-      "id": "9db4a8b2-2911-4d28-80c3-757960d36f8a",
+      "id": "eceed311-04c9-43ac-a14a-e9157287af20",
       "name": "Statements",
       "description": "Statements",
       "order": [
-        "71b8d5ba-7b97-448a-97b5-a5d408bd8312",
-        "b47de17c-0c65-4201-8f9f-d985e9513736"
+        "8ac66359-4663-48f0-802b-1c8ee76cdff4",
+        "50471e6a-eaa5-40dc-bce8-fbec24da319f"
       ],
-      "collection_id": "b4ccd376-fad6-4577-bbbe-4ecb67c2b020"
+      "collection_id": "c2f2d449-0d4c-4829-bf68-f567d0f276f4"
     },
     {
-      "id": "f3680cbc-5f8d-42ac-a1b9-47d56924a6d2",
+      "id": "85fd330e-2456-4994-b6e1-ead698409bda",
       "name": "Tax (beta)",
       "description": "Tax (beta)",
       "order": [
-        "4c2ebd8f-d023-48cd-b8d5-f3222048607a",
-        "6ceb5b61-1da3-420b-8723-61e39d236b04"
+        "aa50eee0-4ade-4084-b270-345976f0410b",
+        "d000af52-56f0-4fdb-a68d-56ff5fd6cad4"
       ],
-      "collection_id": "b4ccd376-fad6-4577-bbbe-4ecb67c2b020"
+      "collection_id": "c2f2d449-0d4c-4829-bf68-f567d0f276f4"
     },
     {
-      "id": "0dd59764-bd40-4c5d-a993-3da1a75cabc1",
+      "id": "69565f34-5ca9-4bd5-ae31-52c4d00f1be8",
       "name": "Transactions",
       "description": "Transactions",
       "order": [
-        "070791a6-0102-4692-9684-4727d72214ff"
+        "96ecf5f4-ceba-47d2-b845-f35fab3fee97"
       ],
-      "collection_id": "b4ccd376-fad6-4577-bbbe-4ecb67c2b020"
+      "collection_id": "c2f2d449-0d4c-4829-bf68-f567d0f276f4"
     }
   ],
   "requests": [
     {
-      "folder": "a4d5edb2-e888-4804-9c45-10858ec8e816",
-      "id": "7310b2cc-7b0d-4e77-a425-3ee4e85e45e2",
+      "folder": "4843ce80-cb33-4b19-b830-bfa1b401e970",
+      "id": "30530479-573b-46e4-95d2-ccdac3842e16",
       "name": "get-accounts-info",
       "dataDisabled": false,
       "descriptionFormat": "markdown",
@@ -102,8 +102,8 @@
       "url": "{{default}}/accounts-info/:version/:providerId?mode=raw",
       "responses": [
         {
-          "request": "7310b2cc-7b0d-4e77-a425-3ee4e85e45e2",
-          "id": "287222c3-d8a9-432a-bbf2-931e293289c6",
+          "request": "30530479-573b-46e4-95d2-ccdac3842e16",
+          "id": "1b44e5bb-9bd7-47dc-8a63-d74b2c00da31",
           "name": "Response_200",
           "status": "OK",
           "responseCode": {
@@ -115,7 +115,7 @@
             {
               "name": "x-akoya-interaction-id",
               "key": "x-akoya-interaction-id",
-              "value": "x-akoya-interaction-id76",
+              "value": "x-akoya-interaction-id95",
               "description": "Akoya supplied interaction id used for logging and error tracking"
             },
             {
@@ -129,8 +129,8 @@
           "rawDataType": "text"
         },
         {
-          "request": "7310b2cc-7b0d-4e77-a425-3ee4e85e45e2",
-          "id": "d2797ed9-482b-45e8-8bfd-3a9cb868d34b",
+          "request": "30530479-573b-46e4-95d2-ccdac3842e16",
+          "id": "fc81456e-7886-4ef5-8e63-1fc5e7dd7283",
           "name": "Response_405",
           "status": "Method Not Allowed",
           "responseCode": {
@@ -142,7 +142,7 @@
             {
               "name": "x-akoya-interaction-id",
               "key": "x-akoya-interaction-id",
-              "value": "x-akoya-interaction-id62",
+              "value": "x-akoya-interaction-id0",
               "description": "Akoya supplied interaction id used for logging and error tracking"
             },
             {
@@ -156,7 +156,7 @@
           "rawDataType": "text"
         }
       ],
-      "collectionId": "b4ccd376-fad6-4577-bbbe-4ecb67c2b020",
+      "collectionId": "c2f2d449-0d4c-4829-bf68-f567d0f276f4",
       "queryParams": [
         {
           "key": "mode",
@@ -189,8 +189,8 @@
       ]
     },
     {
-      "folder": "229070f8-64de-4447-910b-7f3d5b599c5c",
-      "id": "2c5f4a27-293b-4feb-8a2a-04904e4331f1",
+      "folder": "8592c1da-4c30-4b22-9468-19afeb4b118f",
+      "id": "73f97183-3b78-4cc2-9975-3625bcbf2a7d",
       "name": "get-balances",
       "dataDisabled": false,
       "descriptionFormat": "markdown",
@@ -208,8 +208,8 @@
       "url": "{{default}}/balances/:version/:providerId?mode=raw",
       "responses": [
         {
-          "request": "2c5f4a27-293b-4feb-8a2a-04904e4331f1",
-          "id": "8b7b5238-f3d5-4c59-ade5-a5d5fe4dab3b",
+          "request": "73f97183-3b78-4cc2-9975-3625bcbf2a7d",
+          "id": "c5109cfc-cfaf-4024-9fd2-f024480846b6",
           "name": "Response_200",
           "status": "OK",
           "responseCode": {
@@ -221,7 +221,7 @@
             {
               "name": "x-akoya-interaction-id",
               "key": "x-akoya-interaction-id",
-              "value": "x-akoya-interaction-id82",
+              "value": "x-akoya-interaction-id74",
               "description": "Akoya supplied interaction id used for logging and error tracking"
             },
             {
@@ -235,8 +235,8 @@
           "rawDataType": "text"
         },
         {
-          "request": "2c5f4a27-293b-4feb-8a2a-04904e4331f1",
-          "id": "508775be-7546-473b-b2ba-8fddc8f4d48e",
+          "request": "73f97183-3b78-4cc2-9975-3625bcbf2a7d",
+          "id": "1436740c-1df1-4a4a-aa29-bda46fefcf29",
           "name": "Response_405",
           "status": "Method Not Allowed",
           "responseCode": {
@@ -248,7 +248,7 @@
             {
               "name": "x-akoya-interaction-id",
               "key": "x-akoya-interaction-id",
-              "value": "x-akoya-interaction-id21",
+              "value": "x-akoya-interaction-id66",
               "description": "Akoya supplied interaction id used for logging and error tracking"
             },
             {
@@ -262,7 +262,7 @@
           "rawDataType": "text"
         }
       ],
-      "collectionId": "b4ccd376-fad6-4577-bbbe-4ecb67c2b020",
+      "collectionId": "c2f2d449-0d4c-4829-bf68-f567d0f276f4",
       "queryParams": [
         {
           "key": "mode",
@@ -295,8 +295,8 @@
       ]
     },
     {
-      "folder": "1174a506-ef2a-458d-a51e-6587140079b2",
-      "id": "30180fba-e08e-4ed7-b47b-7094e0c45c49",
+      "folder": "9fa36390-8413-4608-97b6-e3231d8327d8",
+      "id": "3ce00aa8-48b1-4166-8368-012e8ddc06ce",
       "name": "customer-info",
       "dataDisabled": false,
       "descriptionFormat": "markdown",
@@ -314,8 +314,8 @@
       "url": "{{default}}/customers/:version/:providerId/current",
       "responses": [
         {
-          "request": "30180fba-e08e-4ed7-b47b-7094e0c45c49",
-          "id": "dabaf5e4-5877-422c-b66a-41d5d2860f5b",
+          "request": "3ce00aa8-48b1-4166-8368-012e8ddc06ce",
+          "id": "b15c738a-5e3f-439d-a482-297b5ba6fbf4",
           "name": "Response_200",
           "status": "OK",
           "responseCode": {
@@ -327,7 +327,7 @@
             {
               "name": "x-akoya-interaction-id",
               "key": "x-akoya-interaction-id",
-              "value": "x-akoya-interaction-id38",
+              "value": "x-akoya-interaction-id42",
               "description": "Akoya tracking id for logging or support."
             },
             {
@@ -336,13 +336,13 @@
             }
           ],
           "mime": "application/json",
-          "text": "{\n  \"customerId\": \"customerId3\",\n  \"name\": {\n    \"first\": \"first4\",\n    \"middle\": \"middle83\",\n    \"last\": \"last51\",\n    \"prefix\": \"prefix36\",\n    \"suffix\": \"suffix66\",\n    \"company\": \"company23\",\n    \"addresses\": [\n      {\n        \"type\": \"HOME\",\n        \"line1\": \"line124\",\n        \"line2\": \"line222\",\n        \"line3\": \"line335\",\n        \"city\": \"city57\",\n        \"state\": \"state98\",\n        \"postalCode\": \"postalCode26\",\n        \"country\": \"country54\"\n      }\n    ],\n    \"telephones\": [\n      {\n        \"number\": \"number21\",\n        \"type\": \"HOME\",\n        \"country\": \"country69\"\n      }\n    ],\n    \"email\": [\n      \"email36\"\n    ],\n    \"accounts\": [\n      {\n        \"accountId\": \"accountId22\",\n        \"relationship\": \"PRIMARY_JOINT_TENANTS\"\n      }\n    ]\n  }\n}",
+          "text": "{\n  \"customerId\": \"customerId16\",\n  \"name\": {\n    \"first\": \"first51\",\n    \"middle\": \"middle67\",\n    \"last\": \"last14\",\n    \"prefix\": \"prefix88\",\n    \"suffix\": \"suffix26\",\n    \"company\": \"company81\",\n    \"addresses\": [\n      {\n        \"type\": \"HOME\",\n        \"line1\": \"line196\",\n        \"line2\": \"line256\",\n        \"line3\": \"line348\",\n        \"city\": \"city53\",\n        \"state\": \"state35\",\n        \"postalCode\": \"postalCode62\",\n        \"country\": \"country38\"\n      }\n    ],\n    \"telephones\": [\n      {\n        \"number\": \"number38\",\n        \"type\": \"CELL\",\n        \"country\": \"country26\"\n      }\n    ],\n    \"email\": [\n      \"email38\"\n    ],\n    \"accounts\": [\n      {\n        \"accountId\": \"accountId32\",\n        \"relationship\": \"BUSINESS\"\n      }\n    ]\n  }\n}",
           "language": "Text",
           "rawDataType": "text"
         },
         {
-          "request": "30180fba-e08e-4ed7-b47b-7094e0c45c49",
-          "id": "5423d835-891d-4e57-843f-e34b8fce1c21",
+          "request": "3ce00aa8-48b1-4166-8368-012e8ddc06ce",
+          "id": "1397ba03-e5fc-410b-9f68-23e0cb7bad2a",
           "name": "Response_405",
           "status": "Method Not Allowed",
           "responseCode": {
@@ -354,7 +354,7 @@
             {
               "name": "x-akoya-interaction-id",
               "key": "x-akoya-interaction-id",
-              "value": "x-akoya-interaction-id46",
+              "value": "x-akoya-interaction-id44",
               "description": "Akoya supplied interaction id used for logging and error tracking"
             },
             {
@@ -368,7 +368,7 @@
           "rawDataType": "text"
         }
       ],
-      "collectionId": "b4ccd376-fad6-4577-bbbe-4ecb67c2b020",
+      "collectionId": "c2f2d449-0d4c-4829-bf68-f567d0f276f4",
       "queryParams": [],
       "headerData": [
         {
@@ -395,8 +395,8 @@
       ]
     },
     {
-      "folder": "1174a506-ef2a-458d-a51e-6587140079b2",
-      "id": "23b6b799-78d7-4ba4-8a59-8de0220b7978",
+      "folder": "9fa36390-8413-4608-97b6-e3231d8327d8",
+      "id": "8529c8df-1a74-4609-8c30-73da63cddd30",
       "name": "get-account-holder",
       "dataDisabled": false,
       "descriptionFormat": "markdown",
@@ -415,8 +415,8 @@
       "url": "{{default}}/contacts/:version/:providerId/:accountId",
       "responses": [
         {
-          "request": "23b6b799-78d7-4ba4-8a59-8de0220b7978",
-          "id": "60fe2327-6203-44d8-b53b-d25de17a7447",
+          "request": "8529c8df-1a74-4609-8c30-73da63cddd30",
+          "id": "6511f62d-862f-4b2a-a47c-eab43e7183f9",
           "name": "Response_200",
           "status": "OK",
           "responseCode": {
@@ -428,7 +428,7 @@
             {
               "name": "x-akoya-interaction-id",
               "key": "x-akoya-interaction-id",
-              "value": "x-akoya-interaction-id31",
+              "value": "x-akoya-interaction-id96",
               "description": "Akoya supplied interaction id used for logging and error tracking"
             },
             {
@@ -442,8 +442,8 @@
           "rawDataType": "text"
         },
         {
-          "request": "23b6b799-78d7-4ba4-8a59-8de0220b7978",
-          "id": "87106b60-df67-4bc8-9183-ecb80444c0ef",
+          "request": "8529c8df-1a74-4609-8c30-73da63cddd30",
+          "id": "a60782c0-8239-43ac-b485-3312524553af",
           "name": "Response_405",
           "status": "Method Not Allowed",
           "responseCode": {
@@ -455,7 +455,7 @@
             {
               "name": "x-akoya-interaction-id",
               "key": "x-akoya-interaction-id",
-              "value": "x-akoya-interaction-id87",
+              "value": "x-akoya-interaction-id14",
               "description": "Akoya supplied interaction id used for logging and error tracking"
             },
             {
@@ -469,7 +469,7 @@
           "rawDataType": "text"
         }
       ],
-      "collectionId": "b4ccd376-fad6-4577-bbbe-4ecb67c2b020",
+      "collectionId": "c2f2d449-0d4c-4829-bf68-f567d0f276f4",
       "queryParams": [],
       "headerData": [
         {
@@ -501,8 +501,8 @@
       ]
     },
     {
-      "folder": "802ebe4c-4b65-44db-b89d-e10a173f7a41",
-      "id": "5701c2ab-bee4-4396-bd8d-b9b58d5f695e",
+      "folder": "e16174fd-3a29-4a89-aa42-c73b0e5f5f53",
+      "id": "0208b0c8-92b3-40a1-b970-6215102271cc",
       "name": "get-accounts",
       "dataDisabled": false,
       "descriptionFormat": "markdown",
@@ -520,8 +520,8 @@
       "url": "{{default}}/accounts/:version/:providerId?mode=raw",
       "responses": [
         {
-          "request": "5701c2ab-bee4-4396-bd8d-b9b58d5f695e",
-          "id": "f3eda8ba-b464-4b1f-8e80-469bab4b56d2",
+          "request": "0208b0c8-92b3-40a1-b970-6215102271cc",
+          "id": "a5ffe4cc-d2db-42cd-9e00-cadb8d699857",
           "name": "Response_200",
           "status": "OK",
           "responseCode": {
@@ -533,7 +533,7 @@
             {
               "name": "x-akoya-interaction-id",
               "key": "x-akoya-interaction-id",
-              "value": "x-akoya-interaction-id56",
+              "value": "x-akoya-interaction-id77",
               "description": "Akoya supplied interaction id used for logging and error tracking"
             },
             {
@@ -547,8 +547,8 @@
           "rawDataType": "text"
         },
         {
-          "request": "5701c2ab-bee4-4396-bd8d-b9b58d5f695e",
-          "id": "7e8c0c95-468a-403c-972c-b0547ca25ada",
+          "request": "0208b0c8-92b3-40a1-b970-6215102271cc",
+          "id": "44149151-2dba-4028-9593-59c403bde0a0",
           "name": "Response_405",
           "status": "Method Not Allowed",
           "responseCode": {
@@ -560,7 +560,7 @@
             {
               "name": "x-akoya-interaction-id",
               "key": "x-akoya-interaction-id",
-              "value": "x-akoya-interaction-id33",
+              "value": "x-akoya-interaction-id42",
               "description": "Akoya supplied interaction id used for logging and error tracking"
             },
             {
@@ -574,7 +574,7 @@
           "rawDataType": "text"
         }
       ],
-      "collectionId": "b4ccd376-fad6-4577-bbbe-4ecb67c2b020",
+      "collectionId": "c2f2d449-0d4c-4829-bf68-f567d0f276f4",
       "queryParams": [
         {
           "key": "mode",
@@ -607,8 +607,8 @@
       ]
     },
     {
-      "folder": "802ebe4c-4b65-44db-b89d-e10a173f7a41",
-      "id": "dcfe5508-d726-40a8-9ed3-57ab5c944355",
+      "folder": "e16174fd-3a29-4a89-aa42-c73b0e5f5f53",
+      "id": "6c67998d-faef-4af0-ae52-d79f6d8e563c",
       "name": "get-taxlots",
       "dataDisabled": false,
       "descriptionFormat": "markdown",
@@ -622,14 +622,14 @@
       "pathVariables": {
         "version": "v2",
         "providerId": "mikomo",
-        "accountId": "accountId71",
-        "holdingId": "holdingId73"
+        "accountId": "accountId21",
+        "holdingId": "holdingId54"
       },
-      "url": "{{default}}/taxlots/:version/:providerId/:accountId/:holdingId?offset=offset58&limit=limit53",
+      "url": "{{default}}/taxlots/:version/:providerId/:accountId/:holdingId?offset=offset37&limit=limit89",
       "responses": [
         {
-          "request": "dcfe5508-d726-40a8-9ed3-57ab5c944355",
-          "id": "be51d2ee-c876-4edd-8e95-4657da152681",
+          "request": "6c67998d-faef-4af0-ae52-d79f6d8e563c",
+          "id": "4bc41d4b-7f46-458b-9f67-220e8e1d3e86",
           "name": "Response_200",
           "status": "OK",
           "responseCode": {
@@ -641,7 +641,7 @@
             {
               "name": "x-akoya-interaction-id",
               "key": "x-akoya-interaction-id",
-              "value": "x-akoya-interaction-id10",
+              "value": "x-akoya-interaction-id19",
               "description": "Akoya supplied interaction id used for logging and error tracking"
             },
             {
@@ -655,8 +655,8 @@
           "rawDataType": "text"
         },
         {
-          "request": "dcfe5508-d726-40a8-9ed3-57ab5c944355",
-          "id": "bc19f293-b900-48cf-bd21-ceea435816ca",
+          "request": "6c67998d-faef-4af0-ae52-d79f6d8e563c",
+          "id": "b54c5058-fa55-406f-b4f4-c979a6a385f7",
           "name": "Response_405",
           "status": "Method Not Allowed",
           "responseCode": {
@@ -668,7 +668,7 @@
             {
               "name": "x-akoya-interaction-id",
               "key": "x-akoya-interaction-id",
-              "value": "x-akoya-interaction-id17",
+              "value": "x-akoya-interaction-id53",
               "description": "Akoya supplied interaction id used for logging and error tracking"
             },
             {
@@ -682,16 +682,16 @@
           "rawDataType": "text"
         }
       ],
-      "collectionId": "b4ccd376-fad6-4577-bbbe-4ecb67c2b020",
+      "collectionId": "c2f2d449-0d4c-4829-bf68-f567d0f276f4",
       "queryParams": [
         {
           "key": "offset",
-          "value": "offset58",
+          "value": "offset37",
           "description": "The number of items to skip before the first in the response. The default is 0"
         },
         {
           "key": "limit",
-          "value": "limit53",
+          "value": "limit89",
           "description": "The maximum number of items to be returned in the response. The default is 50"
         }
       ],
@@ -719,19 +719,19 @@
         },
         {
           "key": "accountId",
-          "value": "accountId71",
+          "value": "accountId21",
           "description": "Account Identifier"
         },
         {
           "key": "holdingId",
-          "value": "holdingId73",
+          "value": "holdingId54",
           "description": "Consumer's holdingId under investments"
         }
       ]
     },
     {
-      "folder": "dedb7635-e617-4931-aec7-b5564adb4cba",
-      "id": "efca041c-4c30-49b7-b0c8-9c4d22a8cf41",
+      "folder": "1cb456db-f88b-473f-8204-f36271681457",
+      "id": "d0a77df0-9d58-4363-82a1-7ba07b4a2f4a",
       "name": "payment-networks",
       "dataDisabled": false,
       "descriptionFormat": "markdown",
@@ -750,8 +750,8 @@
       "url": "{{default}}/payments/:version/:providerId/:accountIdpayment-networks",
       "responses": [
         {
-          "request": "efca041c-4c30-49b7-b0c8-9c4d22a8cf41",
-          "id": "9b23b1be-277c-4185-9531-6de62cb605e8",
+          "request": "d0a77df0-9d58-4363-82a1-7ba07b4a2f4a",
+          "id": "21d27bc9-9354-40e5-bf11-f4284002bec5",
           "name": "Response_200",
           "status": "OK",
           "responseCode": {
@@ -763,7 +763,7 @@
             {
               "name": "x-akoya-interaction-id",
               "key": "x-akoya-interaction-id",
-              "value": "x-akoya-interaction-id88",
+              "value": "x-akoya-interaction-id67",
               "description": "Akoya supplied interaction id used for logging and error tracking"
             },
             {
@@ -777,8 +777,8 @@
           "rawDataType": "text"
         },
         {
-          "request": "efca041c-4c30-49b7-b0c8-9c4d22a8cf41",
-          "id": "0921d166-34ad-40af-be56-de4bd386753c",
+          "request": "d0a77df0-9d58-4363-82a1-7ba07b4a2f4a",
+          "id": "9451c9ed-3a79-413c-9194-b2b7ded859bc",
           "name": "Response_405",
           "status": "Method Not Allowed",
           "responseCode": {
@@ -790,7 +790,7 @@
             {
               "name": "x-akoya-interaction-id",
               "key": "x-akoya-interaction-id",
-              "value": "x-akoya-interaction-id16",
+              "value": "x-akoya-interaction-id90",
               "description": "Akoya supplied interaction id used for logging and error tracking"
             },
             {
@@ -804,7 +804,7 @@
           "rawDataType": "text"
         }
       ],
-      "collectionId": "b4ccd376-fad6-4577-bbbe-4ecb67c2b020",
+      "collectionId": "c2f2d449-0d4c-4829-bf68-f567d0f276f4",
       "queryParams": [],
       "headerData": [
         {
@@ -836,8 +836,8 @@
       ]
     },
     {
-      "folder": "9db4a8b2-2911-4d28-80c3-757960d36f8a",
-      "id": "71b8d5ba-7b97-448a-97b5-a5d408bd8312",
+      "folder": "eceed311-04c9-43ac-a14a-e9157287af20",
+      "id": "8ac66359-4663-48f0-802b-1c8ee76cdff4",
       "name": "get-statement-list",
       "dataDisabled": false,
       "descriptionFormat": "markdown",
@@ -856,8 +856,8 @@
       "url": "{{default}}/statements/:version/:providerId/:accountId?startTime=2020-03-30&endTime=2021-03-30&offset=0&limit=50",
       "responses": [
         {
-          "request": "71b8d5ba-7b97-448a-97b5-a5d408bd8312",
-          "id": "a4d56506-2335-4931-9883-10dbd3587c29",
+          "request": "8ac66359-4663-48f0-802b-1c8ee76cdff4",
+          "id": "34803609-31f8-433f-bcf8-b4c4079dd06a",
           "name": "Response_200",
           "status": "OK",
           "responseCode": {
@@ -869,7 +869,7 @@
             {
               "name": "x-akoya-interaction-id",
               "key": "x-akoya-interaction-id",
-              "value": "x-akoya-interaction-id70",
+              "value": "x-akoya-interaction-id5",
               "description": "Akoya supplied interaction id used for logging and error tracking"
             },
             {
@@ -878,13 +878,13 @@
             }
           ],
           "mime": "application/json",
-          "text": "{\n  \"links\": {\n    \"next\": {\n      \"href\": \"href90\"\n    },\n    \"prev\": {\n      \"href\": \"href38\"\n    }\n  }\n}",
+          "text": "{\n  \"links\": {\n    \"next\": {\n      \"href\": \"href28\"\n    },\n    \"prev\": {\n      \"href\": \"href0\"\n    }\n  }\n}",
           "language": "Text",
           "rawDataType": "text"
         },
         {
-          "request": "71b8d5ba-7b97-448a-97b5-a5d408bd8312",
-          "id": "b65bf346-567a-4818-95e9-417a7c58ea90",
+          "request": "8ac66359-4663-48f0-802b-1c8ee76cdff4",
+          "id": "b678af54-aaca-45db-b289-ddca8ca8a06b",
           "name": "Response_405",
           "status": "Method Not Allowed",
           "responseCode": {
@@ -896,7 +896,7 @@
             {
               "name": "x-akoya-interaction-id",
               "key": "x-akoya-interaction-id",
-              "value": "x-akoya-interaction-id25",
+              "value": "x-akoya-interaction-id56",
               "description": "Akoya supplied interaction id used for logging and error tracking"
             },
             {
@@ -910,7 +910,7 @@
           "rawDataType": "text"
         }
       ],
-      "collectionId": "b4ccd376-fad6-4577-bbbe-4ecb67c2b020",
+      "collectionId": "c2f2d449-0d4c-4829-bf68-f567d0f276f4",
       "queryParams": [
         {
           "key": "startTime",
@@ -963,8 +963,8 @@
       ]
     },
     {
-      "folder": "9db4a8b2-2911-4d28-80c3-757960d36f8a",
-      "id": "b47de17c-0c65-4201-8f9f-d985e9513736",
+      "folder": "eceed311-04c9-43ac-a14a-e9157287af20",
+      "id": "50471e6a-eaa5-40dc-bce8-fbec24da319f",
       "name": "get-statements",
       "dataDisabled": false,
       "descriptionFormat": "markdown",
@@ -984,8 +984,8 @@
       "url": "{{default}}/statements/:version/:providerId/:accountId/:statementId",
       "responses": [
         {
-          "request": "b47de17c-0c65-4201-8f9f-d985e9513736",
-          "id": "922c30ae-be0e-43f9-9436-77fb0cf9ee1a",
+          "request": "50471e6a-eaa5-40dc-bce8-fbec24da319f",
+          "id": "0592ea4b-7654-4a96-8095-6670264905ed",
           "name": "Response_200",
           "status": "OK - An image of an account statement",
           "responseCode": {
@@ -997,12 +997,12 @@
             {
               "name": "Accept",
               "key": "Accept",
-              "value": "Accept84"
+              "value": "Accept19"
             },
             {
               "name": "x-akoya-interaction-id",
               "key": "x-akoya-interaction-id",
-              "value": "x-akoya-interaction-id39",
+              "value": "x-akoya-interaction-id45",
               "description": "Akoya supplied interaction id used for logging and error tracking"
             },
             {
@@ -1016,8 +1016,8 @@
           "rawDataType": "text"
         },
         {
-          "request": "b47de17c-0c65-4201-8f9f-d985e9513736",
-          "id": "fe16bdc8-d636-441f-8fe5-f577ba483c64",
+          "request": "50471e6a-eaa5-40dc-bce8-fbec24da319f",
+          "id": "b1b3aa74-987c-4ddb-9875-314b1004427c",
           "name": "Response_200",
           "status": "OK - An image of an account statement",
           "responseCode": {
@@ -1029,12 +1029,12 @@
             {
               "name": "Accept",
               "key": "Accept",
-              "value": "Accept0"
+              "value": "Accept30"
             },
             {
               "name": "x-akoya-interaction-id",
               "key": "x-akoya-interaction-id",
-              "value": "x-akoya-interaction-id28",
+              "value": "x-akoya-interaction-id27",
               "description": "Akoya supplied interaction id used for logging and error tracking"
             },
             {
@@ -1048,8 +1048,72 @@
           "rawDataType": "text"
         },
         {
-          "request": "b47de17c-0c65-4201-8f9f-d985e9513736",
-          "id": "3f21aea7-3486-4605-99cb-75c4e36fbb0e",
+          "request": "50471e6a-eaa5-40dc-bce8-fbec24da319f",
+          "id": "99e90a02-0e58-4f30-81fe-bdccaec3e2ff",
+          "name": "Response_200",
+          "status": "OK - An image of an account statement",
+          "responseCode": {
+            "code": 200,
+            "name": "200",
+            "detail": "OK - An image of an account statement"
+          },
+          "headers": [
+            {
+              "name": "Accept",
+              "key": "Accept",
+              "value": "Accept71"
+            },
+            {
+              "name": "x-akoya-interaction-id",
+              "key": "x-akoya-interaction-id",
+              "value": "x-akoya-interaction-id53",
+              "description": "Akoya supplied interaction id used for logging and error tracking"
+            },
+            {
+              "key": "Content-Type",
+              "value": "image/jpeg"
+            }
+          ],
+          "mime": "image/jpeg",
+          "text": "any",
+          "language": "Text",
+          "rawDataType": "text"
+        },
+        {
+          "request": "50471e6a-eaa5-40dc-bce8-fbec24da319f",
+          "id": "3966bd02-76c2-4c5a-92f6-e0107fe6fb44",
+          "name": "Response_200",
+          "status": "OK - An image of an account statement",
+          "responseCode": {
+            "code": 200,
+            "name": "200",
+            "detail": "OK - An image of an account statement"
+          },
+          "headers": [
+            {
+              "name": "Accept",
+              "key": "Accept",
+              "value": "Accept15"
+            },
+            {
+              "name": "x-akoya-interaction-id",
+              "key": "x-akoya-interaction-id",
+              "value": "x-akoya-interaction-id12",
+              "description": "Akoya supplied interaction id used for logging and error tracking"
+            },
+            {
+              "key": "Content-Type",
+              "value": "image/tiff"
+            }
+          ],
+          "mime": "image/tiff",
+          "text": "any",
+          "language": "Text",
+          "rawDataType": "text"
+        },
+        {
+          "request": "50471e6a-eaa5-40dc-bce8-fbec24da319f",
+          "id": "438a5a36-b5e0-4f52-92e1-027127226f94",
           "name": "Response_200",
           "status": "OK - An image of an account statement",
           "responseCode": {
@@ -1066,71 +1130,7 @@
             {
               "name": "x-akoya-interaction-id",
               "key": "x-akoya-interaction-id",
-              "value": "x-akoya-interaction-id24",
-              "description": "Akoya supplied interaction id used for logging and error tracking"
-            },
-            {
-              "key": "Content-Type",
-              "value": "image/jpeg"
-            }
-          ],
-          "mime": "image/jpeg",
-          "text": "any",
-          "language": "Text",
-          "rawDataType": "text"
-        },
-        {
-          "request": "b47de17c-0c65-4201-8f9f-d985e9513736",
-          "id": "d46bbd4d-8fa8-49b3-b3b2-948f2648d293",
-          "name": "Response_200",
-          "status": "OK - An image of an account statement",
-          "responseCode": {
-            "code": 200,
-            "name": "200",
-            "detail": "OK - An image of an account statement"
-          },
-          "headers": [
-            {
-              "name": "Accept",
-              "key": "Accept",
-              "value": "Accept92"
-            },
-            {
-              "name": "x-akoya-interaction-id",
-              "key": "x-akoya-interaction-id",
-              "value": "x-akoya-interaction-id66",
-              "description": "Akoya supplied interaction id used for logging and error tracking"
-            },
-            {
-              "key": "Content-Type",
-              "value": "image/tiff"
-            }
-          ],
-          "mime": "image/tiff",
-          "text": "any",
-          "language": "Text",
-          "rawDataType": "text"
-        },
-        {
-          "request": "b47de17c-0c65-4201-8f9f-d985e9513736",
-          "id": "0826655f-025b-4dc3-869b-b84ea119fa91",
-          "name": "Response_200",
-          "status": "OK - An image of an account statement",
-          "responseCode": {
-            "code": 200,
-            "name": "200",
-            "detail": "OK - An image of an account statement"
-          },
-          "headers": [
-            {
-              "name": "Accept",
-              "key": "Accept",
-              "value": "Accept88"
-            },
-            {
-              "name": "x-akoya-interaction-id",
-              "key": "x-akoya-interaction-id",
-              "value": "x-akoya-interaction-id62",
+              "value": "x-akoya-interaction-id53",
               "description": "Akoya supplied interaction id used for logging and error tracking"
             },
             {
@@ -1144,8 +1144,8 @@
           "rawDataType": "text"
         },
         {
-          "request": "b47de17c-0c65-4201-8f9f-d985e9513736",
-          "id": "2ce4e446-6816-4b06-b841-3c232fc01e59",
+          "request": "50471e6a-eaa5-40dc-bce8-fbec24da319f",
+          "id": "d9fbbb15-2135-458a-ad56-8db164c6bdb5",
           "name": "Response_302",
           "status": "Statement is available at specified location. URL is returned via the `Location` HTTP header",
           "responseCode": {
@@ -1157,7 +1157,7 @@
             {
               "name": "x-akoya-interaction-id",
               "key": "x-akoya-interaction-id",
-              "value": "x-akoya-interaction-id38",
+              "value": "x-akoya-interaction-id64",
               "description": "Akoya supplied interaction id used for logging and error tracking"
             },
             {
@@ -1166,13 +1166,13 @@
             }
           ],
           "mime": "text/plain",
-          "text": "response30287",
+          "text": "response30234",
           "language": "Text",
           "rawDataType": "text"
         },
         {
-          "request": "b47de17c-0c65-4201-8f9f-d985e9513736",
-          "id": "8e160029-e587-4ba0-9746-9e49e8f0a12d",
+          "request": "50471e6a-eaa5-40dc-bce8-fbec24da319f",
+          "id": "e71cf401-2cd1-468c-8e47-4138904f3827",
           "name": "Response_400",
           "status": "Statement is processing and is not yet available.",
           "responseCode": {
@@ -1184,7 +1184,7 @@
             {
               "name": "x-akoya-interaction-id",
               "key": "x-akoya-interaction-id",
-              "value": "x-akoya-interaction-id50",
+              "value": "x-akoya-interaction-id75",
               "description": "Akoya supplied interaction id used for logging and error tracking"
             },
             {
@@ -1198,7 +1198,7 @@
           "rawDataType": "text"
         }
       ],
-      "collectionId": "b4ccd376-fad6-4577-bbbe-4ecb67c2b020",
+      "collectionId": "c2f2d449-0d4c-4829-bf68-f567d0f276f4",
       "queryParams": [],
       "headerData": [
         {
@@ -1235,8 +1235,8 @@
       ]
     },
     {
-      "folder": "f3680cbc-5f8d-42ac-a1b9-47d56924a6d2",
-      "id": "4c2ebd8f-d023-48cd-b8d5-f3222048607a",
+      "folder": "85fd330e-2456-4994-b6e1-ead698409bda",
+      "id": "aa50eee0-4ade-4084-b270-345976f0410b",
       "name": "taxFormsSearch",
       "dataDisabled": false,
       "descriptionFormat": "markdown",
@@ -1249,13 +1249,13 @@
       },
       "pathVariables": {
         "version": "v2",
-        "providerId": "providerId47"
+        "providerId": "providerId20"
       },
-      "url": "{{default}}/tax-forms/:version/:providerId?taxYear=2024&taxForms=%5B%22Tax1099Div%22%2C%22Tax1099Int%22%5D&accountId=accountId21",
+      "url": "{{default}}/tax-forms/:version/:providerId?taxYear=2024&taxForms=%5B%22Tax1099Div%22%2C%22Tax1099Int%22%5D&accountId=accountId84",
       "responses": [
         {
-          "request": "4c2ebd8f-d023-48cd-b8d5-f3222048607a",
-          "id": "32dcd190-42e1-46cd-bf3d-9a13dd3d32c6",
+          "request": "aa50eee0-4ade-4084-b270-345976f0410b",
+          "id": "bb72775d-8c94-4996-a68b-f32ce4ed8ff5",
           "name": "Response_200",
           "status": "Array of all the tax document data and tax form images available for the customer matching search criteria",
           "responseCode": {
@@ -1281,8 +1281,8 @@
           "rawDataType": "text"
         },
         {
-          "request": "4c2ebd8f-d023-48cd-b8d5-f3222048607a",
-          "id": "5a93d970-0e83-4fdf-be59-c48af601535e",
+          "request": "aa50eee0-4ade-4084-b270-345976f0410b",
+          "id": "a28da14b-5b03-42fa-acc0-b16a5aeda797",
           "name": "Response_405",
           "status": "Method Not Allowed",
           "responseCode": {
@@ -1294,7 +1294,7 @@
             {
               "name": "x-akoya-interaction-id",
               "key": "x-akoya-interaction-id",
-              "value": "x-akoya-interaction-id42",
+              "value": "x-akoya-interaction-id37",
               "description": "Akoya supplied interaction id used for logging and error tracking"
             },
             {
@@ -1308,7 +1308,7 @@
           "rawDataType": "text"
         }
       ],
-      "collectionId": "b4ccd376-fad6-4577-bbbe-4ecb67c2b020",
+      "collectionId": "c2f2d449-0d4c-4829-bf68-f567d0f276f4",
       "queryParams": [
         {
           "key": "taxYear",
@@ -1322,7 +1322,7 @@
         },
         {
           "key": "accountId",
-          "value": "accountId21",
+          "value": "accountId84",
           "description": "Unique account identifier (not the account number)"
         }
       ],
@@ -1351,14 +1351,14 @@
         },
         {
           "key": "providerId",
-          "value": "providerId47",
+          "value": "providerId20",
           "description": "Provider to query for Tax data."
         }
       ]
     },
     {
-      "folder": "f3680cbc-5f8d-42ac-a1b9-47d56924a6d2",
-      "id": "6ceb5b61-1da3-420b-8723-61e39d236b04",
+      "folder": "85fd330e-2456-4994-b6e1-ead698409bda",
+      "id": "d000af52-56f0-4fdb-a68d-56ff5fd6cad4",
       "name": "getTaxForm",
       "dataDisabled": false,
       "descriptionFormat": "markdown",
@@ -1371,14 +1371,14 @@
       },
       "pathVariables": {
         "version": "v2",
-        "providerId": "providerId44",
-        "taxFormId": "taxFormId74"
+        "providerId": "providerId57",
+        "taxFormId": "taxFormId87"
       },
       "url": "{{default}}/tax-forms/:version/:providerId/:taxFormId?taxDataType=JSON",
       "responses": [
         {
-          "request": "6ceb5b61-1da3-420b-8723-61e39d236b04",
-          "id": "e3803235-46a3-45e6-a6a2-88bfdb09ebc5",
+          "request": "d000af52-56f0-4fdb-a68d-56ff5fd6cad4",
+          "id": "8bbf157a-91f2-4f42-805f-7876c9eb4997",
           "name": "Response_200",
           "status": "The document image or TaxStatement as json for a single tax document for the customer. A single document can include multiple IRS tax forms and/or other reporting statements as delivered by providers",
           "responseCode": {
@@ -1404,8 +1404,8 @@
           "rawDataType": "text"
         },
         {
-          "request": "6ceb5b61-1da3-420b-8723-61e39d236b04",
-          "id": "dbf4e129-4b2f-4629-b9f8-f8a2ffc484da",
+          "request": "d000af52-56f0-4fdb-a68d-56ff5fd6cad4",
+          "id": "c1ddaeff-f207-49ce-a87a-3eed0b7f1d1f",
           "name": "Response_200",
           "status": "The document image or TaxStatement as json for a single tax document for the customer. A single document can include multiple IRS tax forms and/or other reporting statements as delivered by providers",
           "responseCode": {
@@ -1431,8 +1431,8 @@
           "rawDataType": "text"
         },
         {
-          "request": "6ceb5b61-1da3-420b-8723-61e39d236b04",
-          "id": "3e6008b0-146d-4710-96a4-8d566b660e60",
+          "request": "d000af52-56f0-4fdb-a68d-56ff5fd6cad4",
+          "id": "211a36c2-1f86-4f15-93a1-24144f776e1d",
           "name": "Response_405",
           "status": "Method Not Allowed",
           "responseCode": {
@@ -1444,7 +1444,7 @@
             {
               "name": "x-akoya-interaction-id",
               "key": "x-akoya-interaction-id",
-              "value": "x-akoya-interaction-id2",
+              "value": "x-akoya-interaction-id88",
               "description": "Akoya supplied interaction id used for logging and error tracking"
             },
             {
@@ -1458,7 +1458,7 @@
           "rawDataType": "text"
         }
       ],
-      "collectionId": "b4ccd376-fad6-4577-bbbe-4ecb67c2b020",
+      "collectionId": "c2f2d449-0d4c-4829-bf68-f567d0f276f4",
       "queryParams": [
         {
           "key": "taxDataType",
@@ -1491,19 +1491,19 @@
         },
         {
           "key": "providerId",
-          "value": "providerId44",
+          "value": "providerId57",
           "description": "Provider to query for Tax data."
         },
         {
           "key": "taxFormId",
-          "value": "taxFormId74",
+          "value": "taxFormId87",
           "description": "Unique identifier of the tax form to request."
         }
       ]
     },
     {
-      "folder": "0dd59764-bd40-4c5d-a993-3da1a75cabc1",
-      "id": "070791a6-0102-4692-9684-4727d72214ff",
+      "folder": "69565f34-5ca9-4bd5-ae31-52c4d00f1be8",
+      "id": "96ecf5f4-ceba-47d2-b845-f35fab3fee97",
       "name": "get-transactions",
       "dataDisabled": false,
       "descriptionFormat": "markdown",
@@ -1522,8 +1522,8 @@
       "url": "{{default}}/transactions/:version/:providerId/:accountId?startTime=2020-03-30T04%3A00%3A00Z&endTime=2021-03-30T04%3A00%3A00Z&offset=0&limit=50&mode=raw",
       "responses": [
         {
-          "request": "070791a6-0102-4692-9684-4727d72214ff",
-          "id": "3120f610-d4d0-44e3-88a8-b97d1cd1c3b9",
+          "request": "96ecf5f4-ceba-47d2-b845-f35fab3fee97",
+          "id": "bdb415be-9fb2-4beb-9476-bd15dec99fa4",
           "name": "Response_200",
           "status": "OK",
           "responseCode": {
@@ -1535,7 +1535,7 @@
             {
               "name": "x-akoya-interaction-id",
               "key": "x-akoya-interaction-id",
-              "value": "x-akoya-interaction-id28",
+              "value": "x-akoya-interaction-id49",
               "description": "Akoya supplied interaction id used for logging and error tracking"
             },
             {
@@ -1549,8 +1549,8 @@
           "rawDataType": "text"
         },
         {
-          "request": "070791a6-0102-4692-9684-4727d72214ff",
-          "id": "bf019b6c-af30-4a9e-a933-97b376421c42",
+          "request": "96ecf5f4-ceba-47d2-b845-f35fab3fee97",
+          "id": "8678a93c-1f97-41d5-a457-f8a9cade186c",
           "name": "Response_405",
           "status": "Method Not Allowed",
           "responseCode": {
@@ -1562,7 +1562,7 @@
             {
               "name": "x-akoya-interaction-id",
               "key": "x-akoya-interaction-id",
-              "value": "x-akoya-interaction-id70",
+              "value": "x-akoya-interaction-id48",
               "description": "Akoya supplied interaction id used for logging and error tracking"
             },
             {
@@ -1576,7 +1576,7 @@
           "rawDataType": "text"
         }
       ],
-      "collectionId": "b4ccd376-fad6-4577-bbbe-4ecb67c2b020",
+      "collectionId": "c2f2d449-0d4c-4829-bf68-f567d0f276f4",
       "queryParams": [
         {
           "key": "startTime",
