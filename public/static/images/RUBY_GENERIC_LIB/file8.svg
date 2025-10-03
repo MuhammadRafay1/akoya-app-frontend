@@ -1,0 +1,591 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="836.377" height="561.354" viewBox="0 0 836.377 561.354">
+  <defs>
+    <style>
+      .a,
+      .ap,
+      .as {
+        fill: #f8f8f8;
+      }
+
+      .a,
+      .c {
+        stroke: #181818;
+      }
+
+      .a,
+      .ag,
+      .at,
+      .au,
+      .i,
+      .k,
+      .o,
+      .q {
+        stroke-linejoin: round;
+      }
+
+      .a,
+      .ac,
+      .ai,
+      .aj,
+      .ak,
+      .al,
+      .am,
+      .ar,
+      .as,
+      .av,
+      .b,
+      .c,
+      .g,
+      .p,
+      .r,
+      .t,
+      .u,
+      .w,
+      .x {
+        fill-rule: evenodd;
+      }
+
+      .b {
+        fill: #565551;
+      }
+
+      .c {
+        fill: none;
+      }
+
+      .d {
+        fill: #3c3b37;
+      }
+
+      .e {
+        fill: #878680;
+      }
+
+      .f {
+        fill: #e66228;
+      }
+
+      .g {
+        fill: #3a3935;
+      }
+
+      .h {
+        fill: #e7e7e7;
+        font-size: 14px;
+      }
+
+      .an,
+      .h,
+      .n {
+        font-family: MyriadPro-Regular, Myriad Pro;
+      }
+
+      .ak,
+      .i,
+      .o,
+      .v {
+        fill: #fff;
+      }
+
+      .at,
+      .i,
+      .k,
+      .q {
+        stroke: #c5c5c5;
+      }
+
+      .j {
+        fill: #bcbcbc;
+      }
+
+      .k {
+        fill: #e8e8e8;
+      }
+
+      .l {
+        fill: #d4d4d4;
+      }
+
+      .m {
+        fill: #effae7;
+      }
+
+      .aa,
+      .n {
+        fill: #1f1f1f;
+      }
+
+      .ah,
+      .an,
+      .n {
+        font-size: 12px;
+      }
+
+      .o {
+        stroke: #919191;
+      }
+
+      .p {
+        fill: #4b63a7;
+      }
+
+      .q,
+      .y {
+        fill: #f0f0f0;
+      }
+
+      .r {
+        fill: #e17867;
+      }
+
+      .s {
+        fill: #e1dfdf;
+      }
+
+      .t {
+        fill: #757575;
+      }
+
+      .u {
+        fill: #bd9662;
+      }
+
+      .w {
+        fill: #eba12a;
+      }
+
+      .x {
+        fill: #d85a6d;
+      }
+
+      .z {
+        fill: #660e90;
+      }
+
+      .aa,
+      .ad,
+      .ae,
+      .af,
+      .z {
+        font-size: 10px;
+      }
+
+      .aa,
+      .ad,
+      .ae,
+      .af,
+      .ah,
+      .z {
+        font-family: CourierNewPSMT, Courier New;
+      }
+
+      .ab {
+        fill: #ffffd7;
+      }
+
+      .ac {
+        fill: #e4e4ff;
+      }
+
+      .ad {
+        fill: #029f02;
+      }
+
+      .ae {
+        fill: navy;
+      }
+
+      .af,
+      .an {
+        fill: gray;
+      }
+
+      .ag {
+        fill: #ea9386;
+        stroke: #da6457;
+      }
+
+      .ah {
+        fill: #00007f;
+      }
+
+      .ai {
+        fill: #6fb174;
+      }
+
+      .aj {
+        fill: #9c9c9c;
+      }
+
+      .al {
+        fill: #4892bc;
+      }
+
+      .am {
+        fill: #d95646;
+      }
+
+      .ao {
+        fill: #68a1c2;
+      }
+
+      .aq {
+        fill: #b3d8ed;
+      }
+
+      .ar {
+        fill: #8a8a8a;
+      }
+
+      .at {
+        fill: #f5f5f5;
+      }
+
+      .au {
+        fill: #e0e0e0;
+        stroke: #d5d5d5;
+      }
+
+      .av {
+        fill: #dbdbdb;
+      }
+    </style>
+  </defs>
+  <g transform="translate(-7.136 -6.136)">
+    <path class="a" d="M24.914,7.01h801.2c9.335,0,16.9,6.7,16.9,14.965V566.99h-835V21.975C8.011,13.71,15.579,7.01,24.914,7.01Z" />
+    <path class="b" d="M24.546,6.636H826.071a16.909,16.909,0,0,1,16.91,16.909V41.582H7.636V23.545A16.91,16.91,0,0,1,24.546,6.636Z" />
+    <path class="c" d="M24.546,6.636H826.071a16.909,16.909,0,0,1,16.91,16.909V41.582H7.636V23.545A16.91,16.91,0,0,1,24.546,6.636Z" />
+    <rect class="d" width="66.532" height="23.656" rx="11.273" transform="translate(749.406 12.281)" />
+    <circle class="e" cx="8.734" cy="8.734" r="8.734" transform="translate(752.938 15.985)" />
+    <circle class="e" cx="8.75" cy="8.75" r="8.75" transform="translate(773.938 15.969)" />
+    <circle class="f" cx="8.75" cy="8.75" r="8.75" transform="translate(794.938 15.969)" />
+    <path class="g" d="M766.242,25.293H757.1a.6.6,0,1,1,0-1.184h9.137a.6.6,0,1,1,0,1.184Z" />
+    <path class="g" d="M807.582,21.806l-2.856,2.9,2.856,2.9h0a.735.735,0,0,1,.211.517.727.727,0,0,1-.721.731.71.71,0,0,1-.51-.215h0l-2.856-2.894-2.855,2.894h0a.713.713,0,0,1-.51.215.733.733,0,0,1-.51-1.248h0l2.855-2.9-2.855-2.9h0a.733.733,0,0,1,.51-1.248.717.717,0,0,1,.51.214h0l2.855,2.9,2.856-2.9h0a.713.713,0,0,1,.51-.214.727.727,0,0,1,.721.731.735.735,0,0,1-.211.517Z" />
+    <path class="g" d="M786.393,28.844h-7.407a.386.386,0,0,1-.383-.389V20.947a.386.386,0,0,1,.383-.389h7.407a.386.386,0,0,1,.383.389v7.508A.386.386,0,0,1,786.393,28.844Zm-.383-7.509h-6.641v6.732h6.641Z" />
+    <text class="h" transform="translate(67 29)">
+      <tspan x="0" y="0">TestApp</tspan>
+    </text>
+    <rect class="i" width="20" height="504.562" transform="translate(9 61.469)" />
+    <rect class="j" width="20" height="88" transform="translate(9 68)" />
+    <rect class="k" width="814" height="20" transform="translate(28 68)" />
+    <rect class="i" width="210" height="369" transform="translate(28 87)" />
+    <rect class="l" width="259" height="19" transform="translate(29 201)" />
+    <rect class="m" width="259" height="19" transform="translate(29 396)" />
+    <text class="n" transform="translate(145 197)">
+      <tspan x="0" y="0">application_controller.rb</tspan>
+    </text>
+    <rect class="o" width="9" height="9" transform="translate(37 93)" />
+    <path class="p" d="M39,98V97h5v1Z" />
+    <rect class="o" width="9" height="9" transform="translate(84 134)" />
+    <path class="p" d="M86,139v-1h5v1Z" />
+    <path class="p" d="M89,141H88v-5h1Z" />
+    <rect class="o" width="9" height="9" transform="translate(84 154)" />
+    <path class="p" d="M86,159v-1h5v1Z" />
+    <rect class="o" width="9" height="9" transform="translate(84 223)" />
+    <path class="p" d="M89,230H88v-5h1Z" />
+    <path class="p" d="M86,228v-1h5v1Z" />
+    <rect class="o" width="9" height="9" transform="translate(84 243)" />
+    <path class="p" d="M89,250H88v-5h1Z" />
+    <path class="p" d="M86,248v-1h5v1Z" />
+    <rect class="o" width="9" height="9" transform="translate(84 263)" />
+    <path class="p" d="M89,270H88v-5h1Z" />
+    <path class="p" d="M86,268v-1h5v1Z" />
+    <rect class="o" width="9" height="9" transform="translate(84 283)" />
+    <path class="p" d="M89,290H88v-5h1Z" />
+    <path class="p" d="M86,288v-1h5v1Z" />
+    <rect class="o" width="9" height="9" transform="translate(60 301)" />
+    <path class="p" d="M65,308H64v-5h1Z" />
+    <path class="p" d="M62,306v-1h5v1Z" />
+    <rect class="o" width="9" height="9" transform="translate(60 320)" />
+    <path class="p" d="M65,327H64v-5h1Z" />
+    <path class="p" d="M62,325v-1h5v1Z" />
+    <rect class="o" width="9" height="9" transform="translate(60 340)" />
+    <path class="p" d="M65,347H64v-5h1Z" />
+    <path class="p" d="M62,345v-1h5v1Z" />
+    <rect class="o" width="9" height="9" transform="translate(60 361)" />
+    <path class="p" d="M65,368H64v-5h1Z" />
+    <path class="p" d="M62,366v-1h5v1Z" />
+    <rect class="o" width="9" height="9" transform="translate(60 401)" />
+    <path class="p" d="M65,408H64v-5h1Z" />
+    <path class="p" d="M62,406v-1h5v1Z" />
+    <rect class="o" width="9" height="9" transform="translate(60 421)" />
+    <path class="p" d="M65,428H64v-5h1Z" />
+    <path class="p" d="M62,426v-1h5v1Z" />
+    <rect class="o" width="9" height="9" transform="translate(60 381)" />
+    <path class="p" d="M65,388H64v-5h1Z" />
+    <path class="p" d="M62,386v-1h5v1Z" />
+    <rect class="o" width="9" height="9" transform="translate(60 113)" />
+    <path class="p" d="M62,118v-1h5v1Z" />
+    <rect class="i" width="431" height="95" transform="translate(28 462)" />
+    <rect class="q" width="20" height="95" transform="translate(28 462)" />
+    <path class="r" d="M42.906,529.336,39.291,532.9l3.615,3.564h0a.887.887,0,0,1,.268.636.907.907,0,0,1-.913.9.917.917,0,0,1-.646-.264h0L38,534.173l-3.615,3.563h0a.917.917,0,0,1-.646.264.907.907,0,0,1-.913-.9.89.89,0,0,1,.267-.636h0l3.616-3.564-3.616-3.564h0a.888.888,0,0,1-.267-.636.907.907,0,0,1,.913-.9.917.917,0,0,1,.646.264h0L38,531.627l3.615-3.563h0a.917.917,0,0,1,.646-.264.907.907,0,0,1,.913.9.885.885,0,0,1-.268.636Z" />
+    <rect class="i" width="374" height="95" transform="translate(468 462)" />
+    <rect class="q" width="20" height="95" transform="translate(468 462)" />
+    <rect class="s" width="14" height="14" rx="1" transform="translate(471 469)" />
+    <rect class="s" width="14" height="14" rx="1" transform="translate(471 489)" />
+    <rect class="s" width="14" height="14" rx="1" transform="translate(471 508)" />
+    <rect class="s" width="14" height="14" rx="1" transform="translate(31 469)" />
+    <rect class="s" width="14" height="14" rx="1" transform="translate(31 489)" />
+    <rect class="s" width="14" height="14" rx="1" transform="translate(31 508)" />
+    <rect class="s" width="14" height="14" rx="1" transform="translate(471 528)" />
+    <path class="t" d="M41,102h1V455H41Z" />
+    <path class="t" d="M64,122h1V301H64Z" />
+    <path class="t" d="M46,98V97h9v1Z" />
+    <path class="t" d="M69,118v-1h9v1Z" />
+    <path class="t" d="M93,139v-1h9v1Z" />
+    <path class="t" d="M88,125h1v9H88Z" />
+    <rect class="o" width="9" height="9" transform="translate(108 173)" />
+    <path class="p" d="M110,178v-1h5v1Z" />
+    <path class="p" d="M113,180h-1v-5h1Z" />
+    <path class="t" d="M117,178v-1h9v1Z" />
+    <path class="t" d="M113,194v-1h13v1Z" />
+    <path class="t" d="M113,210v-1h13v1Z" />
+    <path class="t" d="M112,164h1v9h-1Z" />
+    <path class="t" d="M112,182h1v28h-1Z" />
+    <path class="t" d="M88,143h1v11H88Z" />
+    <path class="t" d="M93,159v-1h9v1Z" />
+    <path class="t" d="M88,163h1v60H88Z" />
+    <path class="t" d="M93,228v-1h9v1Z" />
+    <path class="t" d="M88,232h1v11H88Z" />
+    <path class="t" d="M93,248v-1h9v1Z" />
+    <path class="t" d="M88,252h1v11H88Z" />
+    <path class="t" d="M93,268v-1h9v1Z" />
+    <path class="t" d="M93,288v-1h9v1Z" />
+    <path class="t" d="M88,272h1v11H88Z" />
+    <path class="t" d="M69,306v-1h9v1Z" />
+    <path class="t" d="M64,310h1v11H64Z" />
+    <path class="t" d="M69,325v-1h9v1Z" />
+    <path class="t" d="M64,329h1v11H64Z" />
+    <path class="t" d="M69,345v-1h9v1Z" />
+    <path class="t" d="M64,349h1v12H64Z" />
+    <path class="t" d="M69,366v-1h9v1Z" />
+    <path class="t" d="M64,370h1v11H64Z" />
+    <path class="t" d="M69,386v-1h9v1Z" />
+    <path class="t" d="M64,390h1v11H64Z" />
+    <path class="t" d="M69,406v-1h9v1Z" />
+    <path class="t" d="M69,426v-1h9v1Z" />
+    <path class="t" d="M65,446v-1H78v1Z" />
+    <path class="t" d="M64,410h1v11H64Z" />
+    <path class="t" d="M64,430h1v25H64Z" />
+    <path class="t" d="M64,104h1v9H64Z" />
+    <path class="u" d="M72,93v10H58V91h6l2,2Z" />
+    <rect class="v" width="10" height="6" transform="translate(60 95)" />
+    <path class="u" d="M95,113v10H81V111h6l2,2Z" />
+    <rect class="v" width="10" height="6" transform="translate(83 115)" />
+    <path class="u" d="M119,134v10H105V132h6l2,2Z" />
+    <rect class="v" width="10" height="6" transform="translate(107 136)" />
+    <rect class="i" width="604" height="369" transform="translate(238 87)" />
+    <path class="w" d="M40.01,26.016c0-1.818-.013-3.637,0-5.455a6.055,6.055,0,0,1,3.308-5.615,5.808,5.808,0,0,1,6.394.4c.435.3.714.362,1.153.007a5.638,5.638,0,0,1,2.542-1.066c.406-.079.589.02.577.5-.029,1.126-.013,2.253-.007,3.38,0,.274-.036.469-.335.6a2.076,2.076,0,0,0-1.216,2.168c.017,3.687-.009,7.375.022,11.062.005.662-.14.906-.824.858a22.769,22.769,0,0,0-2.777,0c-.568.029-.722-.163-.718-.734.031-3.636.03-7.272.035-10.908,0-1.7-.7-2.622-1.974-2.611-1.258.01-1.953.951-1.954,2.642,0,3.61-.011,7.221.012,10.832,0,.568-.092.822-.723.782a27.131,27.131,0,0,0-2.852,0c-.52.021-.686-.133-.678-.679C40.028,30.113,40.01,28.065,40.01,26.016Z" />
+    <path class="x" d="M60.817,20.013a6.618,6.618,0,0,1-2.411,5.257c-.4.332-.372.542-.1.915.7.974,1.358,1.974,2.041,2.959a3.728,3.728,0,0,1,.611,1.394,1.992,1.992,0,0,1-1.069,2.238,1.94,1.94,0,0,1-2.453-.508c-1.177-1.7-2.338-3.405-3.459-5.141a2.836,2.836,0,0,1,.958-4.155c1.535-.853,1.954-1.844,1.594-3.111a1.672,1.672,0,0,0-.8-1.168c-.6-.259-.611-.691-.6-1.221.02-.978.017-1.956,0-2.934-.007-.406.043-.6.535-.523A5.777,5.777,0,0,1,60.817,20.013Z" />
+    <path class="w" d="M13.006,143.957c0-1.053-.008-2.106,0-3.158a3.509,3.509,0,0,1,1.889-3.251,3.287,3.287,0,0,1,3.655.229c.248.174.407.21.658,0a3.215,3.215,0,0,1,1.453-.617c.232-.045.337.012.33.288-.017.652-.008,1.3,0,1.956,0,.159-.021.272-.192.347a1.206,1.206,0,0,0-.7,1.255c.01,2.134,0,4.269.013,6.4,0,.384-.08.525-.471.5a12.927,12.927,0,0,0-1.587,0c-.325.017-.413-.094-.41-.425.018-2.1.017-4.21.02-6.315,0-.984-.4-1.517-1.128-1.511s-1.116.55-1.116,1.529c0,2.09-.007,4.181.006,6.271,0,.329-.052.476-.413.453a15.276,15.276,0,0,0-1.63,0c-.3.012-.392-.077-.387-.393C13.016,146.329,13.006,145.143,13.006,143.957Z" />
+    <path class="x" d="M24.9,140.481a3.853,3.853,0,0,1-1.377,3.044c-.23.192-.213.314-.06.53.4.563.776,1.143,1.166,1.712a2.188,2.188,0,0,1,.35.808,1.158,1.158,0,0,1-.611,1.295,1.1,1.1,0,0,1-1.4-.294c-.672-.982-1.336-1.971-1.976-2.976a1.653,1.653,0,0,1,.547-2.406c.877-.493,1.116-1.067.911-1.8a.969.969,0,0,0-.455-.676c-.342-.15-.349-.4-.343-.707.012-.566.01-1.132,0-1.7,0-.235.024-.344.306-.3A3.331,3.331,0,0,1,24.9,140.481Z" />
+    <text class="n" transform="translate(25 60)">
+      <tspan x="0" y="0">File</tspan>
+    </text>
+    <text class="n" transform="translate(24 129) rotate(-90)">
+      <tspan x="0" y="0">1: Project</tspan>
+    </text>
+    <text class="n" transform="translate(23 226) rotate(-90)">
+      <tspan x="0" y="0">7: Structure</tspan>
+    </text>
+    <rect class="y" width="20" height="367" transform="translate(239 88)" />
+    <text class="n" transform="translate(52 60)">
+      <tspan x="0" y="0">Edit</tspan>
+    </text>
+    <text class="n" transform="translate(81 60)">
+      <tspan x="0" y="0">View</tspan>
+    </text>
+    <text class="n" transform="translate(81 102)">
+      <tspan x="0" y="0">TestApp</tspan>
+    </text>
+    <rect class="i" width="136" height="20" transform="translate(292 68)" />
+    <text class="z" transform="translate(302 103)">
+      <tspan x="0" y="0">HelloController</tspan>
+    </text>
+    <text class="aa" transform="translate(402 103)">
+      <tspan x="0" y="0">&lt;</tspan>
+    </text>
+    <text class="z" transform="translate(416 103)">
+      <tspan x="0" y="0">ApplicationController</tspan>
+    </text>
+    <text class="aa" transform="translate(275 120)">
+      <tspan x="0" y="0">require</tspan>
+    </text>
+    <text class="aa" transform="translate(275 137)">
+      <tspan x="0" y="0">include</tspan>
+    </text>
+    <rect class="ab" width="563" height="17" transform="translate(259 157)" />
+    <path class="ac" d="M298.343,136.959h38.914v16.547H298.343Z" transform="translate(0 20)" />
+    <text class="ad" transform="translate(323 120)">
+      <tspan x="0" y="0">'akoya_ap_is_v240'</tspan>
+    </text>
+    <text class="z" transform="translate(323 137)">
+      <tspan x="0" y="0">AkoyaApIsV240</tspan>
+    </text>
+    <text class="ae" transform="translate(275 168)">
+      <tspan x="0" y="0">def Index</tspan>
+    </text>
+    <text class="af" transform="translate(288 185)">
+      <tspan x="0" y="0"># initialize client and invoke controller methods</tspan>
+    </text>
+    <circle class="ag" cx="6" cy="6" r="6" transform="translate(243 156)" />
+    <text class="ae" transform="translate(275 201)">
+      <tspan x="0" y="0">end</tspan>
+    </text>
+    <text class="ae" transform="translate(263 218)">
+      <tspan x="0" y="0">end</tspan>
+    </text>
+    <text class="ae" transform="translate(263 103)">
+      <tspan x="0" y="0">class</tspan>
+    </text>
+    <text class="ah" transform="translate(62 482)">
+      <tspan x="0" y="0">Process finished with exit code 0</tspan>
+    </text>
+    <text class="n" transform="translate(103 122)">
+      <tspan x="0" y="0">app</tspan>
+    </text>
+    <text class="n" transform="translate(126 142)">
+      <tspan x="0" y="0">assets</tspan>
+    </text>
+    <path class="u" d="M119,154v10H105V152h6l2,2Z" />
+    <rect class="l" width="10" height="6" transform="translate(107 156)" />
+    <path class="u" d="M141,173v10H127V171h6l2,2Z" />
+    <rect class="v" width="10" height="6" transform="translate(129 175)" />
+    <text class="n" transform="translate(126 162)">
+      <tspan x="0" y="0">controllers</tspan>
+    </text>
+    <text class="n" transform="translate(145 180)">
+      <tspan x="0" y="0">concerns</tspan>
+    </text>
+    <text class="n" transform="translate(145 214)">
+      <tspan x="0" y="0">hello_controller</tspan>
+    </text>
+    <path class="u" d="M119,223v10H105V221h6l2,2Z" />
+    <rect class="v" width="10" height="6" transform="translate(107 225)" />
+    <text class="n" transform="translate(126 231)">
+      <tspan x="0" y="0">helpers</tspan>
+    </text>
+    <path class="u" d="M119,243v10H105V241h6l2,2Z" />
+    <rect class="v" width="10" height="6" transform="translate(107 245)" />
+    <text class="n" transform="translate(126 251)">
+      <tspan x="0" y="0">mailers</tspan>
+    </text>
+    <path class="u" d="M119,263v10H105V261h6l2,2Z" />
+    <rect class="v" width="10" height="6" transform="translate(107 265)" />
+    <text class="n" transform="translate(126 271)">
+      <tspan x="0" y="0">models</tspan>
+    </text>
+    <path class="u" d="M119,283v10H105V281h6l2,2Z" />
+    <rect class="v" width="10" height="6" transform="translate(107 285)" />
+    <text class="n" transform="translate(126 291)">
+      <tspan x="0" y="0">views</tspan>
+    </text>
+    <path class="u" d="M95,301v10H81V299h6l2,2Z" />
+    <rect class="v" width="10" height="6" transform="translate(83 303)" />
+    <text class="n" transform="translate(102 309)">
+      <tspan x="0" y="0">bin</tspan>
+    </text>
+    <path class="u" d="M95,321v10H81V319h6l2,2Z" />
+    <rect class="v" width="10" height="6" transform="translate(83 323)" />
+    <text class="n" transform="translate(102 329)">
+      <tspan x="0" y="0">config</tspan>
+    </text>
+    <path class="u" d="M95,341v10H81V339h6l2,2Z" />
+    <rect class="v" width="10" height="6" transform="translate(83 343)" />
+    <text class="n" transform="translate(102 349)">
+      <tspan x="0" y="0">lib</tspan>
+    </text>
+    <path class="u" d="M95,361v10H81V359h6l2,2Z" />
+    <rect class="v" width="10" height="6" transform="translate(83 363)" />
+    <text class="n" transform="translate(102 369)">
+      <tspan x="0" y="0">log</tspan>
+    </text>
+    <path class="u" d="M95,381v10H81V379h6l2,2Z" />
+    <rect class="v" width="10" height="6" transform="translate(83 383)" />
+    <text class="n" transform="translate(102 389)">
+      <tspan x="0" y="0">public</tspan>
+    </text>
+    <path class="ai" d="M95,401v10H81V399h6l2,2Z" />
+    <rect class="v" width="10" height="6" transform="translate(83 403)" />
+    <text class="n" transform="translate(102 409)">
+      <tspan x="0" y="0">test</tspan>
+    </text>
+    <path class="u" d="M95,421v10H81V419h6l2,2Z" />
+    <rect class="v" width="10" height="6" transform="translate(83 423)" />
+    <text class="n" transform="translate(102 429)">
+      <tspan x="0" y="0">vendor</tspan>
+    </text>
+    <text class="n" transform="translate(102 449)">
+      <tspan x="0" y="0">.gitignore</tspan>
+    </text>
+    <path class="aj" d="M82,439v15H93V442l-3-3Z" />
+    <path class="ak" d="M84,441v11h7v-9H89v-2Z" />
+    <path class="al" d="M85,446v-1h5v1Z" />
+    <path class="al" d="M85,448v-1h5v1Z" />
+    <path class="al" d="M85,450v-1h5v1Z" />
+    <rect class="v" width="1" height="1" transform="translate(90 441)" />
+    <path class="aj" d="M298,72V84h10V74.4L305.273,72Z" />
+    <path class="ak" d="M299.818,73.6v8.8h6.364V75.2h-1.818V73.6Z" />
+    <path class="am" d="M300.727,76h4.546l.909,1.6-2.728,3.2h-.909l-2.727-3.2Z" />
+    <rect class="v" width="0.907" height="0.813" transform="translate(365.281 73.594)" />
+    <path class="ak" d="M83,425v1H81Z" />
+    <text class="n" transform="translate(114 60)">
+      <tspan x="0" y="0">Navigate</tspan>
+    </text>
+    <text class="n" transform="translate(168 60)">
+      <tspan x="0" y="0">Code</tspan>
+    </text>
+    <text class="n" transform="translate(203 60)">
+      <tspan x="0" y="0">Refactor</tspan>
+    </text>
+    <text class="n" transform="translate(254 60)">
+      <tspan x="0" y="0">Run</tspan>
+    </text>
+    <text class="n" transform="translate(284 60)">
+      <tspan x="0" y="0">Tools</tspan>
+    </text>
+    <text class="n" transform="translate(320 60)">
+      <tspan x="0" y="0">VCS</tspan>
+    </text>
+    <text class="n" transform="translate(350 60)">
+      <tspan x="0" y="0">Window</tspan>
+    </text>
+    <text class="n" transform="translate(313 82)">
+      <tspan x="0" y="0">hello_controller.rb</tspan>
+    </text>
+    <text class="an" transform="translate(416 81)">
+      <tspan x="0" y="0">x</tspan>
+    </text>
+    <rect class="i" width="80" height="20" transform="translate(28 68)" />
+    <text class="n" transform="translate(51 82)">
+      <tspan x="0" y="0">Project</tspan>
+    </text>
+    <text class="an" transform="translate(96 81)">
+      <tspan x="0" y="0">x</tspan>
+    </text>
+    <rect class="ao" width="11" height="9" transform="translate(35 72)" />
+    <rect class="ap" width="9" height="6" transform="translate(36 74)" />
+    <rect class="aq" width="7" height="4" transform="translate(37 75)" />
+    <path class="ar" d="M40,76v8H32V74h6Z" />
+    <path class="as" d="M34,76v6h4V77H37V76Z" />
+    <path class="ar" d="M35,79V78h2v1Z" />
+    <path class="ar" d="M35,81V80h2v1Z" />
+    <text class="n" transform="translate(401 60)">
+      <tspan x="0" y="0">Help</tspan>
+    </text>
+    <image width="14" height="13" transform="translate(12 234)" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAANCAMAAACuAq9NAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAn1BMVEUAAABrqtRrqtRrqtTge3Xge3Xge3VrqtRrqtTge3Xge3Xge3XYeXRrqtRpnL1mf5BjY2N1ZmbReHPge3Xge3VjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2PGlmG4j2HClGGvimG6kGHGlmHGlmHGlmHGlmHGlmHGlmFrqtTge3VrqNFjY2PaenTGlmEAAAAB73ZgAAAALnRSTlMAHrrzHrrzu7+7v/nI9OtOA9PU9B9a0ARyvAG4dh/rJCK0eh7a/fMiu7/z+fQfpNJrSQAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAB1SURBVAjXY2BkYmZiZAACFlY2VhYGdj09PQ4Ql1NfX5+LgRnINTAEAiMglxshywOWZWTn5eMH8gQEhYQ5RUDiomLiDAwSklIMUCAtwyArJw/jMSjIKSgqwXkMyiqqauoIroaxsbEmgqsF5GrjlFXW0NHQBbMAlwALfQ8300wAAAAASUVORK5CYII=" />
+    <rect class="at" width="20" height="369" transform="translate(220 87)" />
+    <rect class="au" width="16" height="278" rx="1" transform="translate(222 89)" />
+    <rect class="at" width="20" height="369" transform="translate(822 87)" />
+    <rect class="au" width="16" height="278" rx="1" transform="translate(824 89)" />
+    <path class="aj" d="M129,204v12h10v-9.6l-2.727-2.4Z" />
+    <path class="ak" d="M130.818,205.6v8.8h6.364v-7.2h-1.818v-1.6Z" />
+    <path class="am" d="M131.727,208h4.546l.909,1.6-2.728,3.2h-.909l-2.727-3.2Z" />
+    <path class="aj" d="M129,188v12h10v-9.6l-2.727-2.4Z" />
+    <path class="ak" d="M130.818,189.6v8.8h6.364v-7.2h-1.818v-1.6Z" />
+    <path class="am" d="M131.727,192h4.546l.909,1.6-2.728,3.2h-.909l-2.727-3.2Z" />
+    <path class="av" d="M277.434,154.857h.989v15.694h-.989Z" transform="translate(0 20)" />
+    <image width="11" height="15" transform="translate(273 142)" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAPCAMAAAAF48UCAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAgVBMVEUAAADfl0/fl0/fl0/fl0/fl0/fl0/fl0/fl0/fl0/fl0/fl0/fl0/fl0/fl0/fl0/fl0/fl0/gmVHss2f1x3j4zn7zwnT5z3/4zHz/+774zX3vuW3xv3HinVT3y3z97KjkoljmpVvprWHlo1nzw3T0w3XmplyAgICzs7PGxsYAAAAwAkbWAAAAEnRSTlMAGIHc+VwXgPH3nbU0TIWQjpT0mFIUAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAHBJREFUCNd9zdsSgjAMBNClFcELCm1hbcUboMD//6CN8OzJy2YnMwGQKL3RKkGUGutqZ00aW9NQNGYLZbmwGbRbs9PIL/T03jPssL9SFrI94Hi78xGnfhbA6RXkvDvLg7IfwvtT4WcUS8Qk8L+f1/4LxHgLchrJPiQAAAAASUVORK5CYII=" />
+  </g>
+</svg>

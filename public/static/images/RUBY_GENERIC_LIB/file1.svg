@@ -1,0 +1,274 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="668" height="417" viewBox="0 0 668 417">
+  <defs>
+    <style>
+    .cls-1 {
+      fill: #f0f0f0;
+    }
+
+    .cls-1, .cls-4 {
+      stroke: #181818;
+    }
+
+    .cls-1, .cls-13, .cls-21, .cls-3, .cls-4 {
+      stroke-linejoin: round;
+      stroke-width: 1px;
+    }
+
+    .cls-1, .cls-2, .cls-22, .cls-23, .cls-24, .cls-25, .cls-26, .cls-27, .cls-4, .cls-8 {
+      fill-rule: evenodd;
+    }
+
+    .cls-2, .cls-34 {
+      fill: #c5c5c5;
+    }
+
+    .cls-3, .cls-33 {
+      fill: #fff;
+    }
+    
+    .cls-21, .cls-3 {
+      stroke: #c5c5c5;
+    }
+
+    .cls-4 {
+      fill: #565652;
+      filter: url(#gradient-overlay-1);
+    }
+
+    .cls-5 {
+      fill: #3c3b37;
+    }
+
+    .cls-6 {
+      fill: #878680;
+    }
+
+    .cls-7 {
+      fill: #e66228;
+    }
+
+    .cls-8 {
+      fill: #3a3935;
+    }
+
+    .cls-10, .cls-30, .cls-31, .cls-9 {
+      font-size: 12px;
+    }
+
+    .cls-10 {
+      fill: #e7e7e7;
+      text-anchor: middle;
+    }
+
+    .cls-10, .cls-29, .cls-30, .cls-31, .cls-33, .cls-34, .cls-36 {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .cls-11 {
+      fill: #dcdcdc;
+    }
+ 
+    .cls-12 {
+      fill: #efefef;
+      border: 1px solid #aaa;
+    }
+
+    .cls-13 {
+      fill: #3875d7;
+    }
+
+    .cls-13 {
+      stroke: #868686;
+    }
+
+    .cls-14, .cls-15, .cls-16, .cls-17, .cls-18, .cls-19, .cls-29, .cls-30 {
+      fill: #121212;
+    }
+
+    .cls-14 {
+      filter: url(#gradient-overlay-2);
+    }
+
+    .cls-15 {
+      filter: url(#gradient-overlay-3);
+    }
+
+    .cls-15, .cls-16, .cls-17, .cls-18, .cls-19 {
+      opacity: 0.2;
+    }
+
+    .cls-16 {
+      filter: url(#gradient-overlay-4);
+    }
+
+    .cls-17 {
+      filter: url(#gradient-overlay-5);
+    }
+
+    .cls-18 {
+      filter: url(#gradient-overlay-6);
+    }
+
+    .cls-19 {
+      filter: url(#gradient-overlay-7);
+    }
+
+    .cls-20 {
+      fill: #4a87b1;
+    }
+
+    .cls-21 {
+      fill: #86c3e6;
+    }
+
+    .cls-22, .cls-24, .cls-25 {
+      fill: #7a7a7a;
+    }
+
+    .cls-22 {
+      filter: url(#gradient-overlay-8);
+    }
+
+    .cls-23 {
+      fill: #cacaca;
+    }
+
+    .cls-25 {
+      filter: url(#gradient-overlay-9);
+    }
+
+    .cls-26 {
+      fill: #eba12a;
+      filter: url(#inner-shadow-1);
+    }
+
+    .cls-27 {
+      fill: #d85a6d;
+      filter: url(#inner-shadow-2);
+    }
+
+    .cls-28, .cls-29 {
+      font-size: 20px;
+    }
+
+    .cls-32, .cls-33, .cls-34 {
+      font-size: 14px;
+    }
+
+    .cls-35, .cls-36 {
+      font-size: 10px;
+    }
+    </style>
+
+    <filter id="gradient-overlay-1" filterUnits="userSpaceOnUse">
+      <feImage x="9" y="3" width="651" height="31" preserveAspectRatio="none" xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iNjUxIiBoZWlnaHQ9IjMxIj48bGluZWFyR3JhZGllbnQgaWQ9ImdyYWQiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMzI1LjUiIHkxPSIzMSIgeDI9IjMyNS41Ij4KICA8c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiMzYzNiMzciLz4KICA8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiM2MzYyNWUiLz4KPC9saW5lYXJHcmFkaWVudD4KPHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIvPjwvc3ZnPg=="/>
+      <feComposite operator="in" in2="SourceGraphic"/>
+      <feBlend in2="SourceGraphic" result="gradientFill"/>
+    </filter>
+    <filter id="gradient-overlay-2" filterUnits="userSpaceOnUse">
+      <feImage x="251" y="162" width="25" height="26" preserveAspectRatio="none" xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMjUiIGhlaWdodD0iMjYiPjxsaW5lYXJHcmFkaWVudCBpZD0iZ3JhZCIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIHgxPSIxMi41IiB5MT0iMjYiIHgyPSIxMi41Ij4KICA8c3RvcCBvZmZzZXQ9Ii0wLjA0IiBzdG9wLWNvbG9yPSIjZGNkY2RjIi8+CiAgPHN0b3Agb2Zmc2V0PSIxLjA0IiBzdG9wLWNvbG9yPSIjNjE2MTYxIi8+CjwvbGluZWFyR3JhZGllbnQ+CjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiLz48L3N2Zz4="/>
+      <feComposite operator="in" in2="SourceGraphic"/>
+      <feBlend in2="SourceGraphic" result="gradientFill"/>
+    </filter>
+    <filter id="gradient-overlay-3" filterUnits="userSpaceOnUse">
+      <feImage x="251" y="199" width="25" height="26" preserveAspectRatio="none" xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMjUiIGhlaWdodD0iMjYiPjxsaW5lYXJHcmFkaWVudC8+CjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiLz48L3N2Zz4="/>
+      <feComposite operator="in" in2="SourceGraphic"/>
+      <feBlend in2="SourceGraphic" result="gradientFill"/>
+    </filter>
+    <filter id="gradient-overlay-4" filterUnits="userSpaceOnUse">
+      <feImage x="251" y="233" width="25" height="26" preserveAspectRatio="none" xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMjUiIGhlaWdodD0iMjYiPjxsaW5lYXJHcmFkaWVudC8+CjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiLz48L3N2Zz4="/>
+      <feComposite operator="in" in2="SourceGraphic"/>
+      <feBlend in2="SourceGraphic" result="gradientFill"/>
+    </filter>
+    <filter id="gradient-overlay-5" filterUnits="userSpaceOnUse">
+      <feImage x="251" y="269" width="25" height="26" preserveAspectRatio="none" xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMjUiIGhlaWdodD0iMjYiPjxsaW5lYXJHcmFkaWVudC8+CjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiLz48L3N2Zz4="/>
+      <feComposite operator="in" in2="SourceGraphic"/>
+      <feBlend in2="SourceGraphic" result="gradientFill"/>
+    </filter>
+    <filter id="gradient-overlay-6" filterUnits="userSpaceOnUse">
+      <feImage x="251" y="303" width="25" height="26" preserveAspectRatio="none" xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMjUiIGhlaWdodD0iMjYiPjxsaW5lYXJHcmFkaWVudC8+CjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiLz48L3N2Zz4="/>
+      <feComposite operator="in" in2="SourceGraphic"/>
+      <feBlend in2="SourceGraphic" result="gradientFill"/>
+    </filter>
+    <filter id="gradient-overlay-7" filterUnits="userSpaceOnUse">
+      <feImage x="251" y="339" width="25" height="26" preserveAspectRatio="none" xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMjUiIGhlaWdodD0iMjYiPjxsaW5lYXJHcmFkaWVudC8+CjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiLz48L3N2Zz4="/>
+      <feComposite operator="in" in2="SourceGraphic"/>
+      <feBlend in2="SourceGraphic" result="gradientFill"/>
+    </filter>
+    <filter id="gradient-overlay-8" filterUnits="userSpaceOnUse">
+      <feImage x="248" y="169" width="16" height="22" preserveAspectRatio="none" xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMTYiIGhlaWdodD0iMjIiPjxsaW5lYXJHcmFkaWVudCBpZD0iZ3JhZCIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIHgxPSI4IiB5MT0iMjIiIHgyPSI4Ij4KICA8c3RvcCBvZmZzZXQ9IjAuMTE1IiBzdG9wLWNvbG9yPSIjOGY4ZjhmIi8+CiAgPHN0b3Agb2Zmc2V0PSIwLjg4NSIgc3RvcC1jb2xvcj0iIzdhN2E3YSIvPgo8L2xpbmVhckdyYWRpZW50Pgo8cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIi8+PC9zdmc+"/>
+      <feComposite operator="in" in2="SourceGraphic"/>
+      <feBlend in2="SourceGraphic" result="gradientFill"/>
+    </filter>
+    <filter id="gradient-overlay-9" filterUnits="userSpaceOnUse">
+      <feImage x="259" y="176" width="19" height="18" preserveAspectRatio="none" xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMTkiIGhlaWdodD0iMTgiPjxyYWRpYWxHcmFkaWVudCBpZD0iZ3JhZCIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIGN4PSI5LjUiIGN5PSI5IiByPSI5Ij4KICA8c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiNlMGE2NGQiLz4KICA8c3RvcCBvZmZzZXQ9IjEuMTkiIHN0b3AtY29sb3I9IiNhMTZjMmYiLz4KPC9yYWRpYWxHcmFkaWVudD4KPHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIvPjwvc3ZnPg=="/>
+      <feComposite operator="in" in2="SourceGraphic"/>
+      <feBlend in2="SourceGraphic" result="gradientFill"/>
+    </filter>
+    <filter id="inner-shadow-1" filterUnits="userSpaceOnUse">
+      <feOffset dx="0.908" dy="1.782" in="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="2.236" result="innerShadowBlur"/>
+      <feFlood flood-color="#573806" flood-opacity="0.35"/>
+      <feComposite operator="out" in2="innerShadowBlur"/>
+      <feComposite operator="in" in2="SourceAlpha"/>
+      <feBlend mode="multiply" in2="SourceGraphic" result="innerShadow"/>
+    </filter>
+    <filter id="inner-shadow-2" filterUnits="userSpaceOnUse">
+      <feOffset dx="0.908" dy="1.782" in="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="2.236" result="innerShadowBlur"/>
+      <feFlood flood-color="#610916" flood-opacity="0.35"/>
+      <feComposite operator="out" in2="innerShadowBlur"/>
+      <feComposite operator="in" in2="SourceAlpha"/>
+      <feBlend mode="multiply" in2="SourceGraphic" result="innerShadow"/>
+    </filter>
+  </defs>
+  <path d="M24.000,3.000 L645.000,3.000 C653.284,3.000 660.000,9.716 660.000,18.000 L660.000,412.000 L9.000,412.000 L9.000,18.000 C9.000,9.716 15.716,3.000 24.000,3.000 Z" class="cls-1"/>
+  <path d="M10.000,109.000 L10.000,108.000 L659.000,108.000 L659.000,109.000 L10.000,109.000 Z" class="cls-2"/>
+  <rect x="24" y="121" width="190" height="278" class="cls-3"/>
+  <rect x="230" y="121" width="418" height="278" class="cls-3"/>
+  <g style="fill: #565652; filter: url(#gradient-overlay-1)">
+    <path d="M24.000,3.000 L645.000,3.000 C653.284,3.000 660.000,9.716 660.000,18.000 L660.000,34.000 L9.000,34.000 L9.000,18.000 C9.000,9.716 15.716,3.000 24.000,3.000 Z" id="path-1" style="stroke: inherit; filter: none; fill: inherit" class="cls-4"/>
+  </g>
+  <use xlink:href="#path-1" style="stroke: #181818; filter: none; fill: none"/>
+  <rect x="585" y="8" width="59" height="21" rx="10" ry="10" class="cls-5"/>
+  <circle cx="595.875" cy="19.031" r="7.75" class="cls-6"/>
+  <ellipse cx="614.515" cy="19.031" rx="7.765" ry="7.875" class="cls-6"/>
+  <circle cx="633.14" cy="19.031" r="7.765" class="cls-7"/>
+  <path d="M599.928,19.550 L596.483,19.550 L595.267,19.550 L591.822,19.550 C591.486,19.550 591.214,19.315 591.214,19.025 C591.214,18.735 591.486,18.500 591.822,18.500 L595.267,18.500 L596.483,18.500 L599.928,18.500 C600.264,18.500 600.536,18.735 600.536,19.025 C600.536,19.315 600.264,19.550 599.928,19.550 Z" class="cls-8"/>
+  <path d="M636.598,16.457 L634.065,19.025 L636.598,21.593 L636.598,21.593 C636.714,21.710 636.786,21.872 636.786,22.051 C636.786,22.410 636.499,22.700 636.146,22.700 C635.969,22.700 635.809,22.627 635.694,22.510 L635.694,22.510 L633.161,19.942 L630.628,22.510 L630.628,22.510 C630.512,22.627 630.352,22.700 630.175,22.700 C629.822,22.700 629.536,22.410 629.536,22.051 C629.536,21.872 629.607,21.710 629.723,21.593 L629.723,21.593 L632.256,19.025 L629.723,16.457 L629.723,16.457 C629.607,16.340 629.536,16.178 629.536,15.999 C629.536,15.640 629.822,15.350 630.175,15.350 C630.352,15.350 630.512,15.423 630.628,15.540 L630.628,15.540 L633.161,18.108 L635.694,15.540 L635.694,15.540 C635.809,15.423 635.969,15.350 636.146,15.350 C636.499,15.350 636.786,15.640 636.786,15.999 C636.786,16.178 636.714,16.340 636.598,16.457 L636.598,16.457 Z" class="cls-8"/>
+  <path d="M617.803,22.700 L611.233,22.700 C611.045,22.700 610.893,22.546 610.893,22.355 L610.893,15.695 C610.893,15.504 611.045,15.350 611.233,15.350 L617.803,15.350 C617.991,15.350 618.143,15.504 618.143,15.695 L618.143,22.355 C618.143,22.546 617.991,22.700 617.803,22.700 ZM617.463,16.039 L611.573,16.039 L611.573,22.011 L617.463,22.011 L617.463,16.039 Z" class="cls-8"/>
+  <text x="54" y="23" class="cls-9"><tspan x="54" class="cls-10">RubyMine</tspan></text>
+  <rect x="10" y="34" width="649" height="74" class="cls-11"/>
+  <rect x="25" y="122" width="188" height="26" class="cls-11"/>
+  <rect x="25" y="148" width="188" height="39" class="cls-12"/>
+  <rect x="231" y="122" width="416" height="26" class="cls-11"/>
+  <rect x="241" y="158" width="396" height="37" class="cls-13"/>
+  <rect x="251" y="162" width="25" height="26" class="cls-14"/>
+  <rect x="251" y="199" width="25" height="26" class="cls-15"/>
+  <rect x="251" y="233" width="25" height="26" class="cls-16"/>
+  <rect x="251" y="269" width="25" height="26" class="cls-17"/>
+  <rect x="251" y="303" width="25" height="26" class="cls-18"/>
+  <rect x="251" y="339" width="25" height="26" class="cls-19"/>
+  <rect x="251" y="162" width="25" height="5" class="cls-20"/>
+  <rect x="255" y="168" width="17" height="14" class="cls-21"/>
+  <path d="M248.000,169.000 L248.000,191.000 L264.000,191.000 L264.000,175.000 L259.000,169.000 L248.000,169.000 Z" class="cls-22"/>
+  <path d="M259.000,171.000 L259.000,175.000 L263.000,175.000 L259.000,171.000 Z" class="cls-23"/>
+  <path d="M258.000,172.000 L258.000,176.000 L261.000,176.000 L261.000,188.000 L251.000,188.000 L251.000,172.000 L258.000,172.000 Z" class="cls-23"/>
+  <path d="M253.000,180.000 L253.000,179.000 L260.000,179.000 L260.000,180.000 L253.000,180.000 Z" class="cls-24"/>
+  <path d="M253.000,182.000 L253.000,181.000 L260.000,181.000 L260.000,182.000 L253.000,182.000 Z" class="cls-24"/>
+  <path d="M253.000,184.000 L253.000,183.000 L260.000,183.000 L260.000,184.000 L253.000,184.000 Z" class="cls-24"/>
+  <path d="M276.000,178.000 L273.000,183.000 L278.000,186.000 L273.000,187.000 L276.000,192.000 L270.000,189.000 L269.000,194.000 L266.000,189.000 L261.000,192.000 L264.000,187.000 L259.000,185.000 L264.000,184.000 L261.000,178.000 L267.000,181.000 L268.000,176.000 L270.000,181.000 L276.000,178.000 Z" class="cls-25"/>
+  <path d="M29.027,79.621 C29.027,74.836 28.992,70.051 29.036,65.267 C29.097,58.605 32.151,53.543 38.013,50.490 C43.871,47.440 49.823,47.831 55.371,51.534 C56.550,52.321 57.307,52.487 58.499,51.552 C60.494,49.985 62.903,49.220 65.399,48.747 C66.501,48.539 66.998,48.800 66.965,50.053 C66.885,53.016 66.930,55.983 66.946,58.948 C66.949,59.668 66.847,60.182 66.038,60.521 C63.516,61.577 62.723,63.624 62.735,66.225 C62.783,75.929 62.711,85.634 62.794,95.337 C62.810,97.080 62.416,97.721 60.558,97.594 C58.057,97.421 55.529,97.461 53.022,97.584 C51.479,97.660 51.061,97.156 51.074,95.652 C51.157,86.084 51.154,76.515 51.168,66.947 C51.174,62.471 49.272,60.048 45.809,60.076 C42.396,60.103 40.507,62.579 40.507,67.028 C40.506,76.530 40.477,86.032 40.538,95.533 C40.547,97.029 40.289,97.697 38.576,97.592 C36.004,97.434 33.412,97.476 30.834,97.581 C29.425,97.638 28.973,97.232 28.994,95.794 C29.076,90.404 29.027,85.012 29.027,79.621 Z" class="cls-26"/>
+  <path d="M85.503,63.825 C85.412,69.415 83.372,74.129 78.960,77.657 C77.866,78.532 77.950,79.084 78.676,80.067 C80.568,82.629 82.363,85.262 84.216,87.852 C85.017,88.970 85.589,90.172 85.876,91.521 C86.396,93.974 85.250,96.330 82.974,97.409 C80.613,98.529 77.727,98.047 76.315,96.073 C73.121,91.609 69.970,87.112 66.928,82.545 C64.727,79.243 64.741,74.184 69.526,71.609 C73.695,69.366 74.830,66.759 73.853,63.423 C73.480,62.148 72.893,60.851 71.693,60.350 C70.067,59.670 70.035,58.533 70.066,57.137 C70.122,54.565 70.113,51.989 70.067,49.416 C70.048,48.347 70.183,47.848 71.521,48.041 C80.050,49.270 85.498,55.369 85.503,63.825 Z" class="cls-27"/>
+  <text x="104" y="79" class="cls-28"><tspan class="cls-29">Welcome to RubyMine</tspan></text>
+  <text x="80" y="139" class="cls-9"><tspan class="cls-30">Recent Projects</tspan></text>
+  <text x="33" y="163" class="cls-9"><tspan class="cls-31">SomeApp</tspan></text>
+  <text x="290" y="181" class="cls-32"><tspan class="cls-33">Create New Project</tspan></text>
+  <text x="290" y="216" class="cls-32"><tspan class="cls-34">Open Directory</tspan></text>
+  <text x="290" y="251" class="cls-32"><tspan class="cls-34">Check out from Version Control</tspan></text>
+  <text x="290" y="286" class="cls-32"><tspan class="cls-34">Configure</tspan></text>
+  <text x="290" y="321" class="cls-32"><tspan class="cls-34">Docs and How-Tos</tspan></text>
+  <text x="290" y="356" class="cls-32"><tspan class="cls-34">Regsiter</tspan></text>
+  <text x="33" y="179" class="cls-35"><tspan class="cls-36">~\RubymineProjects\SomeApp</tspan></text>
+  <text x="411" y="139" class="cls-9"><tspan class="cls-30">Quick Start</tspan></text>
+</svg>

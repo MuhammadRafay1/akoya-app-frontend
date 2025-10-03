@@ -15,11 +15,11 @@
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: #00809D;
   text-decoration: inherit;
 }
 a:hover {
-  color: #535bf2;
+  color: #00809D;
 }
 
 body {
@@ -47,7 +47,7 @@ button {
   transition: border-color 0.25s;
 }
 button:hover {
-  border-color: #646cff;
+  border-color: #00809D;
 }
 button:focus,
 button:focus-visible {
@@ -65,4 +65,40 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+/* src/index.css (or your global CSS) */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+}
+body {
+  background: #222; /* optional, match your portal bg */
+}
+
+/* make the app container fill full viewport */
+.app-root {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ensure portal wrapper and widget stretch */
+.apimatic-portal-wrapper,
+.hosted-api-docs,
+#apimatic-widget {
+  height: calc(100vh - 64px); /* 64px = header height; change if you used different height */
+  min-height: 400px;
+  overflow: auto;
+}
+
+/* small logo styling */
+.header-logo {
+  height: 40px;
+  object-fit: contain;
+}
+
+.portal-header,
+.portal-footer {
+  display: none !important;
 }

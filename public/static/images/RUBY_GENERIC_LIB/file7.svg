@@ -1,0 +1,169 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="293" height="289" viewBox="0 0 293 289">
+  <defs>
+    <style>
+      .cls-1, .cls-11 {
+        fill: #f0f0f0;
+      }
+
+      .cls-1, .cls-10, .cls-11, .cls-13, .cls-2 {
+        stroke: #181818;
+      }
+
+      .cls-1, .cls-10, .cls-11, .cls-12, .cls-13, .cls-16, .cls-2 {
+        stroke-linejoin: round;
+        stroke-width: 1px;
+      }
+
+      .cls-1, .cls-17, .cls-2, .cls-21, .cls-22, .cls-23, .cls-5, .cls-8, .cls-9 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        fill: #565652;
+        filter: url(#gradient-overlay-1);
+      }
+
+      .cls-3 {
+        fill: #3c3b37;
+      }
+
+      .cls-4 {
+        fill: #e66228;
+      }
+
+      .cls-5 {
+        fill: #3a3935;
+      }
+
+      .cls-6, .cls-7 {
+        font-size: 12px;
+      }
+
+      .cls-7 {
+        fill: #e7e7e7;
+        text-anchor: middle;
+      }
+
+      .cls-15, .cls-18, .cls-20, .cls-7 {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      .cls-8 {
+        fill: #eba12a;
+        filter: url(#inner-shadow-1);
+      }
+
+      .cls-9 {
+        fill: #d85a6d;
+        filter: url(#inner-shadow-2);
+      }
+
+      .cls-10, .cls-16 {
+        fill: #fff;
+      }
+
+      .cls-12, .cls-13 {
+        fill: #e4e4e4;
+      }
+
+      .cls-12 {
+        stroke: #2d98eb;
+      }
+
+      .cls-14, .cls-15, .cls-18 {
+        font-size: 11px;
+      }
+
+      .cls-15, .cls-22 {
+        fill: #181818;
+      }
+
+      .cls-16 {
+        stroke: #b3b4ba;
+      }
+
+      .cls-17 {
+        fill: #4892bc;
+      }
+
+      .cls-18, .cls-20 {
+        fill: #121212;
+      }
+
+      .cls-19, .cls-20 {
+        font-size: 8px;
+      }
+
+      .cls-21 {
+        fill: #b1b1b1;
+      }
+
+      .cls-23 {
+        fill: #828282;
+      }
+    </style>
+
+    <filter id="gradient-overlay-1" filterUnits="userSpaceOnUse">
+      <feImage x="7" y="8" width="281" height="31" preserveAspectRatio="none" xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMjgxIiBoZWlnaHQ9IjMxIj48bGluZWFyR3JhZGllbnQgaWQ9ImdyYWQiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMTQwLjUiIHkxPSIzMSIgeDI9IjE0MC41Ij4KICA8c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiMzYzNiMzciLz4KICA8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiM2MzYyNWUiLz4KPC9saW5lYXJHcmFkaWVudD4KPHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIvPjwvc3ZnPg=="/>
+      <feComposite operator="in" in2="SourceGraphic"/>
+      <feBlend in2="SourceGraphic" result="gradientFill"/>
+    </filter>
+    <filter id="inner-shadow-1" filterUnits="userSpaceOnUse">
+      <feOffset dx="-1.732" dy="1" in="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="2.236" result="innerShadowBlur"/>
+      <feFlood flood-color="#573806" flood-opacity="0.35"/>
+      <feComposite operator="out" in2="innerShadowBlur"/>
+      <feComposite operator="in" in2="SourceAlpha"/>
+      <feBlend mode="multiply" in2="SourceGraphic" result="innerShadow"/>
+    </filter>
+    <filter id="inner-shadow-2" filterUnits="userSpaceOnUse">
+      <feOffset dx="-1.732" dy="1" in="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="2.236" result="innerShadowBlur"/>
+      <feFlood flood-color="#610916" flood-opacity="0.35"/>
+      <feComposite operator="out" in2="innerShadowBlur"/>
+      <feComposite operator="in" in2="SourceAlpha"/>
+      <feBlend mode="multiply" in2="SourceGraphic" result="innerShadow"/>
+    </filter>
+  </defs>
+  <g>
+    <path d="M22.000,8.000 L273.000,8.000 C281.284,8.000 288.000,14.716 288.000,23.000 L288.000,281.000 L7.000,281.000 L7.000,23.000 C7.000,14.716 13.716,8.000 22.000,8.000 Z" class="cls-1"/>
+    <g style="fill: #565652; filter: url(#gradient-overlay-1)">
+      <path d="M22.000,8.000 L273.000,8.000 C281.284,8.000 288.000,14.716 288.000,23.000 L288.000,39.000 L7.000,39.000 L7.000,23.000 C7.000,14.716 13.716,8.000 22.000,8.000 Z" id="path-1" style="stroke: inherit; filter: none; fill: inherit" class="cls-2"/>
+    </g>
+    <use xlink:href="#path-1" style="stroke: #181818; filter: none; fill: none"/>
+    <rect x="251" y="13" width="22" height="21" rx="10" ry="10" class="cls-3"/>
+    <circle cx="262.14" cy="23.031" r="7.766" class="cls-4"/>
+    <path d="M265.598,20.457 L263.065,23.025 L265.598,25.593 L265.598,25.593 C265.714,25.710 265.786,25.872 265.786,26.051 C265.786,26.410 265.499,26.700 265.146,26.700 C264.969,26.700 264.809,26.627 264.694,26.510 L264.694,26.510 L262.161,23.942 L259.628,26.510 L259.628,26.510 C259.512,26.627 259.352,26.700 259.175,26.700 C258.822,26.700 258.536,26.410 258.536,26.051 C258.536,25.872 258.607,25.710 258.723,25.593 L258.723,25.593 L261.256,23.025 L258.723,20.457 L258.723,20.457 C258.607,20.340 258.536,20.178 258.536,19.999 C258.536,19.640 258.822,19.350 259.175,19.350 C259.352,19.350 259.512,19.423 259.628,19.540 L259.628,19.540 L262.161,22.108 L264.694,19.540 L264.694,19.540 C264.809,19.423 264.969,19.350 265.146,19.350 C265.499,19.350 265.786,19.640 265.786,19.999 C265.786,20.178 265.714,20.340 265.598,20.457 L265.598,20.457 Z" class="cls-5"/>
+    <text x="101" y="28" class="cls-6"><tspan x="101" class="cls-7">Add New Controller</tspan></text>
+    <path d="M25.009,25.119 C25.009,23.588 24.997,22.056 25.011,20.525 C25.031,18.394 25.995,16.774 27.846,15.797 C29.696,14.821 31.576,14.946 33.328,16.131 C33.700,16.383 33.939,16.436 34.315,16.137 C34.946,15.635 35.706,15.390 36.494,15.239 C36.842,15.172 36.999,15.256 36.989,15.657 C36.964,16.605 36.978,17.554 36.983,18.503 C36.984,18.734 36.952,18.898 36.696,19.007 C35.900,19.345 35.649,20.000 35.653,20.832 C35.668,23.937 35.646,27.043 35.672,30.148 C35.677,30.705 35.552,30.911 34.966,30.870 C34.176,30.815 33.378,30.827 32.586,30.867 C32.099,30.891 31.967,30.730 31.971,30.249 C31.997,27.187 31.996,24.125 32.000,21.063 C32.002,19.631 31.402,18.855 30.308,18.864 C29.230,18.873 28.634,19.665 28.634,21.089 C28.634,24.129 28.624,27.170 28.644,30.211 C28.647,30.689 28.565,30.903 28.024,30.869 C27.212,30.819 26.393,30.832 25.579,30.866 C25.134,30.884 24.991,30.754 24.998,30.294 C25.024,28.569 25.009,26.844 25.009,25.119 Z" class="cls-8"/>
+    <path d="M42.843,20.064 C42.814,21.853 42.170,23.361 40.777,24.490 C40.431,24.770 40.458,24.947 40.687,25.261 C41.285,26.081 41.851,26.924 42.437,27.753 C42.689,28.111 42.870,28.495 42.961,28.927 C43.125,29.712 42.763,30.466 42.044,30.811 C41.299,31.169 40.388,31.015 39.941,30.383 C38.933,28.955 37.938,27.516 36.977,26.055 C36.282,24.998 36.287,23.379 37.798,22.555 C39.114,21.837 39.473,21.003 39.164,19.935 C39.046,19.527 38.861,19.112 38.482,18.952 C37.969,18.734 37.959,18.370 37.968,17.924 C37.986,17.101 37.983,16.276 37.969,15.453 C37.963,15.111 38.005,14.951 38.428,15.013 C41.121,15.406 42.842,17.358 42.843,20.064 Z" class="cls-9"/>
+  </g>
+  <rect x="16" y="64" width="261" height="20" class="cls-10"/>
+  <rect x="16" y="110" width="261" height="20" class="cls-10"/>
+  <rect x="95" y="154" width="182" height="20" class="cls-11"/>
+  <rect x="102" y="252" width="82" height="20" rx="3" ry="3" class="cls-12"/>
+  <rect x="194" y="252" width="82" height="20" rx="3" ry="3" class="cls-13"/>
+  <text x="219" y="266" class="cls-14"><tspan class="cls-15">Cancel</tspan></text>
+  <text x="136" y="266" class="cls-14"><tspan class="cls-15">OK</tspan></text>
+  <rect x="27" y="186" width="12" height="12" class="cls-16"/>
+  <rect x="96" y="186" width="12" height="12" class="cls-16"/>
+  <rect x="154" y="186" width="12" height="12" class="cls-16"/>
+  <rect x="204" y="186" width="12" height="12" class="cls-16"/>
+  <path d="M22.460,221.818 L18.478,224.117 L18.478,219.520 L22.460,221.818 Z" class="cls-17"/>
+  <text x="20" y="78" class="cls-14"><tspan class="cls-18">Hello</tspan></text>
+  <text x="20" y="59" class="cls-14"><tspan class="cls-18">Controller name: (e.g. 'CreditCard')</tspan></text>
+  <text x="20" y="105" class="cls-14"><tspan class="cls-18">Actions</tspan></text>
+  <text x="20" y="168" class="cls-14"><tspan class="cls-18">Environment:</tspan></text>
+  <text x="30" y="144" class="cls-19"><tspan class="cls-20">Enter actions separated with spaces</tspan></text>
+  <text x="42" y="196" class="cls-14"><tspan class="cls-18">Pretend</tspan></text>
+  <text x="29" y="226" class="cls-14"><tspan class="cls-18">Options</tspan></text>
+  <path d="M71.000,223.000 L71.000,222.000 L277.000,222.000 L277.000,223.000 L71.000,223.000 Z" class="cls-21"/>
+  <text x="111" y="196" class="cls-14"><tspan class="cls-18">Force</tspan></text>
+  <text x="169" y="196" class="cls-14"><tspan class="cls-18">Skip</tspan></text>
+  <text x="220" y="196" class="cls-14"><tspan class="cls-18">Backtrace</tspan></text>
+  <text x="100" y="168" class="cls-14"><tspan class="cls-18">development</tspan></text>
+  <rect x="260" y="157" width="14" height="14" rx="1" ry="1" class="cls-13"/>
+  <path d="M267.299,165.987 L264.576,161.272 L270.021,161.272 L267.299,165.987 Z" class="cls-22"/>
+  <text x="20" y="124" class="cls-14"><tspan class="cls-18">Index</tspan></text>
+  <path d="M163.833,190.060 L163.833,190.060 L159.452,194.818 L159.452,194.818 C159.348,194.931 159.205,195.000 159.048,195.000 C158.890,195.000 158.747,194.931 158.644,194.818 L158.644,194.818 L156.167,192.129 L156.167,192.129 C156.064,192.016 156.000,191.861 156.000,191.690 C156.000,191.347 156.256,191.069 156.571,191.069 C156.729,191.069 156.872,191.138 156.976,191.251 L156.976,191.251 L159.048,193.502 L163.025,189.182 L163.025,189.182 C163.128,189.069 163.271,189.000 163.429,189.000 C163.744,189.000 164.000,189.278 164.000,189.621 C164.000,189.792 163.936,189.947 163.833,190.060 Z" class="cls-23"/>
+</svg>

@@ -10,6 +10,9 @@
 
 import { useState, useRef } from "react";
 import type { JSX } from "react/jsx-runtime";
+import Header from "./components/Header";
+import Body from "./components/Body";
+
 
 // ------------------
 // CONFIG (update before running)
@@ -190,30 +193,13 @@ ${idToken}`);
 
 
   return (
-    <div className="min-h-screen bg-gray-50 text-gray-800">
-      <header className="bg-white shadow p-4">
-        <div className="max-w-4xl mx-auto flex items-center justify-between">
-          <h1 className="text-xl font-semibold">Akoya Auth Demo (React)</h1>
-          <div>
-            <button
-              onClick={() => startAuthFlow()}
-              className="px-4 py-2 rounded bg-blue-600 text-white hover:bg-blue-700"
-            >
-              Run Akoya auth flow
-            </button>
-          </div>
-        </div>
-      </header>
+  <div className="min-h-screen bg-gray-50 text-gray-800" style={{ display: "flex", flexDirection: "column", height: "100vh" }}>
+    <Header onGetAuthClick={startAuthFlow} logoSrc="/static/images/logo-dark.png" title="Akoya API" />
 
-      <main className="max-w-4xl mx-auto p-6">
-        <p className="mb-4">Status: <strong>{status}</strong></p>
-        <p className="text-sm text-gray-600">
-          Notes: This demo will parse the authorization `code` from the redirect URL
-          and POST it to the token endpoint with a Basic Authorization header. The
-          returned `id_token` (or `access_token` if `id_token` isn't present) will
-          be copied to your clipboard (if allowed) and displayed in a popup.
-        </p>
-      </main>
+    {/* Body holds the apimatic portal scripts and container */}
+    <div style={{ flex: 1, overflow: "hidden" }}>
+      <Body />
     </div>
-  );
+  </div>
+);
 }

@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="850" height="574" viewBox="0 0 850 574">
+  <defs>
+    <style>
+    .cls-1, .cls-41, .cls-44 {
+      fill: #f8f8f8;
+    }
+
+    .cls-1, .cls-2 {
+      stroke: #181818;
+    }
+
+    .cls-1, .cls-11, .cls-14, .cls-16, .cls-2, .cls-45, .cls-46, .cls-9 {
+      stroke-linejoin: round;
+      stroke-width: 1px;
+    }
+
+    .cls-1, .cls-15, .cls-17, .cls-18, .cls-2, .cls-20, .cls-21, .cls-23, .cls-24, .cls-25, .cls-26, .cls-33, .cls-34, .cls-35, .cls-36, .cls-37, .cls-38, .cls-43, .cls-44, .cls-6 {
+      fill-rule: evenodd;
+    }
+
+    .cls-2 {
+      fill: #565551;
+      filter: url(#gradient-overlay-1);
+    }
+
+    .cls-3 {
+      fill: #3c3b37;
+      filter: url(#inner-shadow-1);
+    }
+
+    .cls-4 {
+      fill: #878680;
+    }
+
+    .cls-5 {
+      fill: #e66228;
+    }
+
+    .cls-6 {
+      fill: #3a3935;
+    }
+
+    .cls-7, .cls-8 {
+      font-size: 12px;
+    }
+
+    .cls-8 {
+      fill: #e7e7e7;
+    }
+
+    .cls-28, .cls-39, .cls-8 {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .cls-14, .cls-22, .cls-35, .cls-9 {
+      fill: #fff;
+    }
+
+    .cls-11, .cls-16, .cls-45, .cls-9 {
+      stroke: #c5c5c5;
+    }
+
+    .cls-10 {
+      fill: #bcbcbc;
+    }
+
+    .cls-11 {
+      fill: #e8e8e8;
+    }
+
+    .cls-12 {
+      fill: #effae7;
+    }
+
+    .cls-13 {
+      fill: #d4d4d4;
+    }
+
+    .cls-14 {
+      stroke: #919191;
+    }
+
+    .cls-15 {
+      fill: #4b63a7;
+    }
+
+    .cls-16 {
+      fill: #f0f0f0;
+    }
+
+    .cls-17 {
+      fill: #36ac55;
+    }
+
+    .cls-18 {
+      fill: #e17867;
+    }
+
+    .cls-19 {
+      fill: #e1dfdf;
+    }
+
+    .cls-20 {
+      fill: #757575;
+    }
+
+    .cls-21 {
+      fill: #bd9662;
+    }
+
+    .cls-23, .cls-25 {
+      fill: #eba12a;
+    }
+
+    .cls-23 {
+      filter: url(#inner-shadow-2);
+    }
+
+    .cls-24, .cls-26 {
+      fill: #d85a6d;
+    }
+
+    .cls-24 {
+      filter: url(#inner-shadow-3);
+    }
+
+    .cls-27, .cls-28, .cls-29, .cls-30, .cls-31, .cls-39 {
+      font-size: 22.539px;
+    }
+
+    .cls-28, .cls-31 {
+      fill: #1f1f1f;
+    }
+
+    .cls-29 {
+      fill: #00a638;
+    }
+
+    .cls-29, .cls-30, .cls-31 {
+      font-family: "Courier New";
+    }
+
+    .cls-30, .cls-39 {
+      fill: gray;
+    }
+
+    .cls-32 {
+      fill: #ffffd7;
+    }
+
+    .cls-33 {
+      fill: #6fb174;
+    }
+
+    .cls-34 {
+      fill: #9c9c9c;
+    }
+
+    .cls-36 {
+      fill: #4892bc;
+    }
+
+    .cls-37 {
+      fill: #d95646;
+    }
+
+    .cls-38 {
+      fill: #979797;
+    }
+
+    .cls-40 {
+      fill: #68a1c2;
+    }
+
+    .cls-42 {
+      fill: #b3d8ed;
+    }
+
+    .cls-43 {
+      fill: #8a8a8a;
+    }
+
+    .cls-45 {
+      fill: #f5f5f5;
+    }
+
+    .cls-46 {
+      fill: #e0e0e0;
+      stroke: #d5d5d5;
+    }
+    </style>
+
+    <filter id="gradient-overlay-1" filterUnits="userSpaceOnUse">
+      <feImage x="7.625" y="6.625" width="835.344" height="34.9688" preserveAspectRatio="none" xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iODM1LjM0NCIgaGVpZ2h0PSIzNC45Njg4Ij48bGluZWFyR3JhZGllbnQgaWQ9ImdyYWQiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iNDE3LjY3MiIgeTE9IjM0Ljk2OCIgeDI9IjQxNy42NzIiPgogIDxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzNjM2IzNyIvPgogIDxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzYzNjI1ZSIvPgo8L2xpbmVhckdyYWRpZW50Pgo8cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIi8+PC9zdmc+"/>
+      <feComposite operator="in" in2="SourceGraphic"/>
+      <feBlend in2="SourceGraphic" result="gradientFill"/>
+    </filter>
+    <filter id="inner-shadow-1" filterUnits="userSpaceOnUse">
+      <feOffset dy="1" in="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="1.732" result="innerShadowBlur"/>
+      <feFlood flood-opacity="0.35"/>
+      <feComposite operator="out" in2="innerShadowBlur"/>
+      <feComposite operator="in" in2="SourceAlpha"/>
+      <feBlend mode="multiply" in2="SourceGraphic" result="innerShadow"/>
+    </filter>
+    <filter id="inner-shadow-2" filterUnits="userSpaceOnUse">
+      <feOffset dy="2" in="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="2.236" result="innerShadowBlur"/>
+      <feFlood flood-color="#573806" flood-opacity="0.35"/>
+      <feComposite operator="out" in2="innerShadowBlur"/>
+      <feComposite operator="in" in2="SourceAlpha"/>
+      <feBlend mode="multiply" in2="SourceGraphic" result="innerShadow"/>
+    </filter>
+    <filter id="inner-shadow-3" filterUnits="userSpaceOnUse">
+      <feOffset dy="2" in="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="2.236" result="innerShadowBlur"/>
+      <feFlood flood-color="#610916" flood-opacity="0.35"/>
+      <feComposite operator="out" in2="innerShadowBlur"/>
+      <feComposite operator="in" in2="SourceAlpha"/>
+      <feBlend mode="multiply" in2="SourceGraphic" result="innerShadow"/>
+    </filter>
+  </defs>
+  <path d="M24.914,7.010 L826.110,7.010 C835.445,7.010 843.013,13.710 843.013,21.975 L843.013,566.990 L8.012,566.990 L8.012,21.975 C8.012,13.710 15.579,7.010 24.914,7.010 Z" class="cls-1"/>
+  <g style="fill: #565551; filter: url(#gradient-overlay-1)">
+    <path d="M24.546,6.636 L826.072,6.636 C835.411,6.636 842.981,14.207 842.981,23.545 L842.981,41.582 L7.637,41.582 L7.637,23.545 C7.637,14.207 15.207,6.636 24.546,6.636 Z" id="path-1" style="stroke: inherit; filter: none; fill: inherit" class="cls-2"/>
+  </g>
+  <use xlink:href="#path-1" style="stroke: #181818; filter: none; fill: none"/>
+  <rect x="749.406" y="12.281" width="66.532" height="23.656" rx="11.273" ry="11.273" class="cls-3"/>
+  <circle cx="761.672" cy="24.719" r="8.734" class="cls-4"/>
+  <circle cx="782.688" cy="24.719" r="8.75" class="cls-4"/>
+  <circle cx="803.688" cy="24.719" r="8.75" class="cls-5"/>
+  <path d="M766.242,25.293 L762.359,25.293 L760.988,25.293 L757.105,25.293 C756.726,25.293 756.419,25.028 756.419,24.701 C756.419,24.374 756.726,24.109 757.105,24.109 L760.988,24.109 L762.359,24.109 L766.242,24.109 C766.621,24.109 766.927,24.374 766.927,24.701 C766.927,25.028 766.621,25.293 766.242,25.293 Z" class="cls-6"/>
+  <path d="M807.582,21.806 L804.726,24.701 L807.582,27.596 L807.582,27.596 C807.712,27.728 807.793,27.911 807.793,28.113 C807.793,28.516 807.470,28.844 807.072,28.844 C806.873,28.844 806.692,28.762 806.562,28.630 L806.562,28.630 L803.706,25.735 L800.851,28.630 L800.851,28.630 C800.720,28.762 800.540,28.844 800.341,28.844 C799.943,28.844 799.620,28.516 799.620,28.113 C799.620,27.911 799.701,27.728 799.831,27.596 L799.831,27.596 L802.686,24.701 L799.831,21.806 L799.831,21.806 C799.701,21.674 799.620,21.491 799.620,21.289 C799.620,20.886 799.943,20.558 800.341,20.558 C800.540,20.558 800.720,20.640 800.851,20.772 L800.851,20.772 L803.706,23.667 L806.562,20.772 L806.562,20.772 C806.692,20.640 806.873,20.558 807.072,20.558 C807.470,20.558 807.793,20.886 807.793,21.289 C807.793,21.491 807.712,21.674 807.582,21.806 L807.582,21.806 Z" class="cls-6"/>
+  <path d="M786.393,28.844 L778.986,28.844 C778.775,28.844 778.603,28.670 778.603,28.455 L778.603,20.947 C778.603,20.732 778.775,20.558 778.986,20.558 L786.393,20.558 C786.605,20.558 786.776,20.732 786.776,20.947 L786.776,28.455 C786.776,28.670 786.605,28.844 786.393,28.844 ZM786.010,21.335 L779.369,21.335 L779.369,28.067 L786.010,28.067 L786.010,21.335 Z" class="cls-6"/>
+  <text transform="translate(67 29) scale(1.13 1.13)" class="cls-7"><tspan class="cls-8">TestApp</tspan></text>
+  <rect x="9" y="61.469" width="20" height="504.562" class="cls-9"/>
+  <rect x="9" y="68" width="20" height="88" class="cls-10"/>
+  <rect x="28" y="68" width="814" height="20" class="cls-11"/>
+  <rect x="28" y="87" width="322" height="369" class="cls-9"/>
+  <rect x="29" y="353" width="320" height="19" class="cls-12"/>
+  <rect x="29" y="433" width="320" height="19" class="cls-13"/>
+  <rect x="37" y="97" width="9" height="9" class="cls-14"/>
+  <path d="M39.000,102.000 L39.000,101.000 L44.000,101.000 L44.000,102.000 L39.000,102.000 Z" class="cls-15"/>
+  <rect x="84" y="138" width="9" height="9" class="cls-14"/>
+  <path d="M86.000,143.000 L86.000,142.000 L91.000,142.000 L91.000,143.000 L86.000,143.000 Z" class="cls-15"/>
+  <path d="M89.000,145.000 L88.000,145.000 L88.000,140.000 L89.000,140.000 L89.000,145.000 Z" class="cls-15"/>
+  <rect x="84" y="158" width="9" height="9" class="cls-14"/>
+  <path d="M89.000,165.000 L88.000,165.000 L88.000,160.000 L89.000,160.000 L89.000,165.000 Z" class="cls-15"/>
+  <path d="M86.000,163.000 L86.000,162.000 L91.000,162.000 L91.000,163.000 L86.000,163.000 Z" class="cls-15"/>
+  <rect x="84" y="178" width="9" height="9" class="cls-14"/>
+  <path d="M89.000,185.000 L88.000,185.000 L88.000,180.000 L89.000,180.000 L89.000,185.000 Z" class="cls-15"/>
+  <path d="M86.000,183.000 L86.000,182.000 L91.000,182.000 L91.000,183.000 L86.000,183.000 Z" class="cls-15"/>
+  <rect x="84" y="198" width="9" height="9" class="cls-14"/>
+  <path d="M89.000,205.000 L88.000,205.000 L88.000,200.000 L89.000,200.000 L89.000,205.000 Z" class="cls-15"/>
+  <path d="M86.000,203.000 L86.000,202.000 L91.000,202.000 L91.000,203.000 L86.000,203.000 Z" class="cls-15"/>
+  <rect x="84" y="218" width="9" height="9" class="cls-14"/>
+  <path d="M89.000,225.000 L88.000,225.000 L88.000,220.000 L89.000,220.000 L89.000,225.000 Z" class="cls-15"/>
+  <path d="M86.000,223.000 L86.000,222.000 L91.000,222.000 L91.000,223.000 L86.000,223.000 Z" class="cls-15"/>
+  <rect x="84" y="238" width="9" height="9" class="cls-14"/>
+  <path d="M89.000,245.000 L88.000,245.000 L88.000,240.000 L89.000,240.000 L89.000,245.000 Z" class="cls-15"/>
+  <path d="M86.000,243.000 L86.000,242.000 L91.000,242.000 L91.000,243.000 L86.000,243.000 Z" class="cls-15"/>
+  <rect x="60" y="258" width="9" height="9" class="cls-14"/>
+  <path d="M65.000,265.000 L64.000,265.000 L64.000,260.000 L65.000,260.000 L65.000,265.000 Z" class="cls-15"/>
+  <path d="M62.000,263.000 L62.000,262.000 L67.000,262.000 L67.000,263.000 L62.000,263.000 Z" class="cls-15"/>
+  <rect x="60" y="277" width="9" height="9" class="cls-14"/>
+  <path d="M65.000,284.000 L64.000,284.000 L64.000,279.000 L65.000,279.000 L65.000,284.000 Z" class="cls-15"/>
+  <path d="M62.000,282.000 L62.000,281.000 L67.000,281.000 L67.000,282.000 L62.000,282.000 Z" class="cls-15"/>
+  <rect x="60" y="297" width="9" height="9" class="cls-14"/>
+  <path d="M65.000,304.000 L64.000,304.000 L64.000,299.000 L65.000,299.000 L65.000,304.000 Z" class="cls-15"/>
+  <path d="M62.000,302.000 L62.000,301.000 L67.000,301.000 L67.000,302.000 L62.000,302.000 Z" class="cls-15"/>
+  <rect x="60" y="318" width="9" height="9" class="cls-14"/>
+  <path d="M65.000,325.000 L64.000,325.000 L64.000,320.000 L65.000,320.000 L65.000,325.000 Z" class="cls-15"/>
+  <path d="M62.000,323.000 L62.000,322.000 L67.000,322.000 L67.000,323.000 L62.000,323.000 Z" class="cls-15"/>
+  <rect x="60" y="358" width="9" height="9" class="cls-14"/>
+  <path d="M65.000,365.000 L64.000,365.000 L64.000,360.000 L65.000,360.000 L65.000,365.000 Z" class="cls-15"/>
+  <path d="M62.000,363.000 L62.000,362.000 L67.000,362.000 L67.000,363.000 L62.000,363.000 Z" class="cls-15"/>
+  <rect x="60" y="378" width="9" height="9" class="cls-14"/>
+  <path d="M65.000,385.000 L64.000,385.000 L64.000,380.000 L65.000,380.000 L65.000,385.000 Z" class="cls-15"/>
+  <path d="M62.000,383.000 L62.000,382.000 L67.000,382.000 L67.000,383.000 L62.000,383.000 Z" class="cls-15"/>
+  <rect x="60" y="338" width="9" height="9" class="cls-14"/>
+  <path d="M65.000,345.000 L64.000,345.000 L64.000,340.000 L65.000,340.000 L65.000,345.000 Z" class="cls-15"/>
+  <path d="M62.000,343.000 L62.000,342.000 L67.000,342.000 L67.000,343.000 L62.000,343.000 Z" class="cls-15"/>
+  <rect x="60" y="117" width="9" height="9" class="cls-14"/>
+  <path d="M62.000,122.000 L62.000,121.000 L67.000,121.000 L67.000,122.000 L62.000,122.000 Z" class="cls-15"/>
+  <rect x="28" y="462" width="431" height="95" class="cls-9"/>
+  <rect x="28" y="462" width="20" height="95" class="cls-16"/>
+  <path d="M44.087,480.800 L38.913,480.800 L38.913,485.900 C38.913,486.397 38.504,486.800 38.000,486.800 C37.496,486.800 37.087,486.397 37.087,485.900 L37.087,480.800 L31.913,480.800 C31.409,480.800 31.000,480.397 31.000,479.900 C31.000,479.403 31.409,479.000 31.913,479.000 L37.087,479.000 L37.087,473.900 C37.087,473.403 37.496,473.000 38.000,473.000 C38.504,473.000 38.913,473.403 38.913,473.900 L38.913,479.000 L44.087,479.000 C44.591,479.000 45.000,479.403 45.000,479.900 C45.000,480.397 44.591,480.800 44.087,480.800 Z" class="cls-17"/>
+  <path d="M42.907,501.336 L39.291,504.900 L42.907,508.464 L42.907,508.464 C43.072,508.627 43.174,508.851 43.174,509.100 C43.174,509.597 42.765,510.000 42.261,510.000 C42.009,510.000 41.780,509.899 41.615,509.736 L41.615,509.736 L38.000,506.173 L34.385,509.736 L34.385,509.736 C34.220,509.899 33.991,510.000 33.739,510.000 C33.235,510.000 32.826,509.597 32.826,509.100 C32.826,508.851 32.928,508.627 33.094,508.464 L33.094,508.464 L36.709,504.900 L33.094,501.336 L33.094,501.336 C32.928,501.174 32.826,500.949 32.826,500.700 C32.826,500.203 33.235,499.800 33.739,499.800 C33.991,499.800 34.220,499.901 34.385,500.064 L34.385,500.064 L38.000,503.627 L41.615,500.064 L41.615,500.064 C41.780,499.901 42.009,499.800 42.261,499.800 C42.765,499.800 43.174,500.203 43.174,500.700 C43.174,500.949 43.072,501.174 42.907,501.336 L42.907,501.336 Z" class="cls-18"/>
+  <rect x="468" y="462" width="374" height="95" class="cls-9"/>
+  <rect x="468" y="462" width="20" height="95" class="cls-16"/>
+  <rect x="471" y="469" width="14" height="14" rx="1" ry="1" class="cls-19"/>
+  <rect x="471" y="489" width="14" height="14" rx="1" ry="1" class="cls-19"/>
+  <rect x="471" y="508" width="14" height="14" rx="1" ry="1" class="cls-19"/>
+  <rect x="471" y="528" width="14" height="14" rx="1" ry="1" class="cls-19"/>
+  <path d="M41.000,106.000 L42.000,106.000 L42.000,455.000 L41.000,455.000 L41.000,106.000 Z" class="cls-20"/>
+  <path d="M64.000,126.000 L65.000,126.000 L65.000,258.000 L64.000,258.000 L64.000,126.000 Z" class="cls-20"/>
+  <path d="M46.000,102.000 L46.000,101.000 L55.000,101.000 L55.000,102.000 L46.000,102.000 Z" class="cls-20"/>
+  <path d="M69.000,122.000 L69.000,121.000 L78.000,121.000 L78.000,122.000 L69.000,122.000 Z" class="cls-20"/>
+  <path d="M93.000,143.000 L93.000,142.000 L102.000,142.000 L102.000,143.000 L93.000,143.000 Z" class="cls-20"/>
+  <path d="M88.000,129.000 L89.000,129.000 L89.000,138.000 L88.000,138.000 L88.000,129.000 Z" class="cls-20"/>
+  <path d="M88.000,147.000 L89.000,147.000 L89.000,158.000 L88.000,158.000 L88.000,147.000 Z" class="cls-20"/>
+  <path d="M93.000,163.000 L93.000,162.000 L102.000,162.000 L102.000,163.000 L93.000,163.000 Z" class="cls-20"/>
+  <path d="M88.000,167.000 L89.000,167.000 L89.000,178.000 L88.000,178.000 L88.000,167.000 Z" class="cls-20"/>
+  <path d="M93.000,183.000 L93.000,182.000 L102.000,182.000 L102.000,183.000 L93.000,183.000 Z" class="cls-20"/>
+  <path d="M88.000,187.000 L89.000,187.000 L89.000,198.000 L88.000,198.000 L88.000,187.000 Z" class="cls-20"/>
+  <path d="M93.000,203.000 L93.000,202.000 L102.000,202.000 L102.000,203.000 L93.000,203.000 Z" class="cls-20"/>
+  <path d="M88.000,207.000 L89.000,207.000 L89.000,218.000 L88.000,218.000 L88.000,207.000 Z" class="cls-20"/>
+  <path d="M93.000,223.000 L93.000,222.000 L102.000,222.000 L102.000,223.000 L93.000,223.000 Z" class="cls-20"/>
+  <path d="M93.000,243.000 L93.000,242.000 L102.000,242.000 L102.000,243.000 L93.000,243.000 Z" class="cls-20"/>
+  <path d="M88.000,227.000 L89.000,227.000 L89.000,238.000 L88.000,238.000 L88.000,227.000 Z" class="cls-20"/>
+  <path d="M69.000,263.000 L69.000,262.000 L78.000,262.000 L78.000,263.000 L69.000,263.000 Z" class="cls-20"/>
+  <path d="M64.000,267.000 L65.000,267.000 L65.000,278.000 L64.000,278.000 L64.000,267.000 Z" class="cls-20"/>
+  <path d="M69.000,282.000 L69.000,281.000 L78.000,281.000 L78.000,282.000 L69.000,282.000 Z" class="cls-20"/>
+  <path d="M64.000,286.000 L65.000,286.000 L65.000,297.000 L64.000,297.000 L64.000,286.000 Z" class="cls-20"/>
+  <path d="M69.000,302.000 L69.000,301.000 L78.000,301.000 L78.000,302.000 L69.000,302.000 Z" class="cls-20"/>
+  <path d="M64.000,306.000 L65.000,306.000 L65.000,318.000 L64.000,318.000 L64.000,306.000 Z" class="cls-20"/>
+  <path d="M69.000,323.000 L69.000,322.000 L78.000,322.000 L78.000,323.000 L69.000,323.000 Z" class="cls-20"/>
+  <path d="M64.000,327.000 L65.000,327.000 L65.000,338.000 L64.000,338.000 L64.000,327.000 Z" class="cls-20"/>
+  <path d="M69.000,343.000 L69.000,342.000 L78.000,342.000 L78.000,343.000 L69.000,343.000 Z" class="cls-20"/>
+  <path d="M64.000,347.000 L65.000,347.000 L65.000,358.000 L64.000,358.000 L64.000,347.000 Z" class="cls-20"/>
+  <path d="M69.000,363.000 L69.000,362.000 L78.000,362.000 L78.000,363.000 L69.000,363.000 Z" class="cls-20"/>
+  <path d="M69.000,383.000 L69.000,382.000 L78.000,382.000 L78.000,383.000 L69.000,383.000 Z" class="cls-20"/>
+  <path d="M65.000,403.000 L65.000,402.000 L78.000,402.000 L78.000,403.000 L65.000,403.000 Z" class="cls-20"/>
+  <path d="M65.000,423.000 L65.000,422.000 L78.000,422.000 L78.000,423.000 L65.000,423.000 Z" class="cls-20"/>
+  <path d="M65.000,443.000 L65.000,442.000 L78.000,442.000 L78.000,443.000 L65.000,443.000 Z" class="cls-20"/>
+  <path d="M64.000,367.000 L65.000,367.000 L65.000,378.000 L64.000,378.000 L64.000,367.000 Z" class="cls-20"/>
+  <path d="M64.000,387.000 L65.000,387.000 L65.000,455.000 L64.000,455.000 L64.000,387.000 Z" class="cls-20"/>
+  <path d="M64.000,108.000 L65.000,108.000 L65.000,117.000 L64.000,117.000 L64.000,108.000 Z" class="cls-20"/>
+  <path d="M72.000,97.000 L72.000,107.000 L58.000,107.000 L58.000,95.000 L64.000,95.000 L66.000,97.000 L72.000,97.000 Z" class="cls-21"/>
+  <rect x="60" y="99" width="10" height="6" class="cls-22"/>
+  <path d="M95.000,117.000 L95.000,127.000 L81.000,127.000 L81.000,115.000 L87.000,115.000 L89.000,117.000 L95.000,117.000 Z" class="cls-21"/>
+  <rect x="83" y="119" width="10" height="6" class="cls-22"/>
+  <path d="M119.000,138.000 L119.000,148.000 L105.000,148.000 L105.000,136.000 L111.000,136.000 L113.000,138.000 L119.000,138.000 Z" class="cls-21"/>
+  <rect x="107" y="140" width="10" height="6" class="cls-22"/>
+  <rect x="349" y="87" width="493" height="369" class="cls-9"/>
+  <path d="M40.010,26.016 C40.010,24.198 39.997,22.379 40.013,20.561 C40.036,18.030 41.161,16.106 43.321,14.946 C45.479,13.787 47.672,13.936 49.715,15.343 C50.150,15.642 50.429,15.705 50.868,15.350 C51.603,14.754 52.491,14.463 53.410,14.284 C53.816,14.205 53.999,14.304 53.987,14.780 C53.958,15.906 53.974,17.033 53.980,18.160 C53.981,18.434 53.944,18.629 53.645,18.758 C52.717,19.159 52.424,19.937 52.429,20.926 C52.446,24.613 52.420,28.301 52.451,31.988 C52.456,32.650 52.311,32.894 51.627,32.846 C50.705,32.780 49.774,32.795 48.850,32.842 C48.282,32.871 48.128,32.679 48.132,32.108 C48.163,28.472 48.162,24.836 48.167,21.200 C48.169,19.499 47.469,18.578 46.193,18.589 C44.936,18.599 44.240,19.540 44.239,21.231 C44.239,24.841 44.228,28.452 44.251,32.063 C44.254,32.631 44.159,32.885 43.528,32.845 C42.580,32.785 41.625,32.801 40.676,32.841 C40.156,32.862 39.990,32.708 39.998,32.162 C40.028,30.113 40.010,28.065 40.010,26.016 Z" class="cls-23"/>
+  <path d="M60.817,20.013 C60.783,22.138 60.032,23.929 58.406,25.270 C58.003,25.602 58.034,25.812 58.302,26.185 C58.999,27.159 59.660,28.159 60.343,29.144 C60.638,29.569 60.849,30.025 60.954,30.538 C61.146,31.470 60.724,32.365 59.885,32.776 C59.015,33.201 57.952,33.018 57.432,32.268 C56.255,30.571 55.094,28.863 53.973,27.127 C53.163,25.872 53.168,23.950 54.931,22.972 C56.466,22.119 56.885,21.128 56.525,19.861 C56.387,19.376 56.171,18.883 55.729,18.693 C55.130,18.434 55.118,18.002 55.130,17.472 C55.150,16.495 55.147,15.516 55.130,14.538 C55.123,14.132 55.173,13.942 55.666,14.016 C58.808,14.482 60.815,16.800 60.817,20.013 Z" class="cls-24"/>
+  <path d="M13.006,143.957 C13.006,142.904 12.998,141.851 13.008,140.799 C13.020,139.333 13.663,138.219 14.898,137.548 C16.131,136.877 17.384,136.963 18.552,137.777 C18.800,137.951 18.959,137.987 19.210,137.781 C19.630,137.437 20.137,137.268 20.663,137.164 C20.895,137.119 21.000,137.176 20.993,137.452 C20.976,138.104 20.985,138.756 20.989,139.408 C20.989,139.567 20.968,139.680 20.797,139.755 C20.267,139.987 20.100,140.437 20.102,141.010 C20.112,143.144 20.097,145.279 20.115,147.414 C20.118,147.798 20.035,147.939 19.644,147.911 C19.117,147.873 18.585,147.881 18.057,147.909 C17.732,147.925 17.644,147.814 17.647,147.483 C17.665,145.378 17.664,143.273 17.667,141.168 C17.668,140.184 17.268,139.651 16.539,139.657 C15.820,139.663 15.423,140.207 15.423,141.186 C15.422,143.277 15.416,145.367 15.429,147.457 C15.431,147.786 15.377,147.933 15.016,147.910 C14.474,147.875 13.929,147.885 13.386,147.908 C13.089,147.920 12.994,147.831 12.999,147.515 C13.016,146.329 13.006,145.143 13.006,143.957 Z" class="cls-25"/>
+  <path d="M24.895,140.481 C24.876,141.711 24.447,142.748 23.518,143.525 C23.288,143.717 23.305,143.839 23.458,144.055 C23.856,144.618 24.234,145.198 24.624,145.767 C24.793,146.013 24.914,146.278 24.974,146.575 C25.083,147.114 24.842,147.633 24.363,147.870 C23.866,148.116 23.258,148.010 22.961,147.576 C22.289,146.594 21.625,145.605 20.985,144.600 C20.521,143.873 20.524,142.760 21.532,142.194 C22.409,141.701 22.648,141.127 22.443,140.393 C22.364,140.113 22.241,139.827 21.988,139.717 C21.646,139.567 21.639,139.317 21.645,139.010 C21.657,138.444 21.655,137.878 21.646,137.311 C21.642,137.076 21.670,136.967 21.952,137.009 C23.747,137.279 24.894,138.621 24.895,140.481 Z" class="cls-26"/>
+  <text transform="translate(25 60) scale(0.53 0.53)" class="cls-27"><tspan class="cls-28">File</tspan></text>
+  <text transform="translate(24 129) rotate(-90) scale(0.53 0.54)" class="cls-27"><tspan class="cls-28">1: Project</tspan></text>
+  <text transform="translate(23 226) rotate(-90) scale(0.53 0.54)" class="cls-27"><tspan class="cls-28">7: Structure</tspan></text>
+  <text transform="translate(52 60) scale(0.53 0.53)" class="cls-27"><tspan class="cls-28">Edit</tspan></text>
+  <text transform="translate(81 60) scale(0.53 0.53)" class="cls-27"><tspan class="cls-28">View</tspan></text>
+  <text transform="translate(81 106) scale(0.53 0.53)" class="cls-27"><tspan class="cls-28">TestApp</tspan></text>
+  <rect x="352" y="68" width="80" height="20" class="cls-9"/>
+  <g>
+    <text transform="translate(407 103) scale(0.53 0.53)" class="cls-27"><tspan class="cls-29">'http://rubygems.org'</tspan></text>
+    <text transform="translate(357 141) scale(0.53 0.53)" class="cls-27"><tspan class="cls-30"># Bundle edge Rails instead: gem 'rails', github: 'rails/rails'</tspan></text>
+    <text transform="translate(386 160) scale(0.53 0.53)" class="cls-27"><tspan class="cls-29">'rails', '4.1.8'</tspan></text>
+    <text transform="translate(357 179) scale(0.53 0.53)" class="cls-27"><tspan class="cls-30"># Use squite3 as the database for active Record</tspan></text>
+    <text transform="translate(357 218) scale(0.53 0.53)" class="cls-27"><tspan class="cls-30"># Use SCSS for stylesheets</tspan></text>
+    <text transform="translate(386 198) scale(0.53 0.53)" class="cls-27"><tspan class="cls-29">'squite3'</tspan></text>
+    <text transform="translate(386 237) scale(0.53 0.53)" class="cls-27"><tspan class="cls-29">'saas-rails', '~&gt; 4.0.3'</tspan></text>
+    <text transform="translate(357 256) scale(0.53 0.53)" class="cls-27"><tspan class="cls-30"># Use Uglifier as compressor for JavaScript assets</tspan></text>
+    <text transform="translate(357 295) scale(0.53 0.53)" class="cls-27"><tspan class="cls-30"># Use CoffeeScript for .js.coffee assets and views</tspan></text>
+    <text transform="translate(357 333) scale(0.53 0.53)" class="cls-27"><tspan class="cls-30"># see https://github.com/sstephenson/execjs#readme for more support</tspan></text>
+    <text transform="translate(357 352) scale(0.53 0.53)" class="cls-27"><tspan class="cls-30"># gem 'therubyracer', platforms: :ruby</tspan></text>
+    <text transform="translate(357 381) scale(0.53 0.53)" class="cls-27"><tspan class="cls-30"># specify the client library gem in Gemfile</tspan></text>
+    <text transform="translate(357 428) scale(0.53 0.53)" class="cls-27"><tspan class="cls-30"># Use jquery as the JavaScript library</tspan></text>
+    <text transform="translate(386 275) scale(0.53 0.53)" class="cls-27"><tspan class="cls-29">'uglifier', '&gt;= 1.3.0'</tspan></text>
+    <text transform="translate(357 275) scale(0.53 0.53)" class="cls-27"><tspan class="cls-31">gem</tspan></text>
+    <text transform="translate(357 237) scale(0.53 0.53)" class="cls-27"><tspan class="cls-31">gem</tspan></text>
+    <text transform="translate(357 198) scale(0.53 0.53)" class="cls-27"><tspan class="cls-31">gem</tspan></text>
+    <text transform="translate(357 160) scale(0.53 0.53)" class="cls-27"><tspan class="cls-31">gem</tspan></text>
+    <text transform="translate(357 103) scale(0.53 0.53)" class="cls-27"><tspan class="cls-31">source</tspan></text>
+    <text transform="translate(386 314) scale(0.53 0.53)" class="cls-27"><tspan class="cls-29">'coffee-rails', '~&gt; 4.0.0'</tspan></text>
+    <text transform="translate(357 314) scale(0.53 0.53)" class="cls-27"><tspan class="cls-31">gem</tspan></text>
+    <text transform="translate(62 484) scale(0.53 0.53)" class="cls-27"><tspan class="cls-31">[devops@DEV_PC:/~/AkoyaApIsV240]$ _</tspan></text>
+    <rect x="350" y="386" width="491" height="19" class="cls-32"/>
+    <text transform="translate(386 399) scale(0.53 0.53)" class="cls-27"><tspan class="cls-29">'akoya_ap_is_v240', '~&gt;2.4.0'</tspan></text>
+    <text transform="translate(357 399) scale(0.53 0.53)" class="cls-27"><tspan class="cls-31">gem</tspan></text>
+    <text transform="translate(386 447) scale(0.53 0.53)" class="cls-27"><tspan class="cls-29">'jquery-rails'</tspan></text>
+    <text transform="translate(357 447) scale(0.53 0.53)" class="cls-27"><tspan class="cls-31">gem</tspan></text>
+  </g>
+  <text transform="translate(103 126) scale(0.53 0.53)" class="cls-27"><tspan class="cls-28">app</tspan></text>
+  <text transform="translate(126 146) scale(0.53 0.53)" class="cls-27"><tspan class="cls-28">assets</tspan></text>
+  <path d="M119.000,158.000 L119.000,168.000 L105.000,168.000 L105.000,156.000 L111.000,156.000 L113.000,158.000 L119.000,158.000 Z" class="cls-21"/>
+  <rect x="107" y="160" width="10" height="6" class="cls-22"/>
+  <text transform="translate(126 166) scale(0.53 0.53)" class="cls-27"><tspan class="cls-28">controllers</tspan></text>
+  <path d="M119.000,178.000 L119.000,188.000 L105.000,188.000 L105.000,176.000 L111.000,176.000 L113.000,178.000 L119.000,178.000 Z" class="cls-21"/>
+  <rect x="107" y="180" width="10" height="6" class="cls-22"/>
+  <text transform="translate(126 186) scale(0.53 0.53)" class="cls-27"><tspan class="cls-28">helpers</tspan></text>
+  <path d="M119.000,198.000 L119.000,208.000 L105.000,208.000 L105.000,196.000 L111.000,196.000 L113.000,198.000 L119.000,198.000 Z" class="cls-21"/>
+  <rect x="107" y="200" width="10" height="6" class="cls-22"/>
+  <text transform="translate(126 206) scale(0.53 0.53)" class="cls-27"><tspan class="cls-28">mailers</tspan></text>
+  <path d="M119.000,218.000 L119.000,228.000 L105.000,228.000 L105.000,216.000 L111.000,216.000 L113.000,218.000 L119.000,218.000 Z" class="cls-21"/>
+  <rect x="107" y="220" width="10" height="6" class="cls-22"/>
+  <text transform="translate(126 226) scale(0.53 0.53)" class="cls-27"><tspan class="cls-28">models</tspan></text>
+  <path d="M119.000,238.000 L119.000,248.000 L105.000,248.000 L105.000,236.000 L111.000,236.000 L113.000,238.000 L119.000,238.000 Z" class="cls-21"/>
+  <rect x="107" y="240" width="10" height="6" class="cls-22"/>
+  <text transform="translate(126 246) scale(0.53 0.53)" class="cls-27"><tspan class="cls-28">views</tspan></text>
+  <path d="M95.000,258.000 L95.000,268.000 L81.000,268.000 L81.000,256.000 L87.000,256.000 L89.000,258.000 L95.000,258.000 Z" class="cls-21"/>
+  <rect x="83" y="260" width="10" height="6" class="cls-22"/>
+  <text transform="translate(102 266) scale(0.53 0.53)" class="cls-27"><tspan class="cls-28">bin</tspan></text>
+  <path d="M95.000,278.000 L95.000,288.000 L81.000,288.000 L81.000,276.000 L87.000,276.000 L89.000,278.000 L95.000,278.000 Z" class="cls-21"/>
+  <rect x="83" y="280" width="10" height="6" class="cls-22"/>
+  <text transform="translate(102 286) scale(0.53 0.53)" class="cls-27"><tspan class="cls-28">config</tspan></text>
+  <path d="M95.000,298.000 L95.000,308.000 L81.000,308.000 L81.000,296.000 L87.000,296.000 L89.000,298.000 L95.000,298.000 Z" class="cls-21"/>
+  <rect x="83" y="300" width="10" height="6" class="cls-22"/>
+  <text transform="translate(102 306) scale(0.53 0.53)" class="cls-27"><tspan class="cls-28">lib</tspan></text>
+  <path d="M95.000,318.000 L95.000,328.000 L81.000,328.000 L81.000,316.000 L87.000,316.000 L89.000,318.000 L95.000,318.000 Z" class="cls-21"/>
+  <rect x="83" y="320" width="10" height="6" class="cls-22"/>
+  <text transform="translate(102 326) scale(0.53 0.53)" class="cls-27"><tspan class="cls-28">log</tspan></text>
+  <path d="M95.000,338.000 L95.000,348.000 L81.000,348.000 L81.000,336.000 L87.000,336.000 L89.000,338.000 L95.000,338.000 Z" class="cls-21"/>
+  <rect x="83" y="340" width="10" height="6" class="cls-22"/>
+  <text transform="translate(102 346) scale(0.53 0.53)" class="cls-27"><tspan class="cls-28">public</tspan></text>
+  <path d="M95.000,358.000 L95.000,368.000 L81.000,368.000 L81.000,356.000 L87.000,356.000 L89.000,358.000 L95.000,358.000 Z" class="cls-33"/>
+  <rect x="83" y="360" width="10" height="6" class="cls-22"/>
+  <text transform="translate(102 366) scale(0.53 0.53)" class="cls-27"><tspan class="cls-28">test</tspan></text>
+  <path d="M95.000,378.000 L95.000,388.000 L81.000,388.000 L81.000,376.000 L87.000,376.000 L89.000,378.000 L95.000,378.000 Z" class="cls-21"/>
+  <rect x="83" y="380" width="10" height="6" class="cls-22"/>
+  <text transform="translate(102 386) scale(0.53 0.53)" class="cls-27"><tspan class="cls-28">vendor</tspan></text>
+  <text transform="translate(102 406) scale(0.53 0.53)" class="cls-27"><tspan class="cls-28">.gitignore</tspan></text>
+  <text transform="translate(102 426) scale(0.53 0.53)" class="cls-27"><tspan class="cls-28">config.ru</tspan></text>
+  <path d="M82.000,396.000 L82.000,411.000 L93.000,411.000 L93.000,399.000 L90.000,396.000 L82.000,396.000 Z" class="cls-34"/>
+  <path d="M84.000,398.000 L84.000,409.000 L91.000,409.000 L91.000,400.000 L89.000,400.000 L89.000,398.000 L84.000,398.000 Z" class="cls-35"/>
+  <path d="M85.000,403.000 L85.000,402.000 L90.000,402.000 L90.000,403.000 L85.000,403.000 Z" class="cls-36"/>
+  <path d="M85.000,405.000 L85.000,404.000 L90.000,404.000 L90.000,405.000 L85.000,405.000 Z" class="cls-36"/>
+  <path d="M85.000,407.000 L85.000,406.000 L90.000,406.000 L90.000,407.000 L85.000,407.000 Z" class="cls-36"/>
+  <rect x="90" y="398" width="1" height="1" class="cls-22"/>
+  <path d="M82.000,435.000 L82.000,450.000 L93.000,450.000 L93.000,438.000 L90.000,435.000 L82.000,435.000 Z" class="cls-34"/>
+  <path d="M84.000,437.000 L84.000,448.000 L91.000,448.000 L91.000,439.000 L89.000,439.000 L89.000,437.000 L84.000,437.000 Z" class="cls-35"/>
+  <path d="M85.000,440.000 L90.000,440.000 L91.000,442.000 L88.000,446.000 L87.000,446.000 L84.000,442.000 L85.000,440.000 Z" class="cls-37"/>
+  <rect x="90" y="437" width="1" height="1" class="cls-22"/>
+  <path d="M358.000,72.000 L358.000,84.000 L368.000,84.000 L368.000,74.400 L365.273,72.000 L358.000,72.000 Z" class="cls-34"/>
+  <path d="M359.818,73.600 L359.818,82.400 L366.182,82.400 L366.182,75.200 L364.364,75.200 L364.364,73.600 L359.818,73.600 Z" class="cls-35"/>
+  <path d="M360.727,76.000 L365.273,76.000 L366.182,77.600 L363.455,80.800 L362.545,80.800 L359.818,77.600 L360.727,76.000 Z" class="cls-37"/>
+  <rect x="365.281" y="73.594" width="0.907" height="0.813" class="cls-22"/>
+  <path d="M93.000,419.000 L93.000,430.000 L88.000,431.000 L79.000,429.000 L79.000,418.000 L84.000,417.000 L93.000,419.000 Z" class="cls-38"/>
+  <path d="M84.000,420.000 L88.000,421.000 L88.000,423.000 L84.000,422.000 L84.000,420.000 Z" class="cls-35"/>
+  <path d="M84.000,424.000 L88.000,425.000 L88.000,427.000 L84.000,426.000 L84.000,424.000 Z" class="cls-35"/>
+  <path d="M84.000,427.000 L88.000,428.000 L88.000,430.000 L84.000,429.000 L84.000,427.000 Z" class="cls-35"/>
+  <path d="M92.000,420.000 L92.000,422.000 L89.000,423.000 L89.000,420.000 L92.000,420.000 Z" class="cls-35"/>
+  <path d="M92.000,424.000 L92.000,426.000 L89.000,426.000 L89.000,424.000 L92.000,424.000 Z" class="cls-35"/>
+  <path d="M92.000,427.000 L92.000,429.000 L89.000,430.000 L89.000,427.000 L92.000,427.000 Z" class="cls-35"/>
+  <path d="M80.000,419.000 L80.000,421.000 L83.000,422.000 L83.000,420.000 L80.000,419.000 Z" class="cls-35"/>
+  <path d="M80.000,426.000 L83.000,427.000 L83.000,428.000 L80.000,428.000 L80.000,426.000 Z" class="cls-35"/>
+  <path d="M83.000,423.000 L80.000,423.000 L80.000,425.000 L83.000,424.000 L83.000,423.000 Z" class="cls-35"/>
+  <path d="M84.000,418.000 L84.000,419.000 L89.000,419.000 L84.000,418.000 Z" class="cls-35"/>
+  <path d="M83.000,418.000 L83.000,419.000 L81.000,419.000 L83.000,418.000 Z" class="cls-35"/>
+  <text transform="translate(102 446) scale(0.53 0.53)" class="cls-27"><tspan class="cls-28">Gemfile</tspan></text>
+  <text transform="translate(114 60) scale(0.53 0.53)" class="cls-27"><tspan class="cls-28">Navigate</tspan></text>
+  <text transform="translate(168 60) scale(0.53 0.53)" class="cls-27"><tspan class="cls-28">Code</tspan></text>
+  <text transform="translate(203 60) scale(0.53 0.53)" class="cls-27"><tspan class="cls-28">Refactor</tspan></text>
+  <text transform="translate(254 60) scale(0.53 0.53)" class="cls-27"><tspan class="cls-28">Run</tspan></text>
+  <text transform="translate(284 60) scale(0.53 0.53)" class="cls-27"><tspan class="cls-28">Tools</tspan></text>
+  <text transform="translate(320 60) scale(0.53 0.53)" class="cls-27"><tspan class="cls-28">VCS</tspan></text>
+  <text transform="translate(350 60) scale(0.53 0.53)" class="cls-27"><tspan class="cls-28">Window</tspan></text>
+  <text transform="translate(373 82) scale(0.53 0.53)" class="cls-27"><tspan class="cls-28">Gemfile</tspan></text>
+  <text transform="translate(420 81) scale(0.53 0.53)" class="cls-27"><tspan class="cls-39">x</tspan></text>
+  <rect x="28" y="68" width="80" height="20" class="cls-9"/>
+  <text transform="translate(51 82) scale(0.53 0.53)" class="cls-27"><tspan class="cls-28">Project</tspan></text>
+  <text transform="translate(96 81) scale(0.53 0.53)" class="cls-27"><tspan class="cls-39">x</tspan></text>
+  <rect x="35" y="72" width="11" height="9" class="cls-40"/>
+  <rect x="36" y="74" width="9" height="6" class="cls-41"/>
+  <rect x="37" y="75" width="7" height="4" class="cls-42"/>
+  <path d="M40.000,76.000 L40.000,84.000 L32.000,84.000 L32.000,74.000 L38.000,74.000 L40.000,76.000 Z" class="cls-43"/>
+  <path d="M34.000,76.000 L34.000,82.000 L38.000,82.000 L38.000,77.000 L37.000,77.000 L37.000,76.000 L34.000,76.000 Z" class="cls-44"/>
+  <path d="M35.000,79.000 L35.000,78.000 L37.000,78.000 L37.000,79.000 L35.000,79.000 Z" class="cls-43"/>
+  <path d="M35.000,81.000 L35.000,80.000 L37.000,80.000 L37.000,81.000 L35.000,81.000 Z" class="cls-43"/>
+  <text transform="translate(401 60) scale(0.53 0.53)" class="cls-27"><tspan class="cls-28">Help</tspan></text>
+  <image xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAANCAMAAACuAq9NAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAn1BMVEUAAABrqtRrqtRrqtTge3Xge3Xge3VrqtRrqtTge3Xge3Xge3XYeXRrqtRpnL1mf5BjY2N1ZmbReHPge3Xge3VjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2PGlmG4j2HClGGvimG6kGHGlmHGlmHGlmHGlmHGlmHGlmFrqtTge3VrqNFjY2PaenTGlmEAAAAB73ZgAAAALnRSTlMAHrrzHrrzu7+7v/nI9OtOA9PU9B9a0ARyvAG4dh/rJCK0eh7a/fMiu7/z+fQfpNJrSQAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAB1SURBVAjXY2BkYmZiZAACFlY2VhYGdj09PQ4Ql1NfX5+LgRnINTAEAiMglxshywOWZWTn5eMH8gQEhYQ5RUDiomLiDAwSklIMUCAtwyArJw/jMSjIKSgqwXkMyiqqauoIroaxsbEmgqsF5GrjlFXW0NHQBbMAlwALfQ8300wAAAAASUVORK5CYII=" x="12" y="234" width="14" height="13"/>
+  <rect x="330" y="87" width="20" height="369" class="cls-45"/>
+  <rect x="332" y="89" width="16" height="278" rx="1" ry="1" class="cls-46"/>
+  <rect x="822" y="87" width="20" height="369" class="cls-45"/>
+  <rect x="824" y="89" width="16" height="278" rx="1" ry="1" class="cls-46"/>
+</svg>

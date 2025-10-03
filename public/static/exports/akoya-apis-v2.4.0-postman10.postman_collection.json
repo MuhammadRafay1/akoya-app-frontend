@@ -1,0 +1,1659 @@
+{
+  "id": "b4ccd376-fad6-4577-bbbe-4ecb67c2b020",
+  "name": "Akoya APIs v2.4.0",
+  "description": "Akoya product APIs for data access. Default servers are set for the Akoya sandbox environment.\n\nAkoya APIs include the following updates:\n\n- v2.4.0\n  - Added Tax product\n- v2.3.0\n  - Removed erroneous `accountId` query param from Taxlots endpoint\n  - Added TaxLots endpoint\n- v2.2.2\n  - Added mode query parameter to Account Information, Balances, Investments, and Transactions to support standard mode.\n  - Edited callouts for Account Holder endpoint\n- v2.2.1\n  - Fixed typo in `accountIds` query parameter for `/accounts-info`, `/balances`, `/accounts`\n  - Added security method for `Account holder information` to bear token. Missing method defaulted to basic auth.\n  - Added examples and descriptions to some schemas\n  - Added HTTP status `429` FDX error `1207`.\n- v2.2 Additions\n  - Added optional `x-akoya-interaction-type` header to all endpoints to specify if a request is part of a batch process\n  - Update of tags to organize endpoints by Akoya product\n  - `206` response added to `/accounts-info`, `/balances`, `/accounts`\n- v2.1 New Statements product and Customers product updated with additional endpoint, `Account holder information`.\n- v2.0 Launch of Akoya products: Account Info, Balances, Investments, Transactions, Payments, Customers.",
+  "order": [],
+  "folders": [
+    {
+      "id": "a4d5edb2-e888-4804-9c45-10858ec8e816",
+      "name": "Account information",
+      "description": "Account information",
+      "order": [
+        "7310b2cc-7b0d-4e77-a425-3ee4e85e45e2"
+      ],
+      "collection_id": "b4ccd376-fad6-4577-bbbe-4ecb67c2b020"
+    },
+    {
+      "id": "229070f8-64de-4447-910b-7f3d5b599c5c",
+      "name": "Balances",
+      "description": "Balances",
+      "order": [
+        "2c5f4a27-293b-4feb-8a2a-04904e4331f1"
+      ],
+      "collection_id": "b4ccd376-fad6-4577-bbbe-4ecb67c2b020"
+    },
+    {
+      "id": "1174a506-ef2a-458d-a51e-6587140079b2",
+      "name": "Customers",
+      "description": "Customers",
+      "order": [
+        "30180fba-e08e-4ed7-b47b-7094e0c45c49",
+        "23b6b799-78d7-4ba4-8a59-8de0220b7978"
+      ],
+      "collection_id": "b4ccd376-fad6-4577-bbbe-4ecb67c2b020"
+    },
+    {
+      "id": "802ebe4c-4b65-44db-b89d-e10a173f7a41",
+      "name": "Investments",
+      "description": "Investments",
+      "order": [
+        "5701c2ab-bee4-4396-bd8d-b9b58d5f695e",
+        "dcfe5508-d726-40a8-9ed3-57ab5c944355"
+      ],
+      "collection_id": "b4ccd376-fad6-4577-bbbe-4ecb67c2b020"
+    },
+    {
+      "id": "dedb7635-e617-4931-aec7-b5564adb4cba",
+      "name": "Payments",
+      "description": "Payments",
+      "order": [
+        "efca041c-4c30-49b7-b0c8-9c4d22a8cf41"
+      ],
+      "collection_id": "b4ccd376-fad6-4577-bbbe-4ecb67c2b020"
+    },
+    {
+      "id": "9db4a8b2-2911-4d28-80c3-757960d36f8a",
+      "name": "Statements",
+      "description": "Statements",
+      "order": [
+        "71b8d5ba-7b97-448a-97b5-a5d408bd8312",
+        "b47de17c-0c65-4201-8f9f-d985e9513736"
+      ],
+      "collection_id": "b4ccd376-fad6-4577-bbbe-4ecb67c2b020"
+    },
+    {
+      "id": "f3680cbc-5f8d-42ac-a1b9-47d56924a6d2",
+      "name": "Tax (beta)",
+      "description": "Tax (beta)",
+      "order": [
+        "4c2ebd8f-d023-48cd-b8d5-f3222048607a",
+        "6ceb5b61-1da3-420b-8723-61e39d236b04"
+      ],
+      "collection_id": "b4ccd376-fad6-4577-bbbe-4ecb67c2b020"
+    },
+    {
+      "id": "0dd59764-bd40-4c5d-a993-3da1a75cabc1",
+      "name": "Transactions",
+      "description": "Transactions",
+      "order": [
+        "070791a6-0102-4692-9684-4727d72214ff"
+      ],
+      "collection_id": "b4ccd376-fad6-4577-bbbe-4ecb67c2b020"
+    }
+  ],
+  "requests": [
+    {
+      "folder": "a4d5edb2-e888-4804-9c45-10858ec8e816",
+      "id": "7310b2cc-7b0d-4e77-a425-3ee4e85e45e2",
+      "name": "get-accounts-info",
+      "dataDisabled": false,
+      "descriptionFormat": "markdown",
+      "description": "Get basic account information including accountId, masked account number, type, description, etc.\n\nTo view the response schema, select the `200` response below. Then pick an option for annuity, deposit, insurance, investment, loan, and line of credit account types. \n\nFor an example payload response, see the `200` example response below the `Try it` feature. The example is from a deposit account but all account types are supported by this endpoint.\n\n> 🛑\n> \n> The *id_token* should be used as the bearer token with this call.\n\nUse the `mode` query param to receive FDX-aligned, standardized data values (Beta). For example:\n\n`https://sandbox-products.ddp.akoya.com/accounts-info/v2/mikomo?mode=standard`\n\n`mode` is available in both sandbox and production.\n\n`mode` is supported by a subset of providers. Log into the [Data Recipient Hub](https://recipient.ddp.akoya.com/login) and click [here](https://recipient.ddp.akoya.com/support/article/kA0Uw00000015GzKAI) to view a list of all providers supporting the `mode` parameter.\n\n",
+      "headers": "x-akoya-interaction-type:user\nAccept:application/json,text/plain\n",
+      "method": "GET",
+      "currentHelper": "",
+      "auth": {
+        "type": "noauth"
+      },
+      "pathVariables": {
+        "version": "v2",
+        "providerId": "mikomo"
+      },
+      "url": "{{default}}/accounts-info/:version/:providerId?mode=raw",
+      "responses": [
+        {
+          "request": "7310b2cc-7b0d-4e77-a425-3ee4e85e45e2",
+          "id": "287222c3-d8a9-432a-bbf2-931e293289c6",
+          "name": "Response_200",
+          "status": "OK",
+          "responseCode": {
+            "code": 200,
+            "name": "200",
+            "detail": "OK"
+          },
+          "headers": [
+            {
+              "name": "x-akoya-interaction-id",
+              "key": "x-akoya-interaction-id",
+              "value": "x-akoya-interaction-id76",
+              "description": "Akoya supplied interaction id used for logging and error tracking"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "mime": "application/json",
+          "text": "{\n  \"accounts\": [\n    {\n      \"investmentAccount\": {\n        \"accountId\": \"839502593\",\n        \"accountType\": \"College Savings\",\n        \"balanceType\": \"ASSET\",\n        \"currency\": {\n          \"currencyCode\": \"USD\"\n        },\n        \"nickname\": \"529 for Kid\"\n      }\n    },\n    {\n      \"investmentAccount\": {\n        \"accountId\": \"5426873\",\n        \"accountNumberDisplay\": \"...7054\",\n        \"accountType\": \"BROKERAGE\",\n        \"allowedCheckWriting\": false,\n        \"currency\": {\n          \"currencyCode\": \"USD\"\n        },\n        \"lastActivityDate\": \"2021-07-06T00:00:00Z\",\n        \"margin\": false,\n        \"nickname\": \"Self-Directed\",\n        \"status\": \"OPEN\",\n        \"transactionsIncluded\": false\n      }\n    },\n    {\n      \"depositAccount\": {\n        \"accountId\": \"g833202fb0866d0ad83472c429\",\n        \"accountNumberDisplay\": \"xxxxxxxx0071\",\n        \"accountType\": \"CHECKING\",\n        \"balanceType\": \"ASSET\",\n        \"currency\": {\n          \"currencyCode\": \"USD\"\n        },\n        \"description\": \"Checking Plus\",\n        \"fiAttributes\": [\n          {\n            \"name\": \"accountOpenedDate\",\n            \"value\": \"2020-04-23\"\n          },\n          {\n            \"name\": \"interestPaidLastYear\",\n            \"value\": \"3.20\"\n          }\n        ],\n        \"interestRate\": 0.0125,\n        \"interestRateAsOf\": \"2022-04-24T14:15:22Z\",\n        \"interestRateType\": \"FIXED\",\n        \"lastActivityDate\": \"2022-04-24T14:15:22Z\",\n        \"lineOfBusiness\": \"Personal\",\n        \"nickname\": \"Nickname Checking Plus 0071\",\n        \"productName\": \"Checking Plus\",\n        \"status\": \"OPEN\",\n        \"transferIn\": true,\n        \"transferOut\": true\n      }\n    },\n    {\n      \"depositAccount\": {\n        \"accountId\": \"5dbda8de96eeff05f23934523a1fc258\",\n        \"accountNumberDisplay\": \"xxxx0134\",\n        \"accountType\": \"CHECKING\",\n        \"annualPercentageYield\": 0,\n        \"currency\": {\n          \"currencyCode\": \"USD\"\n        },\n        \"description\": \"Virtual Wallet Student Reserve\",\n        \"interestRateAsOf\": \"2022-04-24T14:15:22Z\",\n        \"interestRateType\": \"FIXED\",\n        \"lastActivityDate\": \"2022-04-01T10:05:00Z\",\n        \"lineOfBusiness\": \"LBRB\",\n        \"productName\": \"Virtual Wallet Student Reserve\",\n        \"transactionsIncluded\": false\n      }\n    },\n    {\n      \"depositAccount\": {\n        \"accountId\": \"11719ae5-2399-1278-e43c-43f24abb3058\",\n        \"accountType\": \"CD\",\n        \"annualPercentageYield\": 0.75,\n        \"balanceType\": \"ASSET\",\n        \"currency\": {\n          \"currencyCode\": \"USD\",\n          \"originalCurrencyCode\": \"USD\"\n        },\n        \"description\": \"Certificate of Deposit\",\n        \"fiAttributes\": [\n          {\n            \"name\": \"eStatements\",\n            \"value\": \"False\"\n          },\n          {\n            \"name\": \"interestPaidLastYear\",\n            \"value\": \"50.72\"\n          },\n          {\n            \"name\": \"isTransactionsSupported\",\n            \"value\": \"False\"\n          },\n          {\n            \"name\": \"issueDate\",\n            \"value\": \"2019-03-21T00:00:00.000Z\"\n          },\n          {\n            \"name\": \"interestPayoutFrequency\",\n            \"value\": \"Semi-Annually (And At Maturity)\"\n          }\n        ],\n        \"interestRate\": 0.75,\n        \"lineOfBusiness\": \"CONSUMER\",\n        \"maturityDate\": \"2024-03-21T00:00:00Z\",\n        \"nickname\": \"Certificate of Deposit - 3691\",\n        \"parentAccountId\": \"11719ae5-2399-1278-e43c-43f24abb3058\",\n        \"status\": \"OPEN\",\n        \"term\": 60,\n        \"transactionsIncluded\": false,\n        \"transferIn\": false,\n        \"transferOut\": false\n      }\n    },\n    {\n      \"depositAccount\": {\n        \"accountId\": \"33fbd9e5-9cc3-3d7d-15b3-70d97d87ca1d\",\n        \"accountType\": \"SAVINGS\",\n        \"balanceType\": \"ASSET\",\n        \"currency\": {\n          \"currencyCode\": \"USD\",\n          \"originalCurrencyCode\": \"USD\"\n        },\n        \"description\": \"Savings\",\n        \"fiAttributes\": [\n          {\n            \"name\": \"eStatements\",\n            \"value\": \"True\"\n          }\n        ],\n        \"interestRate\": 0.01,\n        \"lineOfBusiness\": \"CONSUMER\",\n        \"nickname\": \"Savings - 8537\",\n        \"parentAccountId\": \"33fbd9e5-9cc3-3d7d-15b3-70d97d87ca1d\",\n        \"status\": \"OPEN\",\n        \"transactionsIncluded\": false\n      }\n    }\n  ]\n}",
+          "language": "Text",
+          "rawDataType": "text"
+        },
+        {
+          "request": "7310b2cc-7b0d-4e77-a425-3ee4e85e45e2",
+          "id": "d2797ed9-482b-45e8-8bfd-3a9cb868d34b",
+          "name": "Response_405",
+          "status": "Method Not Allowed",
+          "responseCode": {
+            "code": 405,
+            "name": "405",
+            "detail": "Method Not Allowed"
+          },
+          "headers": [
+            {
+              "name": "x-akoya-interaction-id",
+              "key": "x-akoya-interaction-id",
+              "value": "x-akoya-interaction-id62",
+              "description": "Akoya supplied interaction id used for logging and error tracking"
+            },
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "mime": "text/plain",
+          "text": "Method Not Found",
+          "language": "Text",
+          "rawDataType": "text"
+        }
+      ],
+      "collectionId": "b4ccd376-fad6-4577-bbbe-4ecb67c2b020",
+      "queryParams": [
+        {
+          "key": "mode",
+          "value": "raw",
+          "description": "BETA. Default is raw. Use standard for FDX-aligned, standardized data values."
+        }
+      ],
+      "headerData": [
+        {
+          "key": "x-akoya-interaction-type",
+          "value": "user",
+          "description": "Optional but recommended header to include with each data request. \nAllowed values are `user` or `batch`. \n`user` indicates a request is prompted by an end-user action.\n`batch` indicates the request is part of a batch process."
+        },
+        {
+          "key": "Accept",
+          "value": "application/json,text/plain"
+        }
+      ],
+      "pathVariableData": [
+        {
+          "key": "version",
+          "value": "v2",
+          "description": "Akoya major version number. Do not use minor version numbers. For instance, use v2 and not v2.2"
+        },
+        {
+          "key": "providerId",
+          "value": "mikomo",
+          "description": "Id of provider"
+        }
+      ]
+    },
+    {
+      "folder": "229070f8-64de-4447-910b-7f3d5b599c5c",
+      "id": "2c5f4a27-293b-4feb-8a2a-04904e4331f1",
+      "name": "get-balances",
+      "dataDisabled": false,
+      "descriptionFormat": "markdown",
+      "description": "Account information that includes balances and rates of bank accounts, credit cards, loans, investments, and more.\n\nTo view the response schema, select the `200` response below. Then pick an option for annuity, deposit, insurance, investment, loan, and line of credit account types. \n\nFor an example payload response, see the `200` example response below the `Try it` feature. The example is from a deposit account but all account types are supported by this endpoint.\n\n> 🛑\n> \n> The *id_token* should be used as the bearer token with this call.\n\nUse the `mode` query param to receive FDX-aligned, standardized data values (Beta). For example:\n\n`https://sandbox-products.ddp.akoya.com/balances/v2/mikomo?mode=standard`\n\n`mode` is available in both sandbox and production.\n\n`mode` is supported by a subset of providers. Log into the [Data Recipient Hub](https://recipient.ddp.akoya.com/login) and click [here](https://recipient.ddp.akoya.com/support/article/kA0Uw00000015GzKAI) to view a list of all providers supporting the `mode` parameter.",
+      "headers": "x-akoya-interaction-type:user\nAccept:application/json,text/plain\n",
+      "method": "GET",
+      "currentHelper": "",
+      "auth": {
+        "type": "noauth"
+      },
+      "pathVariables": {
+        "version": "v2",
+        "providerId": "mikomo"
+      },
+      "url": "{{default}}/balances/:version/:providerId?mode=raw",
+      "responses": [
+        {
+          "request": "2c5f4a27-293b-4feb-8a2a-04904e4331f1",
+          "id": "8b7b5238-f3d5-4c59-ade5-a5d5fe4dab3b",
+          "name": "Response_200",
+          "status": "OK",
+          "responseCode": {
+            "code": 200,
+            "name": "200",
+            "detail": "OK"
+          },
+          "headers": [
+            {
+              "name": "x-akoya-interaction-id",
+              "key": "x-akoya-interaction-id",
+              "value": "x-akoya-interaction-id82",
+              "description": "Akoya supplied interaction id used for logging and error tracking"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "mime": "application/json",
+          "text": "{\n  \"accounts\": [\n    {\n      \"investmentAccount\": {\n        \"accountId\": \"839502593\",\n        \"accountType\": \"College Savings\",\n        \"availableCashBalance\": 0,\n        \"balanceAsOf\": \"2022-03-16T04:00:00Z\",\n        \"balanceType\": \"ASSET\",\n        \"currency\": {\n          \"currencyCode\": \"USD\"\n        },\n        \"currentValue\": 52672.49,\n        \"marginBalance\": 0,\n        \"nickname\": \"529 for Kid\"\n      }\n    },\n    {\n      \"investmentAccount\": {\n        \"accountId\": \"5426873\",\n        \"accountNumberDisplay\": \"...7054\",\n        \"accountType\": \"BROKERAGE\",\n        \"allowedCheckWriting\": false,\n        \"availableCashBalance\": 0,\n        \"balanceList\": [\n          {\n            \"balanceDate\": \"2021-07-06\",\n            \"balanceDescription\": \"Margin Call\",\n            \"balanceName\": \"MARGINCALL\",\n            \"balanceType\": \"AMOUNT\",\n            \"balanceValue\": 0,\n            \"currency\": {\n              \"currencyCode\": \"USD\"\n            }\n          },\n          {\n            \"balanceDate\": \"2021-07-06\",\n            \"balanceDescription\": \"Fed Call\",\n            \"balanceName\": \"FEDCALL\",\n            \"balanceType\": \"AMOUNT\",\n            \"balanceValue\": 0,\n            \"currency\": {\n              \"currencyCode\": \"USD\"\n            }\n          },\n          {\n            \"balanceDate\": \"2021-07-06\",\n            \"balanceDescription\": \"Intra Day\",\n            \"balanceName\": \"INTRADAY\",\n            \"balanceType\": \"AMOUNT\",\n            \"balanceValue\": 0,\n            \"currency\": {\n              \"currencyCode\": \"USD\"\n            }\n          },\n          {\n            \"balanceDate\": \"2021-07-05\",\n            \"balanceDescription\": \"Prior Day\",\n            \"balanceName\": \"PRIORDAY\",\n            \"balanceType\": \"AMOUNT\",\n            \"balanceValue\": 0,\n            \"currency\": {\n              \"currencyCode\": \"USD\"\n            }\n          }\n        ],\n        \"currency\": {\n          \"currencyCode\": \"USD\"\n        },\n        \"lastActivityDate\": \"2021-07-06T00:00:00Z\",\n        \"margin\": false,\n        \"marginBalance\": 0,\n        \"nickname\": \"Self-Directed\",\n        \"shortBalance\": 0,\n        \"status\": \"OPEN\",\n        \"transactionsIncluded\": false\n      }\n    },\n    {\n      \"depositAccount\": {\n        \"accountId\": \"g833202fb0866d0ad83472c429\",\n        \"accountNumberDisplay\": \"xxxxxxxx0071\",\n        \"accountType\": \"CHECKING\",\n        \"availableBalance\": 106717.06,\n        \"balanceAsOf\": \"2022-04-24T14:15:22Z\",\n        \"balanceType\": \"ASSET\",\n        \"currency\": {\n          \"currencyCode\": \"USD\"\n        },\n        \"currentBalance\": 106717.06,\n        \"description\": \"Checking Plus\",\n        \"fiAttributes\": [\n          {\n            \"name\": \"accountOpenedDate\",\n            \"value\": \"2020-04-23\"\n          },\n          {\n            \"name\": \"interestPaidLastYear\",\n            \"value\": \"3.20\"\n          }\n        ],\n        \"interestRate\": 0.0125,\n        \"interestRateAsOf\": \"2022-04-24T14:15:22Z\",\n        \"interestRateType\": \"FIXED\",\n        \"interestYtd\": 20.33,\n        \"lastActivityDate\": \"2022-04-24T14:15:22Z\",\n        \"lineOfBusiness\": \"Personal\",\n        \"nickname\": \"Nickname Checking Plus 0071\",\n        \"productName\": \"Checking Plus\",\n        \"status\": \"OPEN\",\n        \"transferIn\": true,\n        \"transferOut\": true\n      }\n    },\n    {\n      \"depositAccount\": {\n        \"accountId\": \"5dbda8de96eeff05f23934523a1fc258\",\n        \"accountNumberDisplay\": \"xxxx0134\",\n        \"accountType\": \"CHECKING\",\n        \"annualPercentageYield\": 0,\n        \"availableBalance\": 0,\n        \"balanceAsOf\": \"2022-04-24T14:15:22Z\",\n        \"currency\": {\n          \"currencyCode\": \"USD\"\n        },\n        \"currentBalance\": 0,\n        \"description\": \"Virtual Wallet Student Reserve\",\n        \"interestRateAsOf\": \"2022-04-24T14:15:22Z\",\n        \"interestRateType\": \"FIXED\",\n        \"lastActivityDate\": \"2022-04-01T10:05:00Z\",\n        \"lineOfBusiness\": \"LBRB\",\n        \"openingDayBalance\": 0,\n        \"productName\": \"Virtual Wallet Student Reserve\",\n        \"transactionsIncluded\": false\n      }\n    },\n    {\n      \"depositAccount\": {\n        \"accountId\": \"11719ae5-2399-1278-e43c-43f24abb3058\",\n        \"accountType\": \"CD\",\n        \"annualPercentageYield\": 0.75,\n        \"availableBalance\": 6808.29,\n        \"balanceAsOf\": \"2021-04-07T10:20:43.276Z\",\n        \"balanceType\": \"ASSET\",\n        \"currency\": {\n          \"currencyCode\": \"USD\",\n          \"originalCurrencyCode\": \"USD\"\n        },\n        \"currentBalance\": 6808.29,\n        \"description\": \"Certificate of Deposit\",\n        \"fiAttributes\": [\n          {\n            \"name\": \"eStatements\",\n            \"value\": \"False\"\n          },\n          {\n            \"name\": \"interestPaidLastYear\",\n            \"value\": \"50.72\"\n          },\n          {\n            \"name\": \"isTransactionsSupported\",\n            \"value\": \"False\"\n          },\n          {\n            \"name\": \"issueDate\",\n            \"value\": \"2019-03-21T00:00:00.000Z\"\n          },\n          {\n            \"name\": \"interestPayoutFrequency\",\n            \"value\": \"Semi-Annually (And At Maturity)\"\n          }\n        ],\n        \"interestRate\": 0.75,\n        \"interestYtd\": 25.24,\n        \"lineOfBusiness\": \"CONSUMER\",\n        \"maturityDate\": \"2024-03-21T00:00:00Z\",\n        \"nickname\": \"Certificate of Deposit - 3691\",\n        \"openingDayBalance\": 2000,\n        \"parentAccountId\": \"11719ae5-2399-1278-e43c-43f24abb3058\",\n        \"status\": \"OPEN\",\n        \"term\": 60,\n        \"transactionsIncluded\": false,\n        \"transferIn\": false,\n        \"transferOut\": false\n      }\n    },\n    {\n      \"depositAccount\": {\n        \"accountId\": \"33fbd9e5-9cc3-3d7d-15b3-70d97d87ca1d\",\n        \"accountType\": \"SAVINGS\",\n        \"availableBalance\": 20608.9,\n        \"balanceAsOf\": \"2021-04-07T10:08:11.833Z\",\n        \"balanceType\": \"ASSET\",\n        \"currency\": {\n          \"currencyCode\": \"USD\",\n          \"originalCurrencyCode\": \"USD\"\n        },\n        \"currentBalance\": 20608.9,\n        \"description\": \"Savings\",\n        \"fiAttributes\": [\n          {\n            \"name\": \"eStatements\",\n            \"value\": \"True\"\n          }\n        ],\n        \"interestRate\": 0.01,\n        \"interestYtd\": 0.29,\n        \"lineOfBusiness\": \"CONSUMER\",\n        \"nickname\": \"Savings - 8537\",\n        \"openingDayBalance\": 20608.9,\n        \"parentAccountId\": \"33fbd9e5-9cc3-3d7d-15b3-70d97d87ca1d\",\n        \"status\": \"OPEN\",\n        \"transactionsIncluded\": false\n      }\n    }\n  ]\n}",
+          "language": "Text",
+          "rawDataType": "text"
+        },
+        {
+          "request": "2c5f4a27-293b-4feb-8a2a-04904e4331f1",
+          "id": "508775be-7546-473b-b2ba-8fddc8f4d48e",
+          "name": "Response_405",
+          "status": "Method Not Allowed",
+          "responseCode": {
+            "code": 405,
+            "name": "405",
+            "detail": "Method Not Allowed"
+          },
+          "headers": [
+            {
+              "name": "x-akoya-interaction-id",
+              "key": "x-akoya-interaction-id",
+              "value": "x-akoya-interaction-id21",
+              "description": "Akoya supplied interaction id used for logging and error tracking"
+            },
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "mime": "text/plain",
+          "text": "Method Not Found",
+          "language": "Text",
+          "rawDataType": "text"
+        }
+      ],
+      "collectionId": "b4ccd376-fad6-4577-bbbe-4ecb67c2b020",
+      "queryParams": [
+        {
+          "key": "mode",
+          "value": "raw",
+          "description": "BETA. Default is raw. Use standard for FDX-aligned, standardized data values."
+        }
+      ],
+      "headerData": [
+        {
+          "key": "x-akoya-interaction-type",
+          "value": "user",
+          "description": "Optional but recommended header to include with each data request. \nAllowed values are `user` or `batch`. \n`user` indicates a request is prompted by an end-user action.\n`batch` indicates the request is part of a batch process."
+        },
+        {
+          "key": "Accept",
+          "value": "application/json,text/plain"
+        }
+      ],
+      "pathVariableData": [
+        {
+          "key": "version",
+          "value": "v2",
+          "description": "Akoya major version number. Do not use minor version numbers. For instance, use v2 and not v2.2"
+        },
+        {
+          "key": "providerId",
+          "value": "mikomo",
+          "description": "Id of provider"
+        }
+      ]
+    },
+    {
+      "folder": "1174a506-ef2a-458d-a51e-6587140079b2",
+      "id": "30180fba-e08e-4ed7-b47b-7094e0c45c49",
+      "name": "customer-info",
+      "dataDisabled": false,
+      "descriptionFormat": "markdown",
+      "description": "This product supports use cases such as payment enablement, account opening, and identity verification. Responses return information about the authorized end-user, the customer associated with the `id_token` used in the call. This information may include, but is not limited to, the customer identifier, name, email, address, and phone number.\n\n<br>\n\nTo see the response schema, select the `200` response below. For an example payload response, see the `200` example response below the *Try it* feature. \n\nThis product requires consumer consent to share all account holder information.\n\n> 🛑 The `id_token` should be used as the bearer token with this call.\n> ",
+      "headers": "x-akoya-interaction-type:user\nAccept:application/json,text/plain\n",
+      "method": "GET",
+      "currentHelper": "",
+      "auth": {
+        "type": "noauth"
+      },
+      "pathVariables": {
+        "version": "v2",
+        "providerId": "mikomo"
+      },
+      "url": "{{default}}/customers/:version/:providerId/current",
+      "responses": [
+        {
+          "request": "30180fba-e08e-4ed7-b47b-7094e0c45c49",
+          "id": "dabaf5e4-5877-422c-b66a-41d5d2860f5b",
+          "name": "Response_200",
+          "status": "OK",
+          "responseCode": {
+            "code": 200,
+            "name": "200",
+            "detail": "OK"
+          },
+          "headers": [
+            {
+              "name": "x-akoya-interaction-id",
+              "key": "x-akoya-interaction-id",
+              "value": "x-akoya-interaction-id38",
+              "description": "Akoya tracking id for logging or support."
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "mime": "application/json",
+          "text": "{\n  \"customerId\": \"customerId3\",\n  \"name\": {\n    \"first\": \"first4\",\n    \"middle\": \"middle83\",\n    \"last\": \"last51\",\n    \"prefix\": \"prefix36\",\n    \"suffix\": \"suffix66\",\n    \"company\": \"company23\",\n    \"addresses\": [\n      {\n        \"type\": \"HOME\",\n        \"line1\": \"line124\",\n        \"line2\": \"line222\",\n        \"line3\": \"line335\",\n        \"city\": \"city57\",\n        \"state\": \"state98\",\n        \"postalCode\": \"postalCode26\",\n        \"country\": \"country54\"\n      }\n    ],\n    \"telephones\": [\n      {\n        \"number\": \"number21\",\n        \"type\": \"HOME\",\n        \"country\": \"country69\"\n      }\n    ],\n    \"email\": [\n      \"email36\"\n    ],\n    \"accounts\": [\n      {\n        \"accountId\": \"accountId22\",\n        \"relationship\": \"PRIMARY_JOINT_TENANTS\"\n      }\n    ]\n  }\n}",
+          "language": "Text",
+          "rawDataType": "text"
+        },
+        {
+          "request": "30180fba-e08e-4ed7-b47b-7094e0c45c49",
+          "id": "5423d835-891d-4e57-843f-e34b8fce1c21",
+          "name": "Response_405",
+          "status": "Method Not Allowed",
+          "responseCode": {
+            "code": 405,
+            "name": "405",
+            "detail": "Method Not Allowed"
+          },
+          "headers": [
+            {
+              "name": "x-akoya-interaction-id",
+              "key": "x-akoya-interaction-id",
+              "value": "x-akoya-interaction-id46",
+              "description": "Akoya supplied interaction id used for logging and error tracking"
+            },
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "mime": "text/plain",
+          "text": "Method Not Found",
+          "language": "Text",
+          "rawDataType": "text"
+        }
+      ],
+      "collectionId": "b4ccd376-fad6-4577-bbbe-4ecb67c2b020",
+      "queryParams": [],
+      "headerData": [
+        {
+          "key": "x-akoya-interaction-type",
+          "value": "user",
+          "description": "Optional but recommended header to include with each data request. \nAllowed values are `user` or `batch`. \n`user` indicates a request is prompted by an end-user action.\n`batch` indicates the request is part of a batch process."
+        },
+        {
+          "key": "Accept",
+          "value": "application/json,text/plain"
+        }
+      ],
+      "pathVariableData": [
+        {
+          "key": "version",
+          "value": "v2",
+          "description": "Akoya major version number. Do not use minor version numbers. For instance, use v2 and not v2.2"
+        },
+        {
+          "key": "providerId",
+          "value": "mikomo",
+          "description": "Id of provider"
+        }
+      ]
+    },
+    {
+      "folder": "1174a506-ef2a-458d-a51e-6587140079b2",
+      "id": "23b6b799-78d7-4ba4-8a59-8de0220b7978",
+      "name": "get-account-holder",
+      "dataDisabled": false,
+      "descriptionFormat": "markdown",
+      "description": "This product supports use cases such as payment enablement, account opening, identity verification,or lending & credit enhancement. Responses return information about the authorized consumer, the customer associated with the `id_token` used in the call, and the relationship specific to the provided `accountId`.\n\n> 📌 Please note!\n>\n> This endpoint provides additional information which may not be required for your use case, making it inefficient compared to the [/customer info](https://docs.akoya.com/reference/customer-info) endpoint. Please refer to to the [Customers guide](https://docs.akoya.com/reference/customers) for more information about this endpoint.\n\nGet account holder information. Based on FDX 5.2.1.\n\nThis product requires consumer consent to share all account holder information.\n\n> 🛑 The `id_token` should be used as the bearer token with this call.\n> \n",
+      "headers": "x-akoya-interaction-type:user\nAccept:application/json,text/plain\n",
+      "method": "GET",
+      "currentHelper": "",
+      "auth": {
+        "type": "noauth"
+      },
+      "pathVariables": {
+        "accountId": ":accountId",
+        "version": "v2",
+        "providerId": "mikomo"
+      },
+      "url": "{{default}}/contacts/:version/:providerId/:accountId",
+      "responses": [
+        {
+          "request": "23b6b799-78d7-4ba4-8a59-8de0220b7978",
+          "id": "60fe2327-6203-44d8-b53b-d25de17a7447",
+          "name": "Response_200",
+          "status": "OK",
+          "responseCode": {
+            "code": 200,
+            "name": "200",
+            "detail": "OK"
+          },
+          "headers": [
+            {
+              "name": "x-akoya-interaction-id",
+              "key": "x-akoya-interaction-id",
+              "value": "x-akoya-interaction-id31",
+              "description": "Akoya supplied interaction id used for logging and error tracking"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "mime": "application/json",
+          "text": "{\n  \"holders\": [\n    {\n      \"customerId\": \"string\",\n      \"name\": {\n        \"first\": \"string\",\n        \"middle\": \"string\",\n        \"last\": \"string\",\n        \"prefix\": \"string\",\n        \"suffix\": \"string\",\n        \"company\": \"string\"\n      },\n      \"businessCustomer\": {\n        \"name\": \"string\",\n        \"registeredAgents\": [\n          {\n            \"first\": \"string\",\n            \"middle\": \"string\",\n            \"last\": \"string\",\n            \"prefix\": \"string\",\n            \"suffix\": \"string\",\n            \"company\": \"string\"\n          }\n        ],\n        \"registeredId\": \"string\",\n        \"industryCode\": {\n          \"type\": \"string\",\n          \"code\": \"string\"\n        },\n        \"domicile\": {\n          \"region\": \"string\",\n          \"country\": \"string\"\n        }\n      },\n      \"addresses\": [\n        {\n          \"line1\": \"string\",\n          \"line2\": \"string\",\n          \"line3\": \"string\",\n          \"city\": \"string\",\n          \"state\": \"string\",\n          \"region\": \"string\",\n          \"postalCode\": \"string\",\n          \"country\": \"string\",\n          \"type\": \"string\"\n        }\n      ],\n      \"telephones\": [\n        {\n          \"number\": \"string\",\n          \"type\": \"HOME\",\n          \"country\": \"string\"\n        }\n      ],\n      \"email\": [\n        \"string\"\n      ],\n      \"accounts\": [\n        {\n          \"accountId\": \"string\",\n          \"relationship\": \"AUTHORIZED_USER\"\n        }\n      ],\n      \"relationship\": \"AUTHORIZED_USER\"\n    }\n  ],\n  \"emails\": [\n    \"string\"\n  ],\n  \"addresses\": [\n    {\n      \"line1\": \"string\",\n      \"line2\": \"string\",\n      \"line3\": \"string\",\n      \"city\": \"string\",\n      \"state\": \"string\",\n      \"region\": \"string\",\n      \"postalCode\": \"string\",\n      \"country\": \"string\",\n      \"type\": \"string\"\n    }\n  ],\n  \"telephones\": [\n    {\n      \"type\": \"HOME\",\n      \"country\": \"string\",\n      \"number\": \"8675309\"\n    }\n  ]\n}",
+          "language": "Text",
+          "rawDataType": "text"
+        },
+        {
+          "request": "23b6b799-78d7-4ba4-8a59-8de0220b7978",
+          "id": "87106b60-df67-4bc8-9183-ecb80444c0ef",
+          "name": "Response_405",
+          "status": "Method Not Allowed",
+          "responseCode": {
+            "code": 405,
+            "name": "405",
+            "detail": "Method Not Allowed"
+          },
+          "headers": [
+            {
+              "name": "x-akoya-interaction-id",
+              "key": "x-akoya-interaction-id",
+              "value": "x-akoya-interaction-id87",
+              "description": "Akoya supplied interaction id used for logging and error tracking"
+            },
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "mime": "text/plain",
+          "text": "Method Not Found",
+          "language": "Text",
+          "rawDataType": "text"
+        }
+      ],
+      "collectionId": "b4ccd376-fad6-4577-bbbe-4ecb67c2b020",
+      "queryParams": [],
+      "headerData": [
+        {
+          "key": "x-akoya-interaction-type",
+          "value": "user",
+          "description": "Optional but recommended header to include with each data request. \nAllowed values are `user` or `batch`. \n`user` indicates a request is prompted by an end-user action.\n`batch` indicates the request is part of a batch process."
+        },
+        {
+          "key": "Accept",
+          "value": "application/json,text/plain"
+        }
+      ],
+      "pathVariableData": [
+        {
+          "key": "accountId",
+          "value": ":accountId",
+          "description": "Account Identifier"
+        },
+        {
+          "key": "version",
+          "value": "v2",
+          "description": "Akoya major version number. Do not use minor version numbers. For instance, use v2 and not v2.2"
+        },
+        {
+          "key": "providerId",
+          "value": "mikomo",
+          "description": "Id of provider"
+        }
+      ]
+    },
+    {
+      "folder": "802ebe4c-4b65-44db-b89d-e10a173f7a41",
+      "id": "5701c2ab-bee4-4396-bd8d-b9b58d5f695e",
+      "name": "get-accounts",
+      "dataDisabled": false,
+      "descriptionFormat": "markdown",
+      "description": "Get detailed account information that includes Akoya products Account Info and Balances for all account types (annunity, deposit, insurance, investments, line of credit, and loan) and adds the Investments product to investment accounts including contributions, holdings, vesting information, and more.\n\nTo view the response schema, select the `200` response below. Then pick an option for annuity, deposit, insurance, investment, loan, and line of credit account types. \n\nFor an example payload response, see the `200` example response below the `Try it` feature. The example is from an investment account but all account types are supported and returned by this endpoint.\n\n> 🛑\n> \n> The *id_token* should be used as the bearer token with this call.\n\nUse the `mode` query param to receive FDX-aligned, standardized data values (Beta). For example:\n\n`https://sandbox-products.ddp.akoya.com/accounts/v2/mikomo?mode=standard`\n\n`mode` is available in both sandbox and production.\n\n`mode` is supported by a subset of providers. Log into the [Data Recipient Hub](https://recipient.ddp.akoya.com/login) and click [here](https://recipient.ddp.akoya.com/support/article/kA0Uw00000015GzKAI) to view a list of all providers supporting the `mode` parameter.",
+      "headers": "x-akoya-interaction-type:user\nAccept:application/json,text/plain\n",
+      "method": "GET",
+      "currentHelper": "",
+      "auth": {
+        "type": "noauth"
+      },
+      "pathVariables": {
+        "version": "v2",
+        "providerId": "mikomo"
+      },
+      "url": "{{default}}/accounts/:version/:providerId?mode=raw",
+      "responses": [
+        {
+          "request": "5701c2ab-bee4-4396-bd8d-b9b58d5f695e",
+          "id": "f3eda8ba-b464-4b1f-8e80-469bab4b56d2",
+          "name": "Response_200",
+          "status": "OK",
+          "responseCode": {
+            "code": 200,
+            "name": "200",
+            "detail": "OK"
+          },
+          "headers": [
+            {
+              "name": "x-akoya-interaction-id",
+              "key": "x-akoya-interaction-id",
+              "value": "x-akoya-interaction-id56",
+              "description": "Akoya supplied interaction id used for logging and error tracking"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "mime": "application/json",
+          "text": "{\n  \"accounts\": [\n    {\n      \"investmentAccount\": {\n        \"accountId\": \"839502593\",\n        \"accountType\": \"College Savings\",\n        \"availableCashBalance\": 0,\n        \"balanceAsOf\": \"2022-03-16T04:00:00Z\",\n        \"balanceType\": \"ASSET\",\n        \"currency\": {\n          \"currencyCode\": \"USD\"\n        },\n        \"currentValue\": 52672.49,\n        \"holdings\": [\n          {\n            \"assetClasses\": [\n              {\n                \"assetClass\": \"DOMESTICBOND\",\n                \"percent\": 0\n              }\n            ],\n            \"cashAccount\": false,\n            \"marketValue\": 52672.49,\n            \"mutualFundSecurity\": {\n              \"mutualFundType\": \"OPENEND\",\n              \"reinvestCapitalGains\": true,\n              \"reinvestDividends\": true,\n              \"unitsStreet\": 0,\n              \"unitsUser\": 0,\n              \"yield\": 0,\n              \"yieldAsOfDate\": \"2019-08-24T14:15:22Z\"\n            },\n            \"positionType\": \"LONG\",\n            \"purchasedPrice\": 18.42,\n            \"securityIdType\": \"ISIN\",\n            \"units\": 2088.521\n          }\n        ],\n        \"marginBalance\": 0,\n        \"nickname\": \"529 for Kid\"\n      }\n    },\n    {\n      \"investmentAccount\": {\n        \"accountId\": \"5426873\",\n        \"accountNumberDisplay\": \"...7054\",\n        \"accountType\": \"BROKERAGE\",\n        \"allowedCheckWriting\": false,\n        \"availableCashBalance\": 0,\n        \"balanceList\": [\n          {\n            \"balanceDate\": \"2021-07-06\",\n            \"balanceDescription\": \"Margin Call\",\n            \"balanceName\": \"MARGINCALL\",\n            \"balanceType\": \"AMOUNT\",\n            \"balanceValue\": 0,\n            \"currency\": {\n              \"currencyCode\": \"USD\"\n            }\n          },\n          {\n            \"balanceDate\": \"2021-07-06\",\n            \"balanceDescription\": \"Fed Call\",\n            \"balanceName\": \"FEDCALL\",\n            \"balanceType\": \"AMOUNT\",\n            \"balanceValue\": 0,\n            \"currency\": {\n              \"currencyCode\": \"USD\"\n            }\n          },\n          {\n            \"balanceDate\": \"2021-07-06\",\n            \"balanceDescription\": \"Intra Day\",\n            \"balanceName\": \"INTRADAY\",\n            \"balanceType\": \"AMOUNT\",\n            \"balanceValue\": 0,\n            \"currency\": {\n              \"currencyCode\": \"USD\"\n            }\n          },\n          {\n            \"balanceDate\": \"2021-07-05\",\n            \"balanceDescription\": \"Prior Day\",\n            \"balanceName\": \"PRIORDAY\",\n            \"balanceType\": \"AMOUNT\",\n            \"balanceValue\": 0,\n            \"currency\": {\n              \"currencyCode\": \"USD\"\n            }\n          }\n        ],\n        \"currency\": {\n          \"currencyCode\": \"USD\"\n        },\n        \"lastActivityDate\": \"2021-07-06T00:00:00Z\",\n        \"margin\": false,\n        \"marginBalance\": 0,\n        \"nickname\": \"Self-Directed\",\n        \"shortBalance\": 0,\n        \"status\": \"OPEN\",\n        \"transactionsIncluded\": false\n      }\n    },\n    {\n      \"depositAccount\": {\n        \"accountId\": \"g833202fb0866d0ad83472c429\",\n        \"accountNumberDisplay\": \"xxxxxxxx0071\",\n        \"accountType\": \"CHECKING\",\n        \"availableBalance\": 106717.06,\n        \"balanceAsOf\": \"2022-04-24T14:15:22Z\",\n        \"balanceType\": \"ASSET\",\n        \"currency\": {\n          \"currencyCode\": \"USD\"\n        },\n        \"currentBalance\": 106717.06,\n        \"description\": \"Checking Plus\",\n        \"fiAttributes\": [\n          {\n            \"name\": \"accountOpenedDate\",\n            \"value\": \"2020-04-23\"\n          },\n          {\n            \"name\": \"interestPaidLastYear\",\n            \"value\": \"3.20\"\n          }\n        ],\n        \"interestRate\": 0.0125,\n        \"interestRateAsOf\": \"2022-04-24T14:15:22Z\",\n        \"interestRateType\": \"FIXED\",\n        \"interestYtd\": 20.33,\n        \"lastActivityDate\": \"2022-04-24T14:15:22Z\",\n        \"lineOfBusiness\": \"Personal\",\n        \"nickname\": \"Nickname Checking Plus 0071\",\n        \"productName\": \"Checking Plus\",\n        \"status\": \"OPEN\",\n        \"transferIn\": true,\n        \"transferOut\": true\n      }\n    },\n    {\n      \"depositAccount\": {\n        \"accountId\": \"5dbda8de96eeff05f23934523a1fc258\",\n        \"accountNumberDisplay\": \"xxxx0134\",\n        \"accountType\": \"CHECKING\",\n        \"annualPercentageYield\": 0,\n        \"availableBalance\": 0,\n        \"balanceAsOf\": \"2022-04-24T14:15:22Z\",\n        \"currency\": {\n          \"currencyCode\": \"USD\"\n        },\n        \"currentBalance\": 0,\n        \"description\": \"Virtual Wallet Student Reserve\",\n        \"interestRateAsOf\": \"2022-04-24T14:15:22Z\",\n        \"interestRateType\": \"FIXED\",\n        \"lastActivityDate\": \"2022-04-01T10:05:00Z\",\n        \"lineOfBusiness\": \"LBRB\",\n        \"openingDayBalance\": 0,\n        \"productName\": \"Virtual Wallet Student Reserve\",\n        \"transactionsIncluded\": false\n      }\n    },\n    {\n      \"depositAccount\": {\n        \"accountId\": \"11719ae5-2399-1278-e43c-43f24abb3058\",\n        \"accountType\": \"CD\",\n        \"annualPercentageYield\": 0.75,\n        \"availableBalance\": 6808.29,\n        \"balanceAsOf\": \"2021-04-07T10:20:43.276Z\",\n        \"balanceType\": \"ASSET\",\n        \"currency\": {\n          \"currencyCode\": \"USD\",\n          \"originalCurrencyCode\": \"USD\"\n        },\n        \"currentBalance\": 6808.29,\n        \"description\": \"Certificate of Deposit\",\n        \"fiAttributes\": [\n          {\n            \"name\": \"eStatements\",\n            \"value\": \"False\"\n          },\n          {\n            \"name\": \"interestPaidLastYear\",\n            \"value\": \"50.72\"\n          },\n          {\n            \"name\": \"isTransactionsSupported\",\n            \"value\": \"False\"\n          },\n          {\n            \"name\": \"issueDate\",\n            \"value\": \"2019-03-21T00:00:00.000Z\"\n          },\n          {\n            \"name\": \"interestPayoutFrequency\",\n            \"value\": \"Semi-Annually (And At Maturity)\"\n          }\n        ],\n        \"interestRate\": 0.75,\n        \"interestYtd\": 25.24,\n        \"lineOfBusiness\": \"CONSUMER\",\n        \"maturityDate\": \"2024-03-21T00:00:00Z\",\n        \"nickname\": \"Certificate of Deposit - 3691\",\n        \"openingDayBalance\": 2000,\n        \"parentAccountId\": \"11719ae5-2399-1278-e43c-43f24abb3058\",\n        \"status\": \"OPEN\",\n        \"term\": 60,\n        \"transactionsIncluded\": false,\n        \"transferIn\": false,\n        \"transferOut\": false\n      }\n    },\n    {\n      \"depositAccount\": {\n        \"accountId\": \"33fbd9e5-9cc3-3d7d-15b3-70d97d87ca1d\",\n        \"accountType\": \"SAVINGS\",\n        \"availableBalance\": 20608.9,\n        \"balanceAsOf\": \"2021-04-07T10:08:11.833Z\",\n        \"balanceType\": \"ASSET\",\n        \"currency\": {\n          \"currencyCode\": \"USD\",\n          \"originalCurrencyCode\": \"USD\"\n        },\n        \"currentBalance\": 20608.9,\n        \"description\": \"Savings\",\n        \"fiAttributes\": [\n          {\n            \"name\": \"eStatements\",\n            \"value\": \"True\"\n          }\n        ],\n        \"interestRate\": 0.01,\n        \"interestYtd\": 0.29,\n        \"lineOfBusiness\": \"CONSUMER\",\n        \"nickname\": \"Savings - 8537\",\n        \"openingDayBalance\": 20608.9,\n        \"parentAccountId\": \"33fbd9e5-9cc3-3d7d-15b3-70d97d87ca1d\",\n        \"status\": \"OPEN\",\n        \"transactionsIncluded\": false\n      }\n    }\n  ]\n}",
+          "language": "Text",
+          "rawDataType": "text"
+        },
+        {
+          "request": "5701c2ab-bee4-4396-bd8d-b9b58d5f695e",
+          "id": "7e8c0c95-468a-403c-972c-b0547ca25ada",
+          "name": "Response_405",
+          "status": "Method Not Allowed",
+          "responseCode": {
+            "code": 405,
+            "name": "405",
+            "detail": "Method Not Allowed"
+          },
+          "headers": [
+            {
+              "name": "x-akoya-interaction-id",
+              "key": "x-akoya-interaction-id",
+              "value": "x-akoya-interaction-id33",
+              "description": "Akoya supplied interaction id used for logging and error tracking"
+            },
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "mime": "text/plain",
+          "text": "Method Not Found",
+          "language": "Text",
+          "rawDataType": "text"
+        }
+      ],
+      "collectionId": "b4ccd376-fad6-4577-bbbe-4ecb67c2b020",
+      "queryParams": [
+        {
+          "key": "mode",
+          "value": "raw",
+          "description": "BETA. Default is raw. Use standard for FDX-aligned, standardized data values."
+        }
+      ],
+      "headerData": [
+        {
+          "key": "x-akoya-interaction-type",
+          "value": "user",
+          "description": "Optional but recommended header to include with each data request. \nAllowed values are `user` or `batch`. \n`user` indicates a request is prompted by an end-user action.\n`batch` indicates the request is part of a batch process."
+        },
+        {
+          "key": "Accept",
+          "value": "application/json,text/plain"
+        }
+      ],
+      "pathVariableData": [
+        {
+          "key": "version",
+          "value": "v2",
+          "description": "Akoya major version number. Do not use minor version numbers. For instance, use v2 and not v2.2"
+        },
+        {
+          "key": "providerId",
+          "value": "mikomo",
+          "description": "Id of provider"
+        }
+      ]
+    },
+    {
+      "folder": "802ebe4c-4b65-44db-b89d-e10a173f7a41",
+      "id": "dcfe5508-d726-40a8-9ed3-57ab5c944355",
+      "name": "get-taxlots",
+      "dataDisabled": false,
+      "descriptionFormat": "markdown",
+      "description": "The taxlots API allows you to retrieve tax lots of consumer-permissioned accounts.\n\n> 🛑\n> \n> The *id_token* should be used as the bearer token with this call.",
+      "headers": "x-akoya-interaction-type:user\nAccept:application/json,text/plain\n",
+      "method": "GET",
+      "currentHelper": "",
+      "auth": {
+        "type": "noauth"
+      },
+      "pathVariables": {
+        "version": "v2",
+        "providerId": "mikomo",
+        "accountId": "accountId71",
+        "holdingId": "holdingId73"
+      },
+      "url": "{{default}}/taxlots/:version/:providerId/:accountId/:holdingId?offset=offset58&limit=limit53",
+      "responses": [
+        {
+          "request": "dcfe5508-d726-40a8-9ed3-57ab5c944355",
+          "id": "be51d2ee-c876-4edd-8e95-4657da152681",
+          "name": "Response_200",
+          "status": "OK",
+          "responseCode": {
+            "code": 200,
+            "name": "200",
+            "detail": "OK"
+          },
+          "headers": [
+            {
+              "name": "x-akoya-interaction-id",
+              "key": "x-akoya-interaction-id",
+              "value": "x-akoya-interaction-id10",
+              "description": "Akoya supplied interaction id used for logging and error tracking"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "mime": "application/json",
+          "text": "{\n  \"accountId\": \"string\",\n  \"holding\": {\n    \"holdingId\": \"string\",\n    \"securityId\": \"string\",\n    \"securityIdType\": \"ISIN\",\n    \"taxLots\": [\n      {\n        \"originalPurchaseDate\": \"2024-10-14T18:16:22Z\",\n        \"quantity\": 0,\n        \"purchasedPrice\": 0,\n        \"costBasis\": 0,\n        \"currentValue\": 0,\n        \"positionType\": \"LONG\"\n      }\n    ]\n  }\n}",
+          "language": "Text",
+          "rawDataType": "text"
+        },
+        {
+          "request": "dcfe5508-d726-40a8-9ed3-57ab5c944355",
+          "id": "bc19f293-b900-48cf-bd21-ceea435816ca",
+          "name": "Response_405",
+          "status": "Method Not Allowed",
+          "responseCode": {
+            "code": 405,
+            "name": "405",
+            "detail": "Method Not Allowed"
+          },
+          "headers": [
+            {
+              "name": "x-akoya-interaction-id",
+              "key": "x-akoya-interaction-id",
+              "value": "x-akoya-interaction-id17",
+              "description": "Akoya supplied interaction id used for logging and error tracking"
+            },
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "mime": "text/plain",
+          "text": "Method Not Found",
+          "language": "Text",
+          "rawDataType": "text"
+        }
+      ],
+      "collectionId": "b4ccd376-fad6-4577-bbbe-4ecb67c2b020",
+      "queryParams": [
+        {
+          "key": "offset",
+          "value": "offset58",
+          "description": "The number of items to skip before the first in the response. The default is 0"
+        },
+        {
+          "key": "limit",
+          "value": "limit53",
+          "description": "The maximum number of items to be returned in the response. The default is 50"
+        }
+      ],
+      "headerData": [
+        {
+          "key": "x-akoya-interaction-type",
+          "value": "user",
+          "description": "Optional but recommended header to include with each data request. \nAllowed values are `user` or `batch`. \n`user` indicates a request is prompted by an end-user action.\n`batch` indicates the request is part of a batch process."
+        },
+        {
+          "key": "Accept",
+          "value": "application/json,text/plain"
+        }
+      ],
+      "pathVariableData": [
+        {
+          "key": "version",
+          "value": "v2",
+          "description": "Akoya major version number. Do not use minor version numbers. For instance, use v2 and not v2.2"
+        },
+        {
+          "key": "providerId",
+          "value": "mikomo",
+          "description": "Id of provider"
+        },
+        {
+          "key": "accountId",
+          "value": "accountId71",
+          "description": "Account Identifier"
+        },
+        {
+          "key": "holdingId",
+          "value": "holdingId73",
+          "description": "Consumer's holdingId under investments"
+        }
+      ]
+    },
+    {
+      "folder": "dedb7635-e617-4931-aec7-b5564adb4cba",
+      "id": "efca041c-4c30-49b7-b0c8-9c4d22a8cf41",
+      "name": "payment-networks",
+      "dataDisabled": false,
+      "descriptionFormat": "markdown",
+      "description": "This product supports use cases such as payment enablement or account opening. The response includes identifiers necessary to make ACH and RTP payments. Identifiers include account number, routing number, identifier type (actual or tokenized account number), and payment network type such as ACH or RTP.\n\n<br>\n\nTo see the response schema, select the `200` response below. For an example payload response, see the `200` example response below the *Try it* feature. \n\n> 🛑\n> \n> The *id_token* should be used as the bearer token with this call.",
+      "headers": "x-akoya-interaction-type:user\nAccept:application/json,text/plain\n",
+      "method": "GET",
+      "currentHelper": "",
+      "auth": {
+        "type": "noauth"
+      },
+      "pathVariables": {
+        "version": "v2",
+        "providerId": "mikomo",
+        "accountId": ":accountId"
+      },
+      "url": "{{default}}/payments/:version/:providerId/:accountIdpayment-networks",
+      "responses": [
+        {
+          "request": "efca041c-4c30-49b7-b0c8-9c4d22a8cf41",
+          "id": "9b23b1be-277c-4185-9531-6de62cb605e8",
+          "name": "Response_200",
+          "status": "OK",
+          "responseCode": {
+            "code": 200,
+            "name": "200",
+            "detail": "OK"
+          },
+          "headers": [
+            {
+              "name": "x-akoya-interaction-id",
+              "key": "x-akoya-interaction-id",
+              "value": "x-akoya-interaction-id88",
+              "description": "Akoya supplied interaction id used for logging and error tracking"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "mime": "application/json",
+          "text": "{\n  \"paymentNetworks\": [\n    {\n      \"bankId\": \"125000024\",\n      \"identifier\": \"454992210071\",\n      \"identifierType\": \"ACCOUNT_NUMBER\",\n      \"type\": \"US_ACH\",\n      \"transferIn\": true,\n      \"transferOut\": true\n    }\n  ]\n}",
+          "language": "Text",
+          "rawDataType": "text"
+        },
+        {
+          "request": "efca041c-4c30-49b7-b0c8-9c4d22a8cf41",
+          "id": "0921d166-34ad-40af-be56-de4bd386753c",
+          "name": "Response_405",
+          "status": "Method Not Allowed",
+          "responseCode": {
+            "code": 405,
+            "name": "405",
+            "detail": "Method Not Allowed"
+          },
+          "headers": [
+            {
+              "name": "x-akoya-interaction-id",
+              "key": "x-akoya-interaction-id",
+              "value": "x-akoya-interaction-id16",
+              "description": "Akoya supplied interaction id used for logging and error tracking"
+            },
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "mime": "text/plain",
+          "text": "Method Not Found",
+          "language": "Text",
+          "rawDataType": "text"
+        }
+      ],
+      "collectionId": "b4ccd376-fad6-4577-bbbe-4ecb67c2b020",
+      "queryParams": [],
+      "headerData": [
+        {
+          "key": "x-akoya-interaction-type",
+          "value": "user",
+          "description": "Optional but recommended header to include with each data request. \nAllowed values are `user` or `batch`. \n`user` indicates a request is prompted by an end-user action.\n`batch` indicates the request is part of a batch process."
+        },
+        {
+          "key": "Accept",
+          "value": "application/json,text/plain"
+        }
+      ],
+      "pathVariableData": [
+        {
+          "key": "version",
+          "value": "v2",
+          "description": "Akoya major version number. Do not use minor version numbers. For instance, use v2 and not v2.2"
+        },
+        {
+          "key": "providerId",
+          "value": "mikomo",
+          "description": "Id of provider"
+        },
+        {
+          "key": "accountId",
+          "value": ":accountId",
+          "description": "Account Identifier"
+        }
+      ]
+    },
+    {
+      "folder": "9db4a8b2-2911-4d28-80c3-757960d36f8a",
+      "id": "71b8d5ba-7b97-448a-97b5-a5d408bd8312",
+      "name": "get-statement-list",
+      "dataDisabled": false,
+      "descriptionFormat": "markdown",
+      "description": "Retrieve a list of available statements for the end-user's consented accounts. You may request a date range of up to two years of historical statements (maximum date ranges vary by provider).\n\nThe paginated response includes an array of statement information with the end-user's account id and statement details such as statement id, date, description, and status. The results also include links to GET the statement image.",
+      "headers": "x-akoya-interaction-type:user\nAccept:application/json,text/plain\n",
+      "method": "GET",
+      "currentHelper": "",
+      "auth": {
+        "type": "noauth"
+      },
+      "pathVariables": {
+        "accountId": ":accountId",
+        "version": "v2",
+        "providerId": "mikomo"
+      },
+      "url": "{{default}}/statements/:version/:providerId/:accountId?startTime=2020-03-30&endTime=2021-03-30&offset=0&limit=50",
+      "responses": [
+        {
+          "request": "71b8d5ba-7b97-448a-97b5-a5d408bd8312",
+          "id": "a4d56506-2335-4931-9883-10dbd3587c29",
+          "name": "Response_200",
+          "status": "OK",
+          "responseCode": {
+            "code": 200,
+            "name": "200",
+            "detail": "OK"
+          },
+          "headers": [
+            {
+              "name": "x-akoya-interaction-id",
+              "key": "x-akoya-interaction-id",
+              "value": "x-akoya-interaction-id70",
+              "description": "Akoya supplied interaction id used for logging and error tracking"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "mime": "application/json",
+          "text": "{\n  \"links\": {\n    \"next\": {\n      \"href\": \"href90\"\n    },\n    \"prev\": {\n      \"href\": \"href38\"\n    }\n  }\n}",
+          "language": "Text",
+          "rawDataType": "text"
+        },
+        {
+          "request": "71b8d5ba-7b97-448a-97b5-a5d408bd8312",
+          "id": "b65bf346-567a-4818-95e9-417a7c58ea90",
+          "name": "Response_405",
+          "status": "Method Not Allowed",
+          "responseCode": {
+            "code": 405,
+            "name": "405",
+            "detail": "Method Not Allowed"
+          },
+          "headers": [
+            {
+              "name": "x-akoya-interaction-id",
+              "key": "x-akoya-interaction-id",
+              "value": "x-akoya-interaction-id25",
+              "description": "Akoya supplied interaction id used for logging and error tracking"
+            },
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "mime": "text/plain",
+          "text": "Method Not Found",
+          "language": "Text",
+          "rawDataType": "text"
+        }
+      ],
+      "collectionId": "b4ccd376-fad6-4577-bbbe-4ecb67c2b020",
+      "queryParams": [
+        {
+          "key": "startTime",
+          "value": "2020-03-30",
+          "description": "Start date for use in retrieval of statements (ISO 8601)"
+        },
+        {
+          "key": "endTime",
+          "value": "2021-03-30",
+          "description": "End date for use in retrieval of statements (ISO 8601)"
+        },
+        {
+          "key": "offset",
+          "value": "0",
+          "description": "The number of items to skip before the first in the response. The default is 0."
+        },
+        {
+          "key": "limit",
+          "value": "50",
+          "description": "The maximum number of items to be returned in the response. The default is 50."
+        }
+      ],
+      "headerData": [
+        {
+          "key": "x-akoya-interaction-type",
+          "value": "user",
+          "description": "Optional but recommended header to include with each data request. \nAllowed values are `user` or `batch`. \n`user` indicates a request is prompted by an end-user action.\n`batch` indicates the request is part of a batch process."
+        },
+        {
+          "key": "Accept",
+          "value": "application/json,text/plain"
+        }
+      ],
+      "pathVariableData": [
+        {
+          "key": "accountId",
+          "value": ":accountId",
+          "description": "Account Identifier"
+        },
+        {
+          "key": "version",
+          "value": "v2",
+          "description": "Akoya major version number. Do not use minor version numbers. For instance, use v2 and not v2.2"
+        },
+        {
+          "key": "providerId",
+          "value": "mikomo",
+          "description": "Id of provider"
+        }
+      ]
+    },
+    {
+      "folder": "9db4a8b2-2911-4d28-80c3-757960d36f8a",
+      "id": "b47de17c-0c65-4201-8f9f-d985e9513736",
+      "name": "get-statements",
+      "dataDisabled": false,
+      "descriptionFormat": "markdown",
+      "description": "Retrieve a specific account statement file. Use [HTTP Accept request-header](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html) to specify desired content types. \n\nFor the initial launch, only PDF statements are supported. PDFs are returned in the response.\n\n### cURL request\n\nWe recommend using the auto-generated cURL request with the {idToken}, accountId, providerId, statementId, and version with an added cURL parameter to return the output to a file. For example:\n\n```curl\ncurl --request GET --url https://sandbox-products.ddp.akoya.com/statements/v2/mikomo/513815781465/P9CvLPKDaFRMbNDkhu1 --header \"accept: application/pdf\" --header \"authorization: Bearer {idtoken}\" --output example.pdf\n```",
+      "headers": "x-akoya-interaction-type:user\nAccept:application/pdf,image/gif,image/jpeg,image/tiff,image/png,text/plain,application/json\n",
+      "method": "GET",
+      "currentHelper": "",
+      "auth": {
+        "type": "noauth"
+      },
+      "pathVariables": {
+        "accountId": ":accountId",
+        "version": "v2",
+        "providerId": "mikomo",
+        "statementId": "statementId"
+      },
+      "url": "{{default}}/statements/:version/:providerId/:accountId/:statementId",
+      "responses": [
+        {
+          "request": "b47de17c-0c65-4201-8f9f-d985e9513736",
+          "id": "922c30ae-be0e-43f9-9436-77fb0cf9ee1a",
+          "name": "Response_200",
+          "status": "OK - An image of an account statement",
+          "responseCode": {
+            "code": 200,
+            "name": "200",
+            "detail": "OK - An image of an account statement"
+          },
+          "headers": [
+            {
+              "name": "Accept",
+              "key": "Accept",
+              "value": "Accept84"
+            },
+            {
+              "name": "x-akoya-interaction-id",
+              "key": "x-akoya-interaction-id",
+              "value": "x-akoya-interaction-id39",
+              "description": "Akoya supplied interaction id used for logging and error tracking"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/pdf"
+            }
+          ],
+          "mime": "application/pdf",
+          "text": "any",
+          "language": "Text",
+          "rawDataType": "text"
+        },
+        {
+          "request": "b47de17c-0c65-4201-8f9f-d985e9513736",
+          "id": "fe16bdc8-d636-441f-8fe5-f577ba483c64",
+          "name": "Response_200",
+          "status": "OK - An image of an account statement",
+          "responseCode": {
+            "code": 200,
+            "name": "200",
+            "detail": "OK - An image of an account statement"
+          },
+          "headers": [
+            {
+              "name": "Accept",
+              "key": "Accept",
+              "value": "Accept0"
+            },
+            {
+              "name": "x-akoya-interaction-id",
+              "key": "x-akoya-interaction-id",
+              "value": "x-akoya-interaction-id28",
+              "description": "Akoya supplied interaction id used for logging and error tracking"
+            },
+            {
+              "key": "Content-Type",
+              "value": "image/gif"
+            }
+          ],
+          "mime": "image/gif",
+          "text": "any",
+          "language": "Text",
+          "rawDataType": "text"
+        },
+        {
+          "request": "b47de17c-0c65-4201-8f9f-d985e9513736",
+          "id": "3f21aea7-3486-4605-99cb-75c4e36fbb0e",
+          "name": "Response_200",
+          "status": "OK - An image of an account statement",
+          "responseCode": {
+            "code": 200,
+            "name": "200",
+            "detail": "OK - An image of an account statement"
+          },
+          "headers": [
+            {
+              "name": "Accept",
+              "key": "Accept",
+              "value": "Accept46"
+            },
+            {
+              "name": "x-akoya-interaction-id",
+              "key": "x-akoya-interaction-id",
+              "value": "x-akoya-interaction-id24",
+              "description": "Akoya supplied interaction id used for logging and error tracking"
+            },
+            {
+              "key": "Content-Type",
+              "value": "image/jpeg"
+            }
+          ],
+          "mime": "image/jpeg",
+          "text": "any",
+          "language": "Text",
+          "rawDataType": "text"
+        },
+        {
+          "request": "b47de17c-0c65-4201-8f9f-d985e9513736",
+          "id": "d46bbd4d-8fa8-49b3-b3b2-948f2648d293",
+          "name": "Response_200",
+          "status": "OK - An image of an account statement",
+          "responseCode": {
+            "code": 200,
+            "name": "200",
+            "detail": "OK - An image of an account statement"
+          },
+          "headers": [
+            {
+              "name": "Accept",
+              "key": "Accept",
+              "value": "Accept92"
+            },
+            {
+              "name": "x-akoya-interaction-id",
+              "key": "x-akoya-interaction-id",
+              "value": "x-akoya-interaction-id66",
+              "description": "Akoya supplied interaction id used for logging and error tracking"
+            },
+            {
+              "key": "Content-Type",
+              "value": "image/tiff"
+            }
+          ],
+          "mime": "image/tiff",
+          "text": "any",
+          "language": "Text",
+          "rawDataType": "text"
+        },
+        {
+          "request": "b47de17c-0c65-4201-8f9f-d985e9513736",
+          "id": "0826655f-025b-4dc3-869b-b84ea119fa91",
+          "name": "Response_200",
+          "status": "OK - An image of an account statement",
+          "responseCode": {
+            "code": 200,
+            "name": "200",
+            "detail": "OK - An image of an account statement"
+          },
+          "headers": [
+            {
+              "name": "Accept",
+              "key": "Accept",
+              "value": "Accept88"
+            },
+            {
+              "name": "x-akoya-interaction-id",
+              "key": "x-akoya-interaction-id",
+              "value": "x-akoya-interaction-id62",
+              "description": "Akoya supplied interaction id used for logging and error tracking"
+            },
+            {
+              "key": "Content-Type",
+              "value": "image/png"
+            }
+          ],
+          "mime": "image/png",
+          "text": "any",
+          "language": "Text",
+          "rawDataType": "text"
+        },
+        {
+          "request": "b47de17c-0c65-4201-8f9f-d985e9513736",
+          "id": "2ce4e446-6816-4b06-b841-3c232fc01e59",
+          "name": "Response_302",
+          "status": "Statement is available at specified location. URL is returned via the `Location` HTTP header",
+          "responseCode": {
+            "code": 302,
+            "name": "302",
+            "detail": "Statement is available at specified location. URL is returned via the `Location` HTTP header"
+          },
+          "headers": [
+            {
+              "name": "x-akoya-interaction-id",
+              "key": "x-akoya-interaction-id",
+              "value": "x-akoya-interaction-id38",
+              "description": "Akoya supplied interaction id used for logging and error tracking"
+            },
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "mime": "text/plain",
+          "text": "response30287",
+          "language": "Text",
+          "rawDataType": "text"
+        },
+        {
+          "request": "b47de17c-0c65-4201-8f9f-d985e9513736",
+          "id": "8e160029-e587-4ba0-9746-9e49e8f0a12d",
+          "name": "Response_400",
+          "status": "Statement is processing and is not yet available.",
+          "responseCode": {
+            "code": 400,
+            "name": "400",
+            "detail": "Statement is processing and is not yet available."
+          },
+          "headers": [
+            {
+              "name": "x-akoya-interaction-id",
+              "key": "x-akoya-interaction-id",
+              "value": "x-akoya-interaction-id50",
+              "description": "Akoya supplied interaction id used for logging and error tracking"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "mime": "application/json",
+          "text": "{\n  \"code\": 1300,\n  \"message\": \"Statement is Processing\",\n  \"debugMessage\": \"Statement is Processing.\"\n}",
+          "language": "Text",
+          "rawDataType": "text"
+        }
+      ],
+      "collectionId": "b4ccd376-fad6-4577-bbbe-4ecb67c2b020",
+      "queryParams": [],
+      "headerData": [
+        {
+          "key": "x-akoya-interaction-type",
+          "value": "user",
+          "description": "Optional but recommended header to include with each data request. \nAllowed values are `user` or `batch`. \n`user` indicates a request is prompted by an end-user action.\n`batch` indicates the request is part of a batch process."
+        },
+        {
+          "key": "Accept",
+          "value": "application/pdf,image/gif,image/jpeg,image/tiff,image/png,text/plain,application/json"
+        }
+      ],
+      "pathVariableData": [
+        {
+          "key": "accountId",
+          "value": ":accountId",
+          "description": "Account Identifier"
+        },
+        {
+          "key": "version",
+          "value": "v2",
+          "description": "Akoya major version number. Do not use minor version numbers. For instance, use v2 and not v2.2"
+        },
+        {
+          "key": "providerId",
+          "value": "mikomo",
+          "description": "Id of provider"
+        },
+        {
+          "key": "statementId",
+          "value": "statementId",
+          "description": "Statement Identifier"
+        }
+      ]
+    },
+    {
+      "folder": "f3680cbc-5f8d-42ac-a1b9-47d56924a6d2",
+      "id": "4c2ebd8f-d023-48cd-b8d5-f3222048607a",
+      "name": "taxFormsSearch",
+      "dataDisabled": false,
+      "descriptionFormat": "markdown",
+      "description": "Get the full lists of tax document data and tax form images available for a specific year for the current authorized customer.",
+      "headers": "x-akoya-interaction-id:unique-request-id-001\nx-akoya-interaction-type:user\nAccept:[\"application/json\"]\n",
+      "method": "GET",
+      "currentHelper": "",
+      "auth": {
+        "type": "noauth"
+      },
+      "pathVariables": {
+        "version": "v2",
+        "providerId": "providerId47"
+      },
+      "url": "{{default}}/tax-forms/:version/:providerId?taxYear=2024&taxForms=%5B%22Tax1099Div%22%2C%22Tax1099Int%22%5D&accountId=accountId21",
+      "responses": [
+        {
+          "request": "4c2ebd8f-d023-48cd-b8d5-f3222048607a",
+          "id": "32dcd190-42e1-46cd-bf3d-9a13dd3d32c6",
+          "name": "Response_200",
+          "status": "Array of all the tax document data and tax form images available for the customer matching search criteria",
+          "responseCode": {
+            "code": 200,
+            "name": "200",
+            "detail": "Array of all the tax document data and tax form images available for the customer matching search criteria"
+          },
+          "headers": [
+            {
+              "name": "x-akoya-interaction-id",
+              "key": "x-akoya-interaction-id",
+              "value": "unique-request-id-001",
+              "description": "Akoya supplied interaction id used for logging and error tracking"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "mime": "application/json",
+          "text": "{\n  \"statements\": [\n    {\n      \"taxYear\": 2020,\n      \"taxStatementId\": \"9876987698769876\",\n      \"attributes\": [\n        {\n          \"name\": \"federalTaxWithheld\",\n          \"value\": \"4014.00\"\n        }\n      ],\n      \"taxDataType\": \"JSON\",\n      \"forms\": [\n        {\n          \"tax1099Div\": {\n            \"taxYear\": 2020,\n            \"taxFormId\": \"9876987698769876\",\n            \"taxFormDate\": \"2021-03-30\",\n            \"additionalInformation\": \"FDX v6.0\",\n            \"taxFormType\": \"Tax1099Div\"\n          }\n        }\n      ]\n    },\n    {\n      \"taxYear\": 2020,\n      \"taxStatementId\": \"6543654365436543\",\n      \"attributes\": [\n        {\n          \"name\": \"federalTaxWithheld\",\n          \"value\": \"4011.00\"\n        }\n      ],\n      \"taxDataType\": \"JSON\",\n      \"forms\": [\n        {\n          \"tax1099Int\": {\n            \"taxYear\": 2020,\n            \"taxFormId\": \"6543654365436543\",\n            \"taxFormDate\": \"2021-03-30\",\n            \"additionalInformation\": \"FDX v6.0\",\n            \"taxFormType\": \"Tax1099Int\"\n          }\n        }\n      ]\n    }\n  ]\n}",
+          "language": "Text",
+          "rawDataType": "text"
+        },
+        {
+          "request": "4c2ebd8f-d023-48cd-b8d5-f3222048607a",
+          "id": "5a93d970-0e83-4fdf-be59-c48af601535e",
+          "name": "Response_405",
+          "status": "Method Not Allowed",
+          "responseCode": {
+            "code": 405,
+            "name": "405",
+            "detail": "Method Not Allowed"
+          },
+          "headers": [
+            {
+              "name": "x-akoya-interaction-id",
+              "key": "x-akoya-interaction-id",
+              "value": "x-akoya-interaction-id42",
+              "description": "Akoya supplied interaction id used for logging and error tracking"
+            },
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "mime": "text/plain",
+          "text": "Method Not Found",
+          "language": "Text",
+          "rawDataType": "text"
+        }
+      ],
+      "collectionId": "b4ccd376-fad6-4577-bbbe-4ecb67c2b020",
+      "queryParams": [
+        {
+          "key": "taxYear",
+          "value": "2024",
+          "description": "Tax year in which to search for tax forms."
+        },
+        {
+          "key": "taxForms",
+          "value": "%5B%22Tax1099Div%22%2C%22Tax1099Int%22%5D",
+          "description": "One or more tax form type enums for the specific documents being requested. Comma separated"
+        },
+        {
+          "key": "accountId",
+          "value": "accountId21",
+          "description": "Unique account identifier (not the account number)"
+        }
+      ],
+      "headerData": [
+        {
+          "key": "x-akoya-interaction-id",
+          "value": "unique-request-id-001",
+          "description": "Unique identifier to associate with this request. No specific format required."
+        },
+        {
+          "key": "x-akoya-interaction-type",
+          "value": "user",
+          "description": "Identifies whether the customer is present (USER) or it is a BATCH operation. Case-insensitive."
+        },
+        {
+          "key": "Accept",
+          "value": "[\"application/json\"]",
+          "description": "Use the [Accept HTTP request header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept) to indicate one or more content types to request for the search result response. Use `application/json` to request data or `application/pdf to request images in comma-separated array format.         Use in combination with TaxDataTypeQuery parameter to request `application/json` responses in ''JSON'' or ''BASE64_PDF'' format for tax form data'"
+        }
+      ],
+      "pathVariableData": [
+        {
+          "key": "version",
+          "value": "v2",
+          "description": "Endpoint version."
+        },
+        {
+          "key": "providerId",
+          "value": "providerId47",
+          "description": "Provider to query for Tax data."
+        }
+      ]
+    },
+    {
+      "folder": "f3680cbc-5f8d-42ac-a1b9-47d56924a6d2",
+      "id": "6ceb5b61-1da3-420b-8723-61e39d236b04",
+      "name": "getTaxForm",
+      "dataDisabled": false,
+      "descriptionFormat": "markdown",
+      "description": "Get the Tax Statement as JSON or PDF for a single tax document for the customer. Use [HTTP Accept request-header](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html) to specify desired content types. See `AcceptHeader` definition for typical values.\r\n\r\nNot all providers support PDF payloads. See [this article](https://recipient.ddp.akoya.com/support/article/kA0Uw00000026VxKAI) in the Data Recipent Hub for a list of providers that support document PDFs.",
+      "headers": "x-akoya-interaction-id:unique-request-id-001\nx-akoya-interaction-type:user\nAccept:[\"application/json\"]\n",
+      "method": "GET",
+      "currentHelper": "",
+      "auth": {
+        "type": "noauth"
+      },
+      "pathVariables": {
+        "version": "v2",
+        "providerId": "providerId44",
+        "taxFormId": "taxFormId74"
+      },
+      "url": "{{default}}/tax-forms/:version/:providerId/:taxFormId?taxDataType=JSON",
+      "responses": [
+        {
+          "request": "6ceb5b61-1da3-420b-8723-61e39d236b04",
+          "id": "e3803235-46a3-45e6-a6a2-88bfdb09ebc5",
+          "name": "Response_200",
+          "status": "The document image or TaxStatement as json for a single tax document for the customer. A single document can include multiple IRS tax forms and/or other reporting statements as delivered by providers",
+          "responseCode": {
+            "code": 200,
+            "name": "200",
+            "detail": "The document image or TaxStatement as json for a single tax document for the customer. A single document can include multiple IRS tax forms and/or other reporting statements as delivered by providers"
+          },
+          "headers": [
+            {
+              "name": "x-akoya-interaction-id",
+              "key": "x-akoya-interaction-id",
+              "value": "unique-request-id-001",
+              "description": "Akoya supplied interaction id used for logging and error tracking"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/pdf"
+            }
+          ],
+          "mime": "application/pdf",
+          "text": "any",
+          "language": "Text",
+          "rawDataType": "text"
+        },
+        {
+          "request": "6ceb5b61-1da3-420b-8723-61e39d236b04",
+          "id": "dbf4e129-4b2f-4629-b9f8-f8a2ffc484da",
+          "name": "Response_200",
+          "status": "The document image or TaxStatement as json for a single tax document for the customer. A single document can include multiple IRS tax forms and/or other reporting statements as delivered by providers",
+          "responseCode": {
+            "code": 200,
+            "name": "200",
+            "detail": "The document image or TaxStatement as json for a single tax document for the customer. A single document can include multiple IRS tax forms and/or other reporting statements as delivered by providers"
+          },
+          "headers": [
+            {
+              "name": "x-akoya-interaction-id",
+              "key": "x-akoya-interaction-id",
+              "value": "unique-request-id-001",
+              "description": "Akoya supplied interaction id used for logging and error tracking"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "mime": "application/json",
+          "text": "{\n  \"taxYear\": 2020,\n  \"taxStatementId\": \"1234123412341234\",\n  \"attributes\": [\n    {\n      \"name\": \"Total tax withheld\",\n      \"value\": \"8025.00\"\n    }\n  ],\n  \"issuer\": {\n    \"tin\": \"12-3456789\",\n    \"partyType\": \"BUSINESS\",\n    \"businessName\": {\n      \"name1\": \"Financial Data Exchange\"\n    },\n    \"address\": {\n      \"line1\": \"12020 Sunrise Valley Dr\",\n      \"line2\": \"Suite 230\",\n      \"city\": \"Reston\",\n      \"region\": \"VA\",\n      \"postalCode\": \"20191\",\n      \"country\": \"US\"\n    },\n    \"phone\": {\n      \"number\": \"8885551212\"\n    }\n  },\n  \"recipient\": {\n    \"tin\": \"xxx-xx-1234\",\n    \"partyType\": \"INDIVIDUAL\",\n    \"individualName\": {\n      \"first\": \"Kris\",\n      \"middle\": \"Q\",\n      \"last\": \"Public\"\n    },\n    \"address\": {\n      \"line1\": \"1 Main St\",\n      \"city\": \"Melrose\",\n      \"region\": \"NY\",\n      \"postalCode\": \"12121\",\n      \"country\": \"US\"\n    }\n  },\n  \"taxDataType\": \"JSON\",\n  \"forms\": [\n    {\n      \"tax1099Div\": {\n        \"taxYear\": 2020,\n        \"taxFormId\": \"9876987698769876\",\n        \"taxFormDate\": \"2021-03-30\",\n        \"additionalInformation\": \"FDX v6.0\",\n        \"taxFormType\": \"Tax1099Div\",\n        \"foreignAccountTaxCompliance\": false,\n        \"accountNumber\": \"111-5555555\",\n        \"ordinaryDividends\": 1107,\n        \"qualifiedDividends\": 1208,\n        \"totalCapitalGain\": 2109,\n        \"unrecaptured1250Gain\": 2210,\n        \"section1202Gain\": 2311,\n        \"collectiblesGain\": 2412,\n        \"nonTaxableDistribution\": 3013,\n        \"federalTaxWithheld\": 4014,\n        \"section199ADividends\": 5015,\n        \"investmentExpenses\": 6016,\n        \"foreignTaxPaid\": 7017,\n        \"foreignCountry\": \"Mexico\",\n        \"cashLiquidation\": 9019,\n        \"nonCashLiquidation\": 10020,\n        \"taxExemptInterestDividend\": 11021,\n        \"specifiedPabInterestDividend\": 12022,\n        \"stateAndLocal\": [\n          {\n            \"stateCode\": \"NY\",\n            \"state\": {\n              \"taxWithheld\": 15023,\n              \"taxId\": \"14-000023\"\n            }\n          }\n        ]\n      }\n    },\n    {\n      \"tax1099Int\": {\n        \"taxYear\": 2020,\n        \"taxFormId\": \"6543654365436543\",\n        \"taxFormDate\": \"2021-03-30\",\n        \"additionalInformation\": \"FDX v6.0\",\n        \"taxFormType\": \"Tax1099Int\",\n        \"foreignAccountTaxCompliance\": false,\n        \"accountNumber\": \"111-5555555\",\n        \"payerRtn\": \"007007007\",\n        \"interestIncome\": 1008,\n        \"earlyWithdrawalPenalty\": 2009,\n        \"usBondInterest\": 3010,\n        \"federalTaxWithheld\": 4011,\n        \"investmentExpenses\": 5012,\n        \"foreignTaxPaid\": 6013,\n        \"foreignCountry\": \"Canada\",\n        \"taxExemptInterest\": 8015,\n        \"specifiedPabInterest\": 9016,\n        \"marketDiscount\": 10017,\n        \"bondPremium\": 11018,\n        \"usBondPremium\": 12019,\n        \"taxExemptBondPremium\": 13020,\n        \"cusipNumber\": \"CUSIP\",\n        \"stateAndLocal\": [\n          {\n            \"stateCode\": \"NY\",\n            \"state\": {\n              \"taxWithheld\": 17022,\n              \"taxId\": \"15-000022\"\n            }\n          }\n        ]\n      }\n    }\n  ]\n}",
+          "language": "Text",
+          "rawDataType": "text"
+        },
+        {
+          "request": "6ceb5b61-1da3-420b-8723-61e39d236b04",
+          "id": "3e6008b0-146d-4710-96a4-8d566b660e60",
+          "name": "Response_405",
+          "status": "Method Not Allowed",
+          "responseCode": {
+            "code": 405,
+            "name": "405",
+            "detail": "Method Not Allowed"
+          },
+          "headers": [
+            {
+              "name": "x-akoya-interaction-id",
+              "key": "x-akoya-interaction-id",
+              "value": "x-akoya-interaction-id2",
+              "description": "Akoya supplied interaction id used for logging and error tracking"
+            },
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "mime": "text/plain",
+          "text": "Method Not Found",
+          "language": "Text",
+          "rawDataType": "text"
+        }
+      ],
+      "collectionId": "b4ccd376-fad6-4577-bbbe-4ecb67c2b020",
+      "queryParams": [
+        {
+          "key": "taxDataType",
+          "value": "JSON",
+          "description": "Use taxDataType to request `application/json` tax form data response in 'JSON' or 'BASE64_PDF' format. Omit if either format is acceptable. Used in combination with AcceptHeader requesting `application/json` response"
+        }
+      ],
+      "headerData": [
+        {
+          "key": "x-akoya-interaction-id",
+          "value": "unique-request-id-001",
+          "description": "Unique identifier to associate with this request. No specific format required."
+        },
+        {
+          "key": "x-akoya-interaction-type",
+          "value": "user",
+          "description": "Identifies whether the customer is present (USER) or it is a BATCH operation. Case-insensitive."
+        },
+        {
+          "key": "Accept",
+          "value": "[\"application/json\"]",
+          "description": "Use the [Accept HTTP request header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept) to indicate one or more content types to request for the search result response. Use `application/json` to request data or `application/pdf`to request images. In comma-separated array format.         Use in combination with TaxDataTypeQuery parameter to request `application/json` responses in ''JSON'' or ''BASE64_PDF'' format for tax form data'"
+        }
+      ],
+      "pathVariableData": [
+        {
+          "key": "version",
+          "value": "v2",
+          "description": "Endpoint version."
+        },
+        {
+          "key": "providerId",
+          "value": "providerId44",
+          "description": "Provider to query for Tax data."
+        },
+        {
+          "key": "taxFormId",
+          "value": "taxFormId74",
+          "description": "Unique identifier of the tax form to request."
+        }
+      ]
+    },
+    {
+      "folder": "0dd59764-bd40-4c5d-a993-3da1a75cabc1",
+      "id": "070791a6-0102-4692-9684-4727d72214ff",
+      "name": "get-transactions",
+      "dataDisabled": false,
+      "descriptionFormat": "markdown",
+      "description": "The transactions API allows you to retrieve transaction history of consumer-permissioned accounts.\n\n> 🛑\n> \n> The *id_token* should be used as the bearer token with this call.\n\nFor more information on how to paginate transaction results, please see: [Pagination](https://docs.akoya.com/v2/docs/pagination)\n\nUse the `mode` query param to receive FDX-aligned, standardized data values (Beta). For example:\n\n`https://sandbox-products.ddp.akoya.com/transactions/v2/mikomo?mode=standard`\n\n`mode` is available in both sandbox and production.\n\n`mode` is supported by a subset of providers. Log into the [Data Recipient Hub](https://recipient.ddp.akoya.com/login) and click [here](https://recipient.ddp.akoya.com/support/article/kA0Uw00000015GzKAI) to view a list of all providers supporting the `mode` parameter.",
+      "headers": "x-akoya-interaction-type:user\nAccept:application/json,text/plain\n",
+      "method": "GET",
+      "currentHelper": "",
+      "auth": {
+        "type": "noauth"
+      },
+      "pathVariables": {
+        "version": "v2",
+        "providerId": "mikomo",
+        "accountId": ":accountId"
+      },
+      "url": "{{default}}/transactions/:version/:providerId/:accountId?startTime=2020-03-30T04%3A00%3A00Z&endTime=2021-03-30T04%3A00%3A00Z&offset=0&limit=50&mode=raw",
+      "responses": [
+        {
+          "request": "070791a6-0102-4692-9684-4727d72214ff",
+          "id": "3120f610-d4d0-44e3-88a8-b97d1cd1c3b9",
+          "name": "Response_200",
+          "status": "OK",
+          "responseCode": {
+            "code": 200,
+            "name": "200",
+            "detail": "OK"
+          },
+          "headers": [
+            {
+              "name": "x-akoya-interaction-id",
+              "key": "x-akoya-interaction-id",
+              "value": "x-akoya-interaction-id28",
+              "description": "Akoya supplied interaction id used for logging and error tracking"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "mime": "application/json",
+          "text": "{\n  \"links\": {\n    \"prev\": {\n      \"href\": \"/transactions/v2/mikomo/33fbd9e5-9cc3-3d7d-15b3-70d97d87ca1d?endTime=2021-02-26T00%3A00%3A00Z&limit=5&offset=0&startTime=2019-02-26T00%3A00%3A00Z\"\n    }\n  },\n  \"transactions\": [\n    {\n      \"depositTransaction\": {\n        \"accountId\": \"33fbd9e5-9cc3-3d7d-15b3-70d97d87ca1d\",\n        \"amount\": 0.29,\n        \"debitCreditMemo\": \"CREDIT\",\n        \"description\": \"Interest Paid This Period\",\n        \"postedTimestamp\": \"2021-01-27T00:00:00Z\",\n        \"status\": \"POSTED\",\n        \"transactionId\": \"22ef95ee-6127-382d-a28c-5b8b7a15d2eb\",\n        \"transactionTimestamp\": \"2021-01-27T00:00:00Z\",\n        \"transactionType\": \"INTEREST\"\n      }\n    },\n    {\n      \"depositTransaction\": {\n        \"accountId\": \"33fbd9e5-9cc3-3d7d-15b3-70d97d87ca1d\",\n        \"amount\": 0.13,\n        \"debitCreditMemo\": \"CREDIT\",\n        \"description\": \"Interest Paid This Period\",\n        \"postedTimestamp\": \"2021-02-24T00:00:00Z\",\n        \"status\": \"POSTED\",\n        \"transactionId\": \"f3fced9d-a7a2-4194-5a17-a2a9b09ff64a\",\n        \"transactionTimestamp\": \"2021-02-24T00:00:00Z\",\n        \"transactionType\": \"INTEREST\"\n      }\n    }\n  ]\n}",
+          "language": "Text",
+          "rawDataType": "text"
+        },
+        {
+          "request": "070791a6-0102-4692-9684-4727d72214ff",
+          "id": "bf019b6c-af30-4a9e-a933-97b376421c42",
+          "name": "Response_405",
+          "status": "Method Not Allowed",
+          "responseCode": {
+            "code": 405,
+            "name": "405",
+            "detail": "Method Not Allowed"
+          },
+          "headers": [
+            {
+              "name": "x-akoya-interaction-id",
+              "key": "x-akoya-interaction-id",
+              "value": "x-akoya-interaction-id70",
+              "description": "Akoya supplied interaction id used for logging and error tracking"
+            },
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "mime": "text/plain",
+          "text": "Method Not Found",
+          "language": "Text",
+          "rawDataType": "text"
+        }
+      ],
+      "collectionId": "b4ccd376-fad6-4577-bbbe-4ecb67c2b020",
+      "queryParams": [
+        {
+          "key": "startTime",
+          "value": "2020-03-30T04%3A00%3A00Z",
+          "description": "ISO 8601 date format in UTC time zone. If blank, the default value (current date - 15 calendar days) is used. If a value is specified, endTime is required."
+        },
+        {
+          "key": "endTime",
+          "value": "2021-03-30T04%3A00%3A00Z",
+          "description": "ISO 8601 date format in UTC time zone. If blank, the default value (current date) is used. If a value is specified, startTime is required."
+        },
+        {
+          "key": "offset",
+          "value": "0",
+          "description": "The number of items to skip before the first in the response. The default is 0."
+        },
+        {
+          "key": "limit",
+          "value": "50",
+          "description": "The maximum number of items to be returned in the response. The default is 50."
+        },
+        {
+          "key": "mode",
+          "value": "raw",
+          "description": "BETA. Default is raw. Use standard for FDX-aligned, standardized data values."
+        }
+      ],
+      "headerData": [
+        {
+          "key": "x-akoya-interaction-type",
+          "value": "user",
+          "description": "Optional but recommended header to include with each data request. \nAllowed values are `user` or `batch`. \n`user` indicates a request is prompted by an end-user action.\n`batch` indicates the request is part of a batch process."
+        },
+        {
+          "key": "Accept",
+          "value": "application/json,text/plain"
+        }
+      ],
+      "pathVariableData": [
+        {
+          "key": "version",
+          "value": "v2",
+          "description": "Akoya major version number. Do not use minor version numbers. For instance, use v2 and not v2.2"
+        },
+        {
+          "key": "providerId",
+          "value": "mikomo",
+          "description": "Id of provider"
+        },
+        {
+          "key": "accountId",
+          "value": ":accountId",
+          "description": "Account Identifier"
+        }
+      ]
+    }
+  ],
+  "variables": [
+    {
+      "key": "default",
+      "value": "https://sandbox-products.ddp.akoya.com"
+    },
+    {
+      "key": "auth server",
+      "value": "https://sandbox-idp.ddp.akoya.com"
+    },
+    {
+      "key": "default1",
+      "value": "https://products.ddp.akoya.com"
+    },
+    {
+      "key": "auth server1",
+      "value": "https://sandbox-idp.ddp.akoya.com"
+    }
+  ],
+  "auth": {
+    "type": "basic",
+    "basic": []
+  }
+}

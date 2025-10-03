@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="668" height="200" viewBox="0 0 668 200">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f0f0f0;
+      }
+
+      .cls-1, .cls-11, .cls-13, .cls-2 {
+        stroke: #181818;
+      }
+
+      .cls-1, .cls-10, .cls-11, .cls-13, .cls-14, .cls-2 {
+        stroke-linejoin: round;
+        stroke-width: 1px;
+      }
+
+      .cls-1, .cls-16, .cls-2, .cls-5 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        fill: #565652;
+        filter: url(#gradient-overlay-1);
+      }
+
+      .cls-3 {
+        fill: #3c3b37;
+      }
+
+      .cls-4 {
+        fill: #e66228;
+      }
+
+      .cls-5 {
+        fill: #3a3935;
+      }
+
+      .cls-6, .cls-7 {
+        font-size: 12px;
+      }
+
+      .cls-7 {
+        fill: #e7e7e7;
+        text-anchor: middle;
+      }
+
+      .cls-12, .cls-7, .cls-9 {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      .cls-12, .cls-15, .cls-8, .cls-9 {
+        font-size: 11px;
+      }
+
+      .cls-9 {
+        fill: #121212;
+      }
+
+      .cls-10, .cls-11 {
+        fill: #e4e4e4;
+      }
+
+      .cls-10, .cls-14 {
+        stroke: #2d98eb;
+      }
+
+      .cls-12, .cls-15, .cls-16 {
+        fill: #181818;
+      }
+
+      .cls-13, .cls-14 {
+        fill: #fff;
+      }
+
+      .cls-15 {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: bold;
+      }
+    </style>
+
+    <filter id="gradient-overlay-1" filterUnits="userSpaceOnUse">
+      <feImage x="9" y="3" width="651" height="31" preserveAspectRatio="none" xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iNjUxIiBoZWlnaHQ9IjMxIj48bGluZWFyR3JhZGllbnQgaWQ9ImdyYWQiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMzI1LjUiIHkxPSIzMSIgeDI9IjMyNS41Ij4KICA8c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiMzYzNiMzciLz4KICA8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiM2MzYyNWUiLz4KPC9saW5lYXJHcmFkaWVudD4KPHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIvPjwvc3ZnPg=="/>
+      <feComposite operator="in" in2="SourceGraphic"/>
+      <feBlend in2="SourceGraphic" result="gradientFill"/>
+    </filter>
+  </defs>
+  <path d="M24.000,3.000 L645.000,3.000 C653.284,3.000 660.000,9.716 660.000,18.000 L660.000,193.000 L9.000,193.000 L9.000,18.000 C9.000,9.716 15.716,3.000 24.000,3.000 Z" class="cls-1"/>
+  <g style="fill: #565652; filter: url(#gradient-overlay-1)">
+    <path d="M24.000,3.000 L645.000,3.000 C653.284,3.000 660.000,9.716 660.000,18.000 L660.000,34.000 L9.000,34.000 L9.000,18.000 C9.000,9.716 15.716,3.000 24.000,3.000 Z" id="path-1" style="stroke: inherit; filter: none; fill: inherit" class="cls-2"/>
+  </g>
+  <use xlink:href="#path-1" style="stroke: #181818; filter: none; fill: none"/>
+  <rect x="622" y="8" width="22" height="21" rx="10" ry="10" class="cls-3"/>
+  <circle cx="633.14" cy="18.031" r="7.765" class="cls-4"/>
+  <path d="M636.598,15.457 L634.065,18.025 L636.598,20.593 L636.598,20.593 C636.714,20.710 636.786,20.872 636.786,21.051 C636.786,21.410 636.499,21.700 636.146,21.700 C635.969,21.700 635.809,21.627 635.694,21.510 L635.694,21.510 L633.161,18.942 L630.628,21.510 L630.628,21.510 C630.512,21.627 630.352,21.700 630.175,21.700 C629.822,21.700 629.536,21.410 629.536,21.051 C629.536,20.872 629.607,20.710 629.723,20.593 L629.723,20.593 L632.256,18.025 L629.723,15.457 L629.723,15.457 C629.607,15.340 629.536,15.178 629.536,14.999 C629.536,14.640 629.822,14.350 630.175,14.350 C630.352,14.350 630.512,14.423 630.628,14.540 L630.628,14.540 L633.161,17.108 L635.694,14.540 L635.694,14.540 C635.809,14.423 635.969,14.350 636.146,14.350 C636.499,14.350 636.786,14.640 636.786,14.999 C636.786,15.178 636.714,15.340 636.598,15.457 L636.598,15.457 Z" class="cls-5"/>
+  <text x="77" y="23" class="cls-6"><tspan x="77" class="cls-7">Create New Project</tspan></text>
+  <text x="29" y="61" class="cls-8"><tspan class="cls-9">Project Name:</tspan></text>
+  <text x="29" y="90" class="cls-8"><tspan class="cls-9">Location:</tspan></text>
+  <text x="29" y="118" class="cls-8"><tspan class="cls-9">Project Type:</tspan></text>
+  <rect x="382" y="160" width="82" height="20" rx="3" ry="3" class="cls-10"/>
+  <rect x="474" y="160" width="82" height="20" rx="3" ry="3" class="cls-11"/>
+  <rect x="565" y="160" width="82" height="20" rx="3" ry="3" class="cls-11"/>
+  <text x="594" y="173" class="cls-8"><tspan class="cls-12">Help</tspan></text>
+  <text x="499" y="174" class="cls-8"><tspan class="cls-12">Cancel</tspan></text>
+  <text x="416" y="174" class="cls-8"><tspan class="cls-12">OK</tspan></text>
+  <rect x="113" y="46" width="534" height="23" class="cls-13"/>
+  <rect x="113" y="103" width="534" height="23" class="cls-13"/>
+  <rect x="113" y="75" width="509" height="23" class="cls-13"/>
+  <rect x="115" y="105" width="507" height="19" class="cls-14"/>
+  <rect x="626" y="106" width="17" height="17" rx="1" ry="1" class="cls-11"/>
+  <rect x="625" y="76" width="21" height="21" rx="1" ry="1" class="cls-11"/>
+  <text x="630" y="88" class="cls-8"><tspan class="cls-15">...</tspan></text>
+  <path d="M634.863,116.913 L631.557,111.187 L638.168,111.187 L634.863,116.913 Z" class="cls-16"/>
+  <text x="118" y="118" class="cls-8"><tspan class="cls-9">Rails application</tspan></text>
+  <text x="119" y="90" class="cls-8"><tspan class="cls-9">/~/RubymineProjects/TestApp</tspan></text>
+  <text x="119" y="61" class="cls-8"><tspan class="cls-9">TestApp</tspan></text>
+</svg>
