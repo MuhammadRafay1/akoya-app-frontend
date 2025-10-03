@@ -9,7 +9,6 @@ export default function Body({ accessToken }: { accessToken?: string }) {
     const localJs = "/static/js/portal.js";
     const localCss = "/static/css/portal.css";
 
-    // append portal CSS once
     if (!document.querySelector(`link[href="${localCss}"]`)) {
       const link = document.createElement("link");
       link.rel = "stylesheet";
@@ -34,44 +33,50 @@ export default function Body({ accessToken }: { accessToken?: string }) {
         await loadScript(localJs);
 
         (window as any).APIMaticDevPortal?.ready(async (portal: any) => {
-          console.log("[Portal] Ready event fired. Methods available:", Object.keys(portal));
+          console.log("[Portal] Ready event fired");
           portalRef.current = portal;
 
-          // If we already have a token by the time portal is ready, inject it
+          // If token already available, inject it right away
           if (accessToken) {
-            await injectToken(accessToken, portal);
+            await portal.setConfig((defaultConfig: any) => ({
+              ...defaultConfig,
+              auth: {
+                ...defaultConfig.auth,
+                bearerAuth: {
+                  ...defaultConfig.auth?.bearerAuth,
+                  AccessToken: accessToken,
+                },
+              },
+            }));
+            console.log("[Portal] Injected initial access token");
           }
         });
       } catch (err) {
         console.error("Failed to load portal scripts:", err);
       }
     })();
-  }, []);
 
-  // whenever accessToken changes, inject into portal (if ready)
+    return () => {
+      portalRef.current = null;
+    };
+  }, []); // only once on mount
+
+  // 🔑 Watch for token changes after mount
   useEffect(() => {
-    if (accessToken && portalRef.current) {
-      injectToken(accessToken, portalRef.current);
-    }
-  }, [accessToken]);
-
-  async function injectToken(token: string, portal: any) {
-    try {
-      await portal.setConfig((defaultConfig: any) => ({
+    if (portalRef.current && accessToken) {
+      console.log("[Portal] Updating token after auth:", accessToken);
+      portalRef.current.setConfig((defaultConfig: any) => ({
         ...defaultConfig,
         auth: {
           ...defaultConfig.auth,
           bearerAuth: {
             ...defaultConfig.auth?.bearerAuth,
-            AccessToken: `Bearer ${token}`,
+            AccessToken: `Bearer ${accessToken}`,
           },
         },
       }));
-      console.log("[Portal] Token injected:", token);
-    } catch (err) {
-      console.error("[Portal] Failed to inject token:", err);
     }
-  }
+  }, [accessToken]); // run whenever token changes
 
   return (
     <div
